@@ -570,7 +570,8 @@ def schema_business():
         "email": EMAIL,
         "url": DOMAIN + "/",
         "priceRange": "$$",
-        "image": DOMAIN + "/og.svg",
+        "image": DOMAIN + "/img/og.jpg",
+        "logo": DOMAIN + "/img/logo.png",
         "description": f"Mobile mechanic serving {CITY_MAIN}, {STATE_FULL} and the surrounding "
                        "area. On-site auto repair, diagnostics, brakes, batteries, oil changes, "
                        "A/C repair and pre-purchase inspections — we come to you.",
@@ -753,6 +754,18 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:700;line-height:1.12;letter-spac
 .hero .sub span{display:inline-flex;gap:.45em;align-items:center}
 .hero .sub .ic{color:var(--sun2)}
 
+/* photos */
+.photo-card{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);
+  box-shadow:var(--shadow);line-height:0}
+.photo-card img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:3em;align-items:center}
+.hero-shot{position:relative}
+.hero-shot .photo-card{aspect-ratio:1/1.02}
+.hero-shot .tag{position:absolute;left:1em;bottom:1em;background:rgba(11,14,19,.82);
+  backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:999px;
+  padding:.5em 1.1em;font-size:.85rem;font-weight:600;color:var(--gold);
+  display:inline-flex;gap:.5em;align-items:center}
+
 /* generic sections */
 .sec{padding:4.5em 0}
 .sec-head{max-width:44em;margin-bottom:2.4em}
@@ -906,7 +919,8 @@ form.book .btn{justify-content:center}
 
 @media(max-width:960px){
   .g3{grid-template-columns:repeat(2,1fr)}
-  .split,.contact-grid{grid-template-columns:1fr;gap:2.2em}
+  .split,.contact-grid,.hero-grid{grid-template-columns:1fr;gap:2.2em}
+  .hero-shot .photo-card{aspect-ratio:4/3}
   .ft .cols{grid-template-columns:1fr 1fr}
 }
 @media(max-width:720px){
@@ -974,7 +988,8 @@ def head(title, desc, path, *extra_ld):
 <meta property="og:type" content="website">
 <meta property="og:url" content="{canon}">
 <meta property="og:site_name" content="{esc(BIZ)}">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="{DOMAIN}/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0b0e13">
 <meta name="geo.region" content="US-{STATE}">
 <meta name="geo.placename" content="{CITY_MAIN}">
@@ -1103,6 +1118,8 @@ def block_why():
     <a class="btn btn-sun" href="tel:{PHONE_TEL}">{icon('phone')} Call {PHONE_DISP}</a>
   </div>
   <div class="grid" style="gap:1em">
+    <div class="photo-card"><img src="/img/under-hood.jpg" width="1400" height="1050" loading="lazy"
+      alt="Certified mobile mechanic performing an engine repair under the hood at a customer's location"></div>
     <div class="card"><span class="cico">{icon('clock')}</span><h3>Open when you're off work</h3>
       <p>Monday to Saturday we run until 10pm, and we work Sundays too. Book the evening slot
       and never miss an hour of work over a brake job.</p></div>
@@ -1175,22 +1192,29 @@ def page_home():
             f"diagnostics, batteries, oil changes, A/C and more — at your home or office, "
             f"7 days a week. Call {PHONE_DISP}.")
     hero = f"""
-<section class="hero"><div class="wrap">
-  <span class="kick">Mobile auto mechanic — Orlando, {STATE_FULL}</span>
-  <h1>The repair shop <span class="gtx">comes to you.</span></h1>
-  <p class="lead">Certified mechanics, a fully stocked service vehicle, and your driveway.
-  {BIZ} brings expert auto repair to your home, your office, or the roadside where the car
-  quit — across Orlando and the surrounding areas, seven days a week.</p>
-  <div class="cta">
-    <a class="btn btn-sun" href="tel:{PHONE_TEL}">{icon('phone')} Call {PHONE_DISP}</a>
-    <a class="btn btn-ghost" href="{BOOK_URL}" rel="nofollow">{icon('calendar')} Book an appointment</a>
+<section class="hero"><div class="wrap"><div class="hero-grid">
+  <div>
+    <span class="kick">Mobile auto mechanic — Orlando, {STATE_FULL}</span>
+    <h1>The repair shop <span class="gtx">comes to you.</span></h1>
+    <p class="lead">Certified mechanics, a fully stocked service vehicle, and your driveway.
+    {BIZ} brings expert auto repair to your home, your office, or the roadside where the car
+    quit — across Orlando and the surrounding areas, seven days a week.</p>
+    <div class="cta">
+      <a class="btn btn-sun" href="tel:{PHONE_TEL}">{icon('phone')} Call {PHONE_DISP}</a>
+      <a class="btn btn-ghost" href="{BOOK_URL}" rel="nofollow">{icon('calendar')} Book an appointment</a>
+    </div>
+    <div class="sub">
+      <span>{icon('check')} Certified mechanics</span>
+      <span>{icon('check')} Price approved before work starts</span>
+      <span>{icon('check')} Open 7 days &middot; evenings too</span>
+    </div>
   </div>
-  <div class="sub">
-    <span>{icon('check')} Certified mechanics</span>
-    <span>{icon('check')} Price approved before work starts</span>
-    <span>{icon('check')} Open 7 days &middot; evenings too</span>
+  <div class="hero-shot">
+    <div class="photo-card"><img src="/img/driveway-service.jpg" width="1475" height="1536"
+      alt="Orlando's Finest mobile mechanic servicing an SUV in a customer's driveway in Orlando, FL" fetchpriority="high"></div>
+    <span class="tag">{icon('pin')} A real job, in a real driveway</span>
   </div>
-</div></section>"""
+</div></div></section>"""
     body = (hero + block_services() + block_steps() + block_why()
             + block_testimonial() + block_areas() + block_faq(light=True)
             + block_cta())
@@ -1340,7 +1364,9 @@ def page_about():
     shift, during your workday in the office lot, or on a Sunday without wrecking the week.</p>
   </div>
   <div>
-    <div class="card"><span class="cico">{icon('shield')}</span><h3>Certified mechanics</h3>
+    <div class="photo-card"><img src="/img/interior-work.jpg" width="1100" height="1467" loading="lazy"
+      alt="Mobile mechanic repairing a steering column at the customer's location in Orlando"></div>
+    <div class="card" style="margin-top:1em"><span class="cico">{icon('shield')}</span><h3>Certified mechanics</h3>
       <p>Trained, experienced techs who diagnose by testing — and show you what they found.</p></div>
     <div class="card" style="margin-top:1em"><span class="cico">{icon('clock')}</span><h3>Seven days a week</h3>
       <p>{HOURS_LINE}. Evening slots are normal, not special favors.</p></div>
@@ -1564,6 +1590,8 @@ def build():
 
     w("style.css", CSS)
     w("main.js", JS)
+    if os.path.isdir("assets"):
+        shutil.copytree("assets", os.path.join(OUT, "img"))
     w("humans.txt", HUMANS)
     w("robots.txt", ROBOTS)
 

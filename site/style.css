@@ -103,6 +103,18 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:700;line-height:1.12;letter-spac
 .hero .sub span{display:inline-flex;gap:.45em;align-items:center}
 .hero .sub .ic{color:var(--sun2)}
 
+/* photos */
+.photo-card{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);
+  box-shadow:var(--shadow);line-height:0}
+.photo-card img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:3em;align-items:center}
+.hero-shot{position:relative}
+.hero-shot .photo-card{aspect-ratio:1/1.02}
+.hero-shot .tag{position:absolute;left:1em;bottom:1em;background:rgba(11,14,19,.82);
+  backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:999px;
+  padding:.5em 1.1em;font-size:.85rem;font-weight:600;color:var(--gold);
+  display:inline-flex;gap:.5em;align-items:center}
+
 /* generic sections */
 .sec{padding:4.5em 0}
 .sec-head{max-width:44em;margin-bottom:2.4em}
@@ -256,7 +268,8 @@ form.book .btn{justify-content:center}
 
 @media(max-width:960px){
   .g3{grid-template-columns:repeat(2,1fr)}
-  .split,.contact-grid{grid-template-columns:1fr;gap:2.2em}
+  .split,.contact-grid,.hero-grid{grid-template-columns:1fr;gap:2.2em}
+  .hero-shot .photo-card{aspect-ratio:4/3}
   .ft .cols{grid-template-columns:1fr 1fr}
 }
 @media(max-width:720px){
