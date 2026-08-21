@@ -1,0 +1,37 @@
+/* humans.txt — https://www.orlandosfinestmobilemechanics.com/humans.txt */
+
+   ____       __                __      _
+  / __ \_____/ /___ _____  ____/ /___  ( )____
+ / / / / ___/ / __ `/ __ \/ __  / __ \|// ___/
+/ /_/ / /  / / /_/ / / / / /_/ / /_/ / (__  )
+\____/_/  /_/\__,_/_/ /_/\__,_/\____/ /____/
+        F I N E S T   ·   M O B I L E   ·   M E C H A N I C
+
+/* TEAM */
+Site: Orlando's Finest Mobile Mechanic — the repair shop that comes to you
+Built by: Clickflame · Anthony Limpert
+Contact: support@clickflame.com
+From: the workbench of a mom-and-pop shop, for a mom-and-pop shop
+
+/* MANIFESTO */
+This site was built for the people whose car breaking down means missing
+a shift, not missing a tee time. The weak and the weary deserve a
+mechanic who comes to them — and a website that fights for them too.
+
+We don't build for big corporations. Ever. The chains have ad budgets;
+the little guys have us. Technology is the crowbar that pries the
+playing field level, and we swing it for the small shops every time.
+
+We're a mom-and-pop operation ourselves — with the best top-ranked pop
+in the business doing the work.
+
+/* STACK */
+One Python file. Static HTML. No frameworks, no builders, no bloat.
+Bricolage Grotesque + Inter. Hand-drawn SVG icons. JSON-LD throughout.
+Hosted on Netlify, deployed from GitHub.
+
+/* THANKS */
+Yair, Paul, and every mechanic who ever fixed a car in a parking lot
+while the owner watched and learned something.
+
+// hello, fellow dev. view-source is the best documentation.
