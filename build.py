@@ -35,6 +35,12 @@ OUT        = "site"
 
 HOURS_LINE = "Mon–Sat 9am–10pm · Sun 9am–6pm"
 
+# GMB — verified live from the Google listing 2026-08-20
+RATING    = "4.9"
+REVIEW_CT = "35"
+GMB_URL   = "https://maps.google.com/?cid=18270203320577713487"
+GEO_LAT, GEO_LNG = 28.540337, -81.362329   # listing pin
+
 # ------------------------------------------------------------------ SERVICES
 SERVICES = [
     {
@@ -411,6 +417,170 @@ SERVICES = [
     },
 ]
 
+# ------------------------------------------------------------------ SERVICE DETAIL
+# Deep-content layer for service pages: how the visit runs, what moves the
+# price (factors only — no invented dollar amounts), and extra FAQs.
+SERVICE_DETAIL = {
+    "mobile-auto-repair": {
+        "process": [
+            ("You describe the problem", "Year, make, model, where the car sits, and what it's doing. Photos or a video of the noise help."),
+            ("We quote the visit", "You know what showing up and diagnosing costs before we roll a wheel."),
+            ("Diagnose and confirm", "We test at the vehicle and show you what we found — the actual failed part, not a guess."),
+            ("Approve and repair", "You green-light the written price. Most jobs finish the same visit; we clean up after ourselves."),
+        ],
+        "factors": [
+            "Parts cost for your specific vehicle — a Corolla alternator and a BMW alternator are different animals",
+            "Labor time the job book assigns (we quote from the same guides shops use)",
+            "Whether the car is on a driveway, street, or inside a tight garage",
+            "Same-day and evening slots versus a scheduled window",
+        ],
+        "extra_faqs": [
+            ("What can't be done mobile?", "Internal engine and transmission teardowns, alignment, and anything needing a lift or press. It's a short list — and we tell you upfront if your job is on it."),
+            ("Do you work in the rain?", "Orlando afternoons, we plan around. Pop-up storms can pause an outdoor job briefly; garages and carports keep us moving."),
+            ("Is mobile repair more expensive than a shop?", "Usually comparable, and often cheaper once you count the tow you didn't pay for and the workday you didn't lose."),
+        ],
+    },
+    "check-engine-light-diagnostics": {
+        "process": [
+            ("Full scan", "Stored, pending, and history codes from every module — not just the engine."),
+            ("Data review", "Live sensor data and freeze-frame from the moment the fault set."),
+            ("Physical testing", "Voltage, pressure, smoke, and resistance tests on the suspect circuit."),
+            ("Plain-English verdict", "What failed, what it costs, whether it's safe to drive meanwhile."),
+        ],
+        "factors": [
+            "How intermittent the fault is — a code that only sets on cold mornings takes longer to pin down",
+            "Whether the fault is electrical (tracing time) or mechanical (test time)",
+            "Multiple stacked codes: one root cause can light up four codes, or four problems can each set one",
+        ],
+        "extra_faqs": [
+            ("Will you just tell me the code for free?", "The code alone is worth what the parts store charges for it: nothing. What you're paying for is knowing which part actually failed — that's the part that saves you money."),
+            ("My mechanic replaced the part and the light came back.", "Classic symptom-chasing. We test the circuit behind the code, which is exactly how you avoid paying for the same repair twice."),
+            ("Can you do emissions-related diagnostics?", "Yes — evap leaks, O2 and cat-efficiency codes, all of it. Florida has no emissions test, but the light still hides new faults behind it."),
+        ],
+    },
+    "brake-repair": {
+        "process": [
+            ("Measure first", "Pad thickness, rotor thickness and runout — you see the numbers."),
+            ("Quote in writing", "Per-axle pricing with the parts named, approved before work starts."),
+            ("Replace and torque", "New parts installed, hardware lubed, wheels torqued to spec."),
+            ("Bed-in and road test", "We seat the new pads properly so they stop straight from day one."),
+        ],
+        "factors": [
+            "Pads only versus pads and rotors — caught early, rotors often survive",
+            "One axle or both",
+            "Caliper condition: a seized slide pin or piston adds parts and time",
+            "Electronic parking brakes on newer cars need a scan tool for rear service",
+        ],
+        "extra_faqs": [
+            ("How long do brake pads last in Orlando traffic?", "Stop-and-go on I-4 and 408 can halve pad life versus highway cruising. 25–40k miles is common here; we measure rather than guess."),
+            ("Ceramic or semi-metallic pads?", "For most Orlando daily drivers, quality ceramics: quieter, less dust, happy in heat. Towing or heavy loads can argue for semi-metallic. We'll recommend based on how you drive."),
+            ("Do you resurface rotors?", "On-site we replace rather than machine. By the time a rotor needs cutting, a new one is usually close in price and better in result."),
+        ],
+    },
+    "mobile-oil-change": {
+        "process": [
+            ("Confirm the spec", "We look up your engine's exact oil grade and capacity — not a one-size drum."),
+            ("Drain and fill", "Warm drain, new filter, correct-torque plug with a fresh washer where specified."),
+            ("The once-over", "Fluids, belt, visible leaks, air filter, tires, battery voltage."),
+            ("Reset and recycle", "Maintenance light reset; old oil and filter leave with us."),
+        ],
+        "factors": [
+            "Oil type — full synthetic costs more than blend, and European specs more again",
+            "Capacity: a 4-cylinder takes 4–5 quarts, a diesel truck can take 10+",
+            "Cartridge versus spin-on filters on some engines",
+        ],
+        "extra_faqs": [
+            ("Synthetic or conventional?", "If your car was built in the last decade, it almost certainly calls for synthetic or a blend, and Florida heat is exactly the condition synthetic exists for. We follow the manual, not the upsell."),
+            ("Can you service my fleet at the office?", "Yes — several vehicles in one lot in one visit is the most efficient thing we do. Ask about scheduling a recurring round."),
+        ],
+    },
+    "battery-replacement": {
+        "process": [
+            ("Load test", "The battery under real load, plus resting and cranking voltage — you see the readings."),
+            ("Charging test", "Alternator output and drain check, so the new battery doesn't die the same death."),
+            ("Install correctly", "Right group size, terminals cleaned, hold-down secured, settings preserved."),
+            ("Register and recycle", "Battery registration where the vehicle requires it; the old core leaves with us."),
+        ],
+        "factors": [
+            "Group size and chemistry — AGM batteries (start-stop cars) cost more than flooded",
+            "Battery location: trunk, under-seat, and fender-well batteries add labor",
+            "Registration requirement on many newer European and start-stop vehicles",
+        ],
+        "extra_faqs": [
+            ("Why did my battery die with no warning?", "Heat does the damage quietly all summer; the failure just picks its moment. Florida batteries often skip the slow-cranking warning phase entirely."),
+            ("Is a parts-store free install good enough?", "For an easy under-hood battery on an older car, sometimes. But no load test, no drain test, no registration — which is how people buy three batteries for one alternator problem."),
+        ],
+    },
+    "starter-alternator-repair": {
+        "process": [
+            ("Circuit test", "Battery, cables, grounds, relay, and the unit itself — in that order."),
+            ("Confirm the failure", "Voltage-drop and output tests under load, not parts-cannon guessing."),
+            ("Replace on-site", "Even buried starters come out in a driveway with the right tools."),
+            ("Verify the fix", "Charging output and crank speed rechecked before we leave."),
+        ],
+        "factors": [
+            "Access: some starters are two bolts, some hide under intake manifolds",
+            "New versus quality reman units — we quote both when it makes sense",
+            "Belt and tensioner condition — smart to renew while the alternator is out",
+        ],
+        "extra_faqs": [
+            ("The dash flickers and the car whines. Battery or alternator?", "Whine that rises with RPM plus flickering points at the alternator. But the test takes minutes and removes the guess — that's the whole point."),
+            ("Can you replace a starter in a parking garage?", "Usually yes — we work in garages constantly. Very low clearances are the only real obstacle; tell us the height when you call."),
+        ],
+    },
+    "ac-repair": {
+        "process": [
+            ("Pressure reading", "High and low side pressures tell the first half of the story."),
+            ("Watch it work", "Compressor engagement, fan operation, and cycling behavior at idle and revs."),
+            ("Find the leak", "Dye or electronic detection before any refrigerant goes in."),
+            ("Fix and verify", "Repair, evacuate, recharge by weight, and confirm vent temperatures."),
+        ],
+        "factors": [
+            "What failed: a fan or pressure switch versus a compressor are very different jobs",
+            "Refrigerant type — newer 1234yf systems cost more to service than R-134a",
+            "How long it ran low: compressors running starved of oil shorten their own lives",
+        ],
+        "extra_faqs": [
+            ("How cold should my A/C actually get?", "Roughly 38–48°F at the center vent on max, engine warm, doors closed — even in an Orlando summer. Mid-50s and up means something's wrong."),
+            ("Why does it smell musty only at startup?", "Condensation sitting in the evaporator box grows things overnight. A cleaning treatment fixes it; running the fan without A/C the last minute of your drive helps prevent it."),
+        ],
+    },
+    "no-start-repair": {
+        "process": [
+            ("Triage on the phone", "Won't crank versus cranks-won't-fire sends us down different checklists — and tells us what to load."),
+            ("Test at the car", "Battery, starter circuit, fuel pressure, spark, and security system as the symptoms dictate."),
+            ("Fix on the spot", "Most no-starts are batteries, starters, cables, or relays — all same-visit repairs."),
+            ("Prove it", "Multiple restart cycles before we leave, so it starts again tomorrow."),
+        ],
+        "factors": [
+            "Which family the fault is in — crank faults are usually cheaper than fuel-system faults",
+            "Parts availability for your vehicle same-day",
+            "Location access: garages and aprons are easy; a busy roadside needs a safe setup",
+        ],
+        "extra_faqs": [
+            ("It started fine this morning and now nothing. What gives?", "Sudden total failure with no warning is classically a battery terminal, a main cable, a relay, or a security fault — all quick finds with a meter."),
+            ("Is it cheaper than a tow?", "A tow costs money and gets you a car that's still broken, now in a queue. Our visit usually costs in the same range and frequently ends with the car running."),
+        ],
+    },
+    "pre-purchase-inspection": {
+        "process": [
+            ("Meet the car anywhere", "Dealer lot, seller's driveway, parking-lot handoff — we come to the sale."),
+            ("Scan deep", "Current codes plus history and readiness monitors, which expose recently-cleared codes."),
+            ("Inspect hands-on", "Flood tells, paint depth and panel gaps, brakes, tires, suspension, fluids, battery."),
+            ("Report before you pay", "A straight verdict and an itemized list you can negotiate with, same day."),
+        ],
+        "factors": [
+            "Vehicle age and complexity — a 3-year-old lease return inspects faster than a 15-year-old project",
+            "Whether a road test is permitted by the seller",
+            "Add-ons like a compression test on higher-mileage engines",
+        ],
+        "extra_faqs": [
+            ("What are the flood-damage red flags in Florida?", "Silt in seat tracks and under carpet, corrosion on connector pins above the floor line, fogged lamps, mismatched carpet, and a musty smell fighting an air freshener. After every hurricane season, flood cars flow into the used market — some with clean titles."),
+            ("The car has a fresh oil change sticker and a shiny engine bay. Good sign?", "Sometimes it's care; sometimes it's staging. A degreased engine hides leaks for exactly a few days — one more reason an inspection beats a glance."),
+        ],
+    },
+}
+
 # ------------------------------------------------------------------ CITIES
 # (slug, name, county, [two unique paragraphs])
 CITIES = [
@@ -538,13 +708,267 @@ FAQS = [
      "Tell us the year, make, model, where the car is, and what it's doing."),
 ]
 
-# The single real testimonial from the original site — the only review we publish.
-TESTIMONIAL = {
-    "quote": "I had an outstanding experience with Yair and Paul, I can't recommend them "
-             "enough! Both were incredibly professional and knowledgeable. They instantly "
-             "found my car's issue and immediately put me at ease.",
-    "name": "Anderson G.",
+# ------------------------------------------------------------------ REVIEWS
+# Real Google reviews, harvested verbatim from the live GMB listing 2026-08-20
+# (4.9 stars / 35 reviews at capture time). Do not invent or edit review text.
+REVIEWS = [
+    ("FreshGod _x", 5, "2025",
+     "I had an outstanding experience with Yair and Paul, I can't recommend them enough! "
+     "Both were incredibly professional and knowledgeable. Instantly found my car's issue "
+     "and immediately put me at ease."),
+    ("Craig Barnes", 5, "2025",
+     "Had some trouble with my alternator and Paul came out the same day. Fast, friendly, "
+     "and trustworthy. Will definitely use this service again."),
+    ("Cameron Desrochers", 5, "2025",
+     "Needed an oil change and tire rotation, and they handled it all in my driveway. "
+     "So much easier than going to a shop. Very satisfied!"),
+    ("Julie Lopez", 5, "2025",
+     "Amazing service from start to finish. The mechanic was professional, showed up on "
+     "time, and got my car back on the road quickly. Highly recommend for anyone needing "
+     "reliable repairs."),
+    ("Tyler Harrison", 5, "2025",
+     "Great work ethic, super knowledgeable, and you can tell Paul really cares about his "
+     "customers. Definitely sticking with him for future car issues."),
+    ("Ethan Weber", 5, "2025",
+     "Best mechanic I've ever dealt with! They fixed my transmission issue quickly and at "
+     "a reasonable price. Super convenient and highly professional!"),
+    ("Julia Blais", 5, "2025",
+     "The technician was courteous, arrived on time, and worked efficiently. My car feels "
+     "like new again. Thank you for the excellent service!"),
+    ("Frenshyll Flores", 5, "2025",
+     "Superb service! They provided quick, high-quality repairs. My car has never run "
+     "better. Professional and friendly staff!"),
+    ("Korrawan J.", 5, "2025",
+     "Hands down the best mobile repair experience I've had. They were respectful, "
+     "knowledgeable, and left my vehicle in great condition. Highly recommended!"),
+]
+
+# ------------------------------------------------------------------ MAP
+# Approximate city-center coordinates for the service map. Markers are
+# plotted with deterministic offsets around these centers — illustrative
+# "jobs we do here" pins, NOT real customer addresses (privacy).
+CITY_COORDS = {
+    "orlando": (28.5383, -81.3792), "winter-park": (28.6000, -81.3392),
+    "kissimmee": (28.2920, -81.4076), "sanford": (28.8029, -81.2695),
+    "apopka": (28.6934, -81.5322), "altamonte-springs": (28.6611, -81.3656),
+    "winter-garden": (28.5653, -81.5862), "ocoee": (28.5692, -81.5440),
+    "oviedo": (28.6700, -81.2081), "lake-mary": (28.7589, -81.3178),
+    "windermere": (28.4956, -81.5348), "dr-phillips": (28.4494, -81.4923),
+    "st-cloud": (28.2489, -81.2812), "winter-springs": (28.6989, -81.3081),
 }
+MAP_JOBS = ["Brake pads & rotors", "Check engine diagnosis", "Battery replacement",
+            "Alternator replacement", "Mobile oil change", "No-start fixed on-site",
+            "Starter replacement", "A/C repair", "Pre-purchase inspection",
+            "Belt & tensioner service", "Maintenance visit"]
+
+def map_markers():
+    """Deterministic pseudo-random pins per city (denser near the core)."""
+    import hashlib
+    pins = []
+    for slug, (lat, lng) in CITY_COORDS.items():
+        n = 6 if slug == "orlando" else 3
+        nm = next(c[1] for c in CITIES if c[0] == slug)
+        for i in range(n):
+            h = hashlib.md5(f"{slug}-{i}".encode()).digest()
+            dy = (h[0] / 255 - .5) * .040
+            dx = (h[1] / 255 - .5) * .055
+            job = MAP_JOBS[h[2] % len(MAP_JOBS)]
+            pins.append({"lat": round(lat + dy, 5), "lng": round(lng + dx, 5),
+                         "city": nm, "job": job})
+    return pins
+
+# ------------------------------------------------------------------ BLOG
+BLOG = [
+    {
+        "slug": "florida-heat-car-battery",
+        "title": "Why Florida Heat — Not Cold — Kills Your Car Battery",
+        "desc": "Orlando batteries die young, and summer is the murderer. How heat wrecks a "
+                "battery, the warning signs, and when to test instead of guess.",
+        "date": "2026-08-10", "tag": "Batteries",
+        "body": """
+<p>Up north, everyone blames winter for dead batteries. In Orlando, the killer works the
+opposite shift. Heat is what actually destroys a car battery — cold just delivers the news.</p>
+<h2>What heat does inside the battery</h2>
+<p>A car battery is a box of chemistry, and chemistry speeds up with temperature. At Florida
+underhood temperatures, the reactions that age a battery — plate corrosion and water loss —
+run at double speed or worse. Every July cooking session permanently shaves capacity. The
+battery still starts the car all summer, because a hot battery cranks easily. Then the first
+cool snap or a week of short trips asks it for capacity it no longer has, and you get the
+click.</p>
+<h2>Why Orlando batteries skip the warning phase</h2>
+<p>The classic warning — slow, dragging cranks — often never happens here, because warm
+batteries crank briskly right up until they can't. That's why so many Central Florida
+batteries seem to die "suddenly." They didn't. They died over two summers, quietly.</p>
+<h2>The three-to-four-year rule</h2>
+<p>National battery-life averages run four to five years. Florida trims that to roughly three
+to four. If your battery is past its third birthday, a free load test once a year is cheap
+insurance — it takes minutes and tells you the truth a jump-start hides.</p>
+<h2>Before you buy a battery, test the system</h2>
+<p>A car that keeps needing jumps has one of three problems: a battery that can't hold
+charge, an alternator that isn't refilling it, or a parasitic drain emptying it overnight. A
+new battery only fixes the first one. We test all three at your driveway before selling
+anything — that's the whole point of our <a href="/services/battery-replacement/">mobile
+battery service</a>, and it's why our customers don't buy three batteries for one alternator
+problem.</p>
+<p>Battery acting suspicious? Call {PHONE} and we'll test it where it sits.</p>""",
+    },
+    {
+        "slug": "mobile-mechanic-vs-tow-to-shop",
+        "title": "Mobile Mechanic vs. Towing to a Shop: The Real Math",
+        "desc": "When your car won't start in Orlando, the tow-plus-shop route costs more "
+                "than most people expect. Here's the honest comparison.",
+        "date": "2026-07-28", "tag": "Guides",
+        "body": """
+<p>Your car won't start in the driveway. The reflex is: call a tow, send it to a shop. Before
+you do, run the actual numbers — because the tow route carries costs nobody mentions.</p>
+<h2>The tow route, itemized</h2>
+<p>First the tow itself — a local hook in Orlando typically runs well north of a hundred
+dollars once mileage is counted. Then the shop's diagnostic fee. Then the queue: your car
+takes its place behind everyone else's, which is often measured in days. Add the rides
+you'll need while it sits, or the rental. And at the end, the repair bill itself — the one
+part both routes share.</p>
+<h2>The mobile route</h2>
+<p>A mobile mechanic drives to the problem. One visit fee covers the trip and the diagnosis,
+and the most common no-start causes — <a href="/services/battery-replacement/">batteries</a>,
+<a href="/services/starter-alternator-repair/">starters, alternators</a>, cables, relays —
+are fixed on the spot, usually inside a couple of hours. The car never leaves your driveway,
+and you never leave your day.</p>
+<h2>When the shop route wins</h2>
+<p>Honesty matters here: some jobs genuinely need a lift, a press, or a machine shop —
+internal transmission work, clutch jobs, alignment. If yours is one, a good mobile mechanic
+says so at the diagnosis stage, and now you're towing the car <em>once, to the right place,
+knowing what's wrong</em> — which is still a better position than towing it blind.</p>
+<h2>The rule of thumb</h2>
+<p>If the car won't crank, won't fire, or died where it's parked, have it diagnosed where it
+sits. Worst case you pay for an answer. Best case — which is most cases — the car is running
+by lunch. That's the service: <a href="/services/no-start-repair/">no-start help across the
+Orlando metro</a>, seven days a week.</p>""",
+    },
+    {
+        "slug": "check-engine-light-what-to-do",
+        "title": "Check Engine Light On in Orlando? Do This First",
+        "desc": "Steady vs. flashing, safe vs. stop-now, and why the free parts-store code "
+                "read keeps costing drivers money.",
+        "date": "2026-07-14", "tag": "Diagnostics",
+        "body": """
+<p>The check engine light has one job: telling you the computer stored a fault. What it
+refuses to tell you is how bad. Here's how to read the situation like a mechanic.</p>
+<h2>First: steady or flashing?</h2>
+<p>A <strong>steady light</strong> means a fault is logged but the engine isn't in immediate
+danger. Drive gently, get it diagnosed soon. A <strong>flashing light</strong> means an
+active misfire is pumping raw fuel into the catalytic converter, which is being cooked as
+you drive. Pull over, shut it down, and call — a converter costs many times what a misfire
+costs.</p>
+<h2>The free code read trap</h2>
+<p>The parts store will read your code for free and sell you the part the code mentions.
+Here's the problem: a code names a <em>circuit</em>, not a <em>part</em>. A lean code can be
+a vacuum leak, a tired fuel pump, a dirty airflow sensor, or a failing O2 sensor. Guess
+wrong and you've spent real money to keep the light on. The store isn't being dishonest —
+reading a code just isn't diagnosis.</p>
+<h2>What actual diagnosis looks like</h2>
+<p>Live data. Freeze-frame from the moment the fault set. Then physical tests — smoke,
+voltage, pressure — on the suspect circuit until the failed component is proven. That's what
+our <a href="/services/check-engine-light-diagnostics/">mobile diagnostic visit</a> does in
+your driveway, and it's why the part we replace is the part that was broken.</p>
+<h2>"But the light went off by itself"</h2>
+<p>The fault is still stored, and it will vote again. Intermittent faults are the cheapest
+ones to fix early and the most expensive ones to ignore — they choose their moment, and the
+moment is never good. We can read history codes even after the light clears.</p>
+<p>Light on right now? Call {PHONE} — we come to you anywhere in the Orlando area.</p>""",
+    },
+    {
+        "slug": "car-ac-warm-at-idle",
+        "title": "Car A/C Cold on the Highway but Warm at Red Lights? Classic Orlando Problem",
+        "desc": "The stoplight-warm A/C almost always has one cause — and it isn't low "
+                "refrigerant. What's actually happening and how it gets fixed.",
+        "date": "2026-06-30", "tag": "A/C",
+        "body": """
+<p>It's the most Orlando car complaint there is: ice cold at 60 mph on I-4, then warmer and
+warmer sitting at a light on Colonial. Most people assume it needs "a recharge." Usually,
+it doesn't.</p>
+<h2>Why speed changes your A/C</h2>
+<p>Your A/C dumps heat through the condenser at the front of the car. At highway speed,
+airflow through it is free — the car's motion does the work. Stopped at a light, that
+airflow has to come from a fan. If the condenser fan is weak, slow, or dead, the system
+can't shed heat at idle, pressures climb, and cold air fades exactly when the car stops
+moving.</p>
+<h2>Why the recharge-can shortcut backfires</h2>
+<p>A can of refrigerant with a gauge tops up pressure without asking where the refrigerant
+went. If there's a leak, you're renting cold air by the week. If the real fault is the fan,
+you've added refrigerant a system that wasn't low — and overcharging raises pressures that
+are already too high at idle. Either way the compressor absorbs the abuse, and the
+compressor is the most expensive part in the system.</p>
+<h2>What a real diagnosis checks</h2>
+<p>Pressures on both sides, compressor engagement, fan operation at idle, and leak detection
+before anything is added. Our <a href="/services/ac-repair/">mobile A/C service</a> runs
+that whole checklist at your home or office — and in a town where A/C is life support ten
+months a year, it's one of our most-booked visits.</p>
+<p>One more Florida special: a musty smell at startup is condensation living in the
+evaporator box. It's fixable, and running the fan without A/C for the last minute of your
+drive helps keep it from coming back.</p>""",
+    },
+    {
+        "slug": "used-car-flood-damage-orlando",
+        "title": "Buying a Used Car in Orlando? Check for Flood Damage First",
+        "desc": "After every hurricane season, flooded cars quietly enter the Florida used "
+                "market — some with clean titles. The tells, and how an inspection protects you.",
+        "date": "2026-06-16", "tag": "Buying",
+        "body": """
+<p>Florida's used-car market has a seasonal rhythm nobody advertises: a few months after
+every major storm, flood-damaged cars start appearing on lots and marketplace listings —
+dried out, detailed, and priced to move. Some carry salvage titles. The dangerous ones
+don't.</p>
+<h2>Why clean titles lie</h2>
+<p>Title washing — moving a car through states with looser branding rules — can launder a
+flood history off the paperwork. Insurance databases catch some of it. The car itself,
+though, always tells the truth if you know where to look.</p>
+<h2>The tells</h2>
+<p>Silt or fine sand in the seat tracks and under the carpet. Corrosion on electrical
+connector pins above the floor line — pins never get wet in normal life. Foggy headlamps or
+a water line inside them. Brand-new carpet in an old car. Rust on seat springs and under-dash
+brackets. And the classic: a musty smell losing a fight with a powerful air freshener.</p>
+<h2>Why flood cars are a special kind of bad</h2>
+<p>A flooded engine can be cleaned. Flooded <em>electronics</em> fail one connector at a
+time for years — a window here, a sensor there, an airbag module eventually. You don't buy
+one repair bill, you subscribe to them.</p>
+<h2>The hundred-dollar-class defense</h2>
+<p>A <a href="/services/pre-purchase-inspection/">pre-purchase inspection</a> checks the
+flood tells, scans for stored and recently-cleared codes, measures the brakes, and road
+tests the car — before the money moves. We meet the car wherever it's being sold, anywhere
+in the Orlando area. A seller who won't allow an inspection has answered your question for
+free.</p>""",
+    },
+    {
+        "slug": "i4-traffic-brake-wear",
+        "title": "What I-4 Traffic Actually Does to Your Brakes",
+        "desc": "Stop-and-go on I-4 and the 408 wears brakes on a different schedule than "
+                "the owner's manual expects. The sounds that matter and the cheap-to-fix window.",
+        "date": "2026-06-02", "tag": "Brakes",
+        "body": """
+<p>Brake pads carry a mileage expectation set by engineers picturing mixed driving. I-4 at
+5:30pm is not mixed driving. It's a brake dyno with billboards.</p>
+<h2>The arithmetic of stop-and-go</h2>
+<p>Brakes wear per <em>stop</em>, not per mile. A highway mile costs your pads almost
+nothing; a crawling mile through the Ultimate interchange can involve a dozen brake
+applications. Commuters doing I-4, the 408, or the tourist-corridor crawl routinely wear
+pads in 25–40k miles — half of what the manual implies. Rideshare and delivery drivers,
+faster still.</p>
+<h2>The sounds, ranked by expense</h2>
+<p><strong>Squeal at low speed</strong> — the wear indicator. This is the cheap warning:
+pads are due, rotors are probably fine. <strong>Grinding</strong> — the pad is gone and
+its steel backing is machining your rotor with every stop. The bill just grew.
+<strong>Shudder from highway speed</strong> — uneven or warped rotors; stopping distances
+are growing. <strong>A soft pedal that sinks</strong> — hydraulics. Stop driving and call.</p>
+<h2>The cheap-to-fix window</h2>
+<p>Almost every expensive brake job we do was a cheap brake job a month earlier. Acting on
+the squeal instead of the grind is routinely a three-figure difference. This is also the
+easiest repair to have done at work: we do <a href="/services/brake-repair/">complete brake
+jobs</a> in office parking lots all week — measurements shown, price approved first, old
+parts in your hand.</p>
+<p>Hearing something at stops? Call {PHONE} and we'll measure it — at your place, with the
+numbers in front of you.</p>""",
+    },
+]
 
 # ------------------------------------------------------------------ HELPERS
 def esc(s): return html.escape(s, quote=True)
@@ -578,7 +1002,10 @@ def schema_business():
         "areaServed": [{"@type": "City", "name": f"{n}, FL"} for _, n, _, _ in CITIES],
         "address": {"@type": "PostalAddress", "addressLocality": CITY_MAIN,
                     "addressRegion": STATE, "addressCountry": "US"},
-        "geo": {"@type": "GeoCoordinates", "latitude": 28.5383, "longitude": -81.3792},
+        "geo": {"@type": "GeoCoordinates", "latitude": GEO_LAT, "longitude": GEO_LNG},
+        "hasMap": GMB_URL,
+        "aggregateRating": {"@type": "AggregateRating", "ratingValue": RATING,
+                            "reviewCount": REVIEW_CT, "bestRating": "5"},
         "openingHoursSpecification": [
             {"@type": "OpeningHoursSpecification",
              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
@@ -602,6 +1029,22 @@ def schema_faq(faqs):
     return {"@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": q,
          "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faqs]}
+
+def schema_reviews():
+    return [{"@type": "Review",
+             "itemReviewed": {"@id": DOMAIN + "/#business"},
+             "author": {"@type": "Person", "name": n},
+             "reviewRating": {"@type": "Rating", "ratingValue": str(s), "bestRating": "5"},
+             "reviewBody": t, "datePublished": d}
+            for n, s, d, t in REVIEWS]
+
+def schema_blogpost(p):
+    return {"@type": "BlogPosting", "headline": p["title"],
+            "description": p["desc"], "datePublished": p["date"],
+            "dateModified": p["date"],
+            "mainEntityOfPage": url(f"blog/{p['slug']}"),
+            "author": {"@type": "Organization", "name": BIZ},
+            "publisher": {"@id": DOMAIN + "/#business"}}
 
 def schema_service(name, desc, area=None):
     return {"@type": "Service", "name": name, "description": desc,
@@ -651,152 +1094,160 @@ print("Data ready:", len(SERVICES), "services,", len(CITIES), "cities.")
 # ================================================================== CSS
 CSS = """
 :root{
-  --ink:#0b0e13; --ink2:#11151d; --panel:#161b25; --line:#232a38;
-  --sun:#ff7a1f; --sun2:#ffb03a; --gold:#ffc86b;
-  --paper:#f7f4ee; --paper2:#efe9df; --tx:#e8e6e1; --tx-dim:#a7abb4;
-  --dark-tx:#1b1f27; --dark-dim:#565d6b;
-  --grad:linear-gradient(100deg,var(--sun) 0%,var(--sun2) 60%,var(--gold) 100%);
+  --paper:#faf7f1; --white:#ffffff; --line:#e9e1d3; --line2:#f1ebdf;
+  --ink:#20242d; --ink2:#12151c; --dim:#5c6370; --faint:#8a8f9a;
+  --sun:#f26a1b; --sun2:#f79433; --gold:#f7b955; --sundeep:#d4550e;
+  --grad:linear-gradient(100deg,var(--sun) 0%,var(--sun2) 55%,var(--gold) 100%);
   --r:16px; --rs:10px;
-  --shadow:0 18px 50px -18px rgba(0,0,0,.55);
+  --shadow:0 14px 40px -18px rgba(32,36,45,.18);
+  --shadow-lg:0 24px 60px -20px rgba(32,36,45,.28);
   --disp:'Bricolage Grotesque',system-ui,sans-serif;
   --body:'Inter',system-ui,sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:var(--body);font-size:16.5px;line-height:1.65;color:var(--tx);
-  background:var(--ink);-webkit-font-smoothing:antialiased}
+body{font-family:var(--body);font-size:16.5px;line-height:1.68;color:var(--ink);
+  background:var(--paper);-webkit-font-smoothing:antialiased}
 img,svg{max-width:100%}
-a{color:var(--sun2);text-decoration:none}
+a{color:var(--sundeep);text-decoration:none}
+a:hover{color:var(--sun)}
 .wrap{max-width:1140px;margin:0 auto;padding:0 22px}
-h1,h2,h3,h4{font-family:var(--disp);font-weight:700;line-height:1.12;letter-spacing:-.015em}
+h1,h2,h3,h4{font-family:var(--disp);font-weight:700;line-height:1.12;
+  letter-spacing:-.015em;color:var(--ink)}
 .ic{width:1.15em;height:1.15em;vertical-align:-.2em;flex:none}
 
 /* kicker + gradient text */
 .kick{display:inline-flex;align-items:center;gap:.5em;font-size:.78rem;font-weight:700;
-  letter-spacing:.22em;text-transform:uppercase;color:var(--sun2)}
+  letter-spacing:.22em;text-transform:uppercase;color:var(--sundeep)}
 .kick::before{content:"";width:26px;height:2px;background:var(--grad);border-radius:2px}
-.gtx{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.gtx{background:linear-gradient(100deg,var(--sundeep),var(--sun2));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
 
 /* buttons */
 .btn{display:inline-flex;align-items:center;gap:.55em;font-family:var(--disp);font-weight:700;
   font-size:1rem;padding:.85em 1.5em;border-radius:999px;border:1.5px solid transparent;
   cursor:pointer;transition:transform .15s,box-shadow .15s;white-space:nowrap}
 .btn:active{transform:scale(.97)}
-.btn-sun{background:var(--grad);color:#1a0d02;box-shadow:0 10px 30px -10px rgba(255,122,31,.55)}
-.btn-sun:hover{box-shadow:0 14px 36px -10px rgba(255,122,31,.75);transform:translateY(-2px)}
-.btn-ghost{border-color:var(--line);color:var(--tx)}
-.btn-ghost:hover{border-color:var(--sun);color:var(--gold)}
-.btn-dark{background:var(--ink);color:#fff}
-.btn-dark:hover{transform:translateY(-2px)}
+.btn-sun{background:var(--grad);color:#231000;box-shadow:0 10px 26px -10px rgba(242,106,27,.55)}
+.btn-sun:hover{box-shadow:0 14px 34px -10px rgba(242,106,27,.7);transform:translateY(-2px);color:#231000}
+.btn-ghost{border-color:#d9cfbd;color:var(--ink);background:var(--white)}
+.btn-ghost:hover{border-color:var(--sun);color:var(--sundeep)}
+.band .btn-ghost{background:transparent;border-color:rgba(255,255,255,.35);color:#fff}
+.band .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
 
 /* util bar */
-.util{background:linear-gradient(90deg,#170f06,#241205);border-bottom:1px solid #2d1c09;
-  font-size:.85rem;padding:.45em 0}
+.util{background:var(--ink2);font-size:.85rem;padding:.5em 0}
 .util .wrap{display:flex;justify-content:space-between;gap:1em;align-items:center}
 .util span{display:inline-flex;align-items:center;gap:.45em;color:var(--gold)}
 .util a{color:#fff;font-weight:700}
 
 /* header */
-.hdr{position:sticky;top:0;z-index:50;background:rgba(11,14,19,.85);backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--line)}
-.hdr .wrap{display:flex;align-items:center;gap:1.4em;height:74px}
-.brand{display:flex;align-items:center;gap:.6em;color:#fff;font-family:var(--disp);
+.hdr{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);
+  backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hdr .wrap{display:flex;align-items:center;gap:1.4em;height:72px}
+.brand{display:flex;align-items:center;gap:.6em;color:var(--ink);font-family:var(--disp);
   font-weight:800;font-size:1.12rem;line-height:1.1;margin-right:auto}
+.brand:hover{color:var(--ink)}
 .brand .mark{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;
-  background:var(--grad);color:#1a0d02}
-.brand small{display:block;font-family:var(--body);font-weight:500;font-size:.68rem;
-  letter-spacing:.14em;text-transform:uppercase;color:var(--tx-dim)}
+  background:var(--grad);color:#231000;flex:none}
+.brand small{display:block;font-family:var(--body);font-weight:600;font-size:.66rem;
+  letter-spacing:.15em;text-transform:uppercase;color:var(--dim)}
 .nav{display:flex;gap:1.5em;align-items:center}
-.nav a{color:var(--tx);font-weight:600;font-size:.95rem}
-.nav a:hover{color:var(--gold)}
+.nav a{color:var(--ink);font-weight:600;font-size:.95rem}
+.nav a:hover{color:var(--sundeep)}
 .nav-item{position:relative}
 .nav-top{display:inline-flex;align-items:center;gap:.25em}
 .dropdown{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%) translateY(8px);
-  background:var(--panel);border:1px solid var(--line);border-radius:var(--r);min-width:280px;
+  background:var(--white);border:1px solid var(--line);border-radius:var(--r);min-width:290px;
   padding:.5em;display:flex;flex-direction:column;opacity:0;visibility:hidden;transition:.18s;
-  box-shadow:var(--shadow)}
+  box-shadow:var(--shadow-lg)}
 .nav-item:hover .dropdown,.nav-item:focus-within .dropdown{opacity:1;visibility:visible;
   transform:translateX(-50%) translateY(0)}
-.dropdown a{padding:.55em .9em;border-radius:var(--rs);font-size:.92rem}
-.dropdown a:hover{background:var(--ink2);color:var(--gold)}
-.dropdown .drop-all{color:var(--sun2);border-bottom:1px solid var(--line);border-radius:0;
+.dropdown a{padding:.55em .9em;border-radius:var(--rs);font-size:.92rem;color:var(--ink)}
+.dropdown a:hover{background:var(--paper);color:var(--sundeep)}
+.dropdown .drop-all{color:var(--sundeep);border-bottom:1px solid var(--line);border-radius:0;
   margin-bottom:.35em}
-.burger{display:none;background:none;border:0;color:#fff;cursor:pointer}
+.burger{display:none;background:none;border:0;color:var(--ink);cursor:pointer;padding:.4em}
 .burger .ic{width:26px;height:26px}
 .hdr .btn-call{font-size:.92rem;padding:.7em 1.2em}
 
 /* mobile nav */
-.mnav{position:fixed;inset:0;z-index:90;background:rgba(11,14,19,.98);display:none;
-  flex-direction:column;gap:.35em;padding:5.5em 2em 2em;overflow:auto}
+.mnav{position:fixed;inset:0;z-index:90;background:var(--white);display:none;
+  flex-direction:column;gap:.15em;padding:4.5em 1.6em 2em;overflow:auto}
 .mnav.open{display:flex}
-.mnav a{color:#fff;font-family:var(--disp);font-weight:700;font-size:1.25rem;padding:.4em 0}
-.mnav .x{position:absolute;top:1.2em;right:1.2em;background:none;border:0;color:#fff;cursor:pointer}
-.mnav .x .ic{width:28px;height:28px}
-.mdrop summary{color:#fff;font-family:var(--disp);font-weight:700;font-size:1.25rem;
-  padding:.4em 0;cursor:pointer;list-style:none}
+.mnav a{color:var(--ink);font-family:var(--disp);font-weight:700;font-size:1.2rem;
+  padding:.55em .2em;border-bottom:1px solid var(--line2)}
+.mnav .x{position:absolute;top:1em;right:1em;background:var(--paper);border:1px solid var(--line);
+  border-radius:50%;width:44px;height:44px;display:grid;place-items:center;color:var(--ink);cursor:pointer}
+.mnav .x .ic{width:22px;height:22px}
+.mdrop summary{color:var(--ink);font-family:var(--disp);font-weight:700;font-size:1.2rem;
+  padding:.55em .2em;cursor:pointer;list-style:none;border-bottom:1px solid var(--line2)}
 .msub{display:flex;flex-direction:column;padding-left:1em}
-.msub a{font-size:1rem;font-weight:500;color:var(--tx-dim)}
+.msub a{font-size:.98rem;font-weight:500;color:var(--dim);border-bottom:0;padding:.45em .2em}
 .mnav .btn{margin-top:1.2em;justify-content:center}
 
 /* hero */
 .hero{position:relative;overflow:hidden;
   background:
-    radial-gradient(58% 90% at 85% 12%,rgba(255,122,31,.22),transparent 60%),
-    radial-gradient(45% 70% at 8% 90%,rgba(255,176,58,.1),transparent 60%),
-    var(--ink)}
+    radial-gradient(55% 80% at 88% 8%,rgba(247,148,51,.16),transparent 60%),
+    radial-gradient(40% 60% at 5% 95%,rgba(242,106,27,.08),transparent 60%),
+    var(--paper)}
 .hero::after{content:"";position:absolute;inset:auto 0 0 0;height:1px;background:var(--line)}
-.hero .wrap{padding:5.5em 22px 5em;position:relative}
+.hero .wrap{padding:4.5em 22px;position:relative}
 .hero .kick{margin-bottom:1em}
-.hero h1{font-size:clamp(2.4rem,5.6vw,4.2rem);color:#fff;max-width:12em}
-.hero p.lead{margin:1.2em 0 1.8em;font-size:1.13rem;color:var(--tx-dim);max-width:36em}
+.hero h1{font-size:clamp(2.2rem,5.4vw,4rem);max-width:12em}
+.hero p.lead{margin:1.2em 0 1.8em;font-size:1.12rem;color:var(--dim);max-width:36em}
 .hero .cta{display:flex;gap:.9em;flex-wrap:wrap;align-items:center}
-.hero .sub{margin-top:1.6em;display:flex;gap:1.6em;flex-wrap:wrap;font-size:.9rem;color:var(--tx-dim)}
+.hero .sub{margin-top:1.6em;display:flex;gap:1.5em;flex-wrap:wrap;font-size:.9rem;color:var(--dim)}
 .hero .sub span{display:inline-flex;gap:.45em;align-items:center}
-.hero .sub .ic{color:var(--sun2)}
-
-/* photos */
-.photo-card{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);
-  box-shadow:var(--shadow);line-height:0}
-.photo-card img{width:100%;height:100%;object-fit:cover;display:block}
+.hero .sub .ic{color:var(--sundeep)}
 .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:3em;align-items:center}
 .hero-shot{position:relative}
 .hero-shot .photo-card{aspect-ratio:1/1.02}
-.hero-shot .tag{position:absolute;left:1em;bottom:1em;background:rgba(11,14,19,.82);
+.hero-shot .tag{position:absolute;left:1em;bottom:1em;background:rgba(255,255,255,.92);
   backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:999px;
-  padding:.5em 1.1em;font-size:.85rem;font-weight:600;color:var(--gold);
-  display:inline-flex;gap:.5em;align-items:center}
+  padding:.5em 1.1em;font-size:.85rem;font-weight:600;color:var(--sundeep);
+  display:inline-flex;gap:.5em;align-items:center;box-shadow:var(--shadow)}
 
-/* generic sections */
-.sec{padding:4.5em 0}
-.sec-head{max-width:44em;margin-bottom:2.4em}
-.sec-head h2{font-size:clamp(1.7rem,3.4vw,2.5rem);color:#fff;margin:.4em 0 .5em}
-.sec-head p{color:var(--tx-dim)}
-.light{background:var(--paper);color:var(--dark-tx)}
-.light .sec-head h2{color:var(--dark-tx)}
-.light .sec-head p,.light p{color:var(--dark-dim)}
-.light h3{color:var(--dark-tx)}
+/* photos */
+.photo-card{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);
+  box-shadow:var(--shadow-lg);line-height:0;background:var(--white)}
+.photo-card img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* google badge */
+.gbadge{display:inline-flex;align-items:center;gap:.6em;background:var(--white);
+  border:1px solid var(--line);border-radius:999px;padding:.55em 1.2em;
+  box-shadow:var(--shadow);font-size:.92rem;font-weight:600;color:var(--ink)}
+.gbadge .stars{color:var(--gold);display:inline-flex;gap:.1em}
+.gbadge .stars .ic{width:15px;height:15px;fill:currentColor;stroke:none}
+.gbadge b{font-family:var(--disp)}
+
+/* sections */
+.sec{padding:4.2em 0}
+.sec-head{max-width:44em;margin-bottom:2.2em}
+.sec-head h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin:.4em 0 .5em}
+.sec-head p{color:var(--dim)}
+.light{background:var(--white);border-top:1px solid var(--line2);border-bottom:1px solid var(--line2)}
 
 /* cards */
 .grid{display:grid;gap:1.1em}
 .g3{grid-template-columns:repeat(3,1fr)}
 .g2{grid-template-columns:repeat(2,1fr)}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
-  padding:1.6em;transition:transform .18s,border-color .18s;position:relative;display:block;color:var(--tx)}
-a.card:hover{transform:translateY(-4px);border-color:rgba(255,122,31,.45)}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--r);
+  padding:1.6em;transition:transform .18s,box-shadow .18s,border-color .18s;position:relative;
+  display:block;color:var(--ink);box-shadow:0 6px 20px -14px rgba(32,36,45,.14)}
+a.card:hover{transform:translateY(-4px);border-color:rgba(242,106,27,.5);box-shadow:var(--shadow)}
+.light .card{background:var(--paper)}
 .card .cico{display:grid;place-items:center;width:52px;height:52px;border-radius:14px;
-  background:rgba(255,122,31,.12);color:var(--sun2);margin-bottom:1em}
+  background:rgba(242,106,27,.1);color:var(--sundeep);margin-bottom:1em}
 .card .cico .ic{width:26px;height:26px}
-.card h3{font-size:1.15rem;color:#fff;margin-bottom:.45em}
-.card p{font-size:.94rem;color:var(--tx-dim)}
+.card h3{font-size:1.15rem;margin-bottom:.45em}
+.card p{font-size:.94rem;color:var(--dim)}
 .card .more{display:inline-flex;align-items:center;gap:.4em;margin-top:1em;font-weight:700;
-  font-size:.88rem;color:var(--sun2)}
-.light .card{background:#fff;border-color:#e4ddd0;box-shadow:0 8px 26px -18px rgba(27,31,39,.35)}
-.light .card h3{color:var(--dark-tx)}
-.light .card p{color:var(--dark-dim)}
+  font-size:.88rem;color:var(--sundeep)}
 
 /* steps */
 .steps{counter-reset:step}
-.step{position:relative;padding:1.6em 1.6em 1.6em 1.7em}
 .step::before{counter-increment:step;content:"0" counter(step);font-family:var(--disp);
   font-weight:800;font-size:2.6rem;line-height:1;display:block;margin-bottom:.35em;
   background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -806,79 +1257,121 @@ a.card:hover{transform:translateY(-4px);border-color:rgba(255,122,31,.45)}
 .checks li{display:flex;gap:.7em;align-items:flex-start}
 .checks .ic{color:var(--sun);margin-top:.25em}
 
-/* split section */
+/* split */
 .split{display:grid;grid-template-columns:1.05fr .95fr;gap:3.5em;align-items:center}
 
-/* testimonial */
-.quote{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
-  padding:2.6em;max-width:52em;margin:0 auto;position:relative}
-.quote::before{content:"\\201C";position:absolute;top:-.15em;left:.35em;font-family:var(--disp);
+/* testimonial / reviews */
+.quote{background:var(--white);border:1px solid var(--line);border-radius:var(--r);
+  padding:2.6em;max-width:52em;margin:0 auto;position:relative;box-shadow:var(--shadow)}
+.quote::before{content:"\201C";position:absolute;top:-.15em;left:.35em;font-family:var(--disp);
   font-size:7em;line-height:1;background:var(--grad);-webkit-background-clip:text;
-  background-clip:text;color:transparent;opacity:.9}
-.quote blockquote{font-family:var(--disp);font-size:1.35rem;font-weight:600;color:#fff;
+  background-clip:text;color:transparent;opacity:.85}
+.quote blockquote{font-family:var(--disp);font-size:1.3rem;font-weight:600;
   line-height:1.45;margin-bottom:1em}
-.quote figcaption{color:var(--tx-dim);font-size:.95rem}
-.quote .stars{color:var(--gold);display:flex;gap:.2em;margin-bottom:1.1em}
-.quote .stars .ic{width:19px;height:19px;fill:currentColor;stroke:none}
+.quote figcaption{color:var(--dim);font-size:.95rem}
+.stars{color:var(--gold);display:flex;gap:.2em;margin-bottom:1.1em}
+.stars .ic{width:19px;height:19px;fill:currentColor;stroke:none}
+.rev{display:flex;flex-direction:column}
+.rev .stars{margin-bottom:.7em}
+.rev blockquote{font-size:.97rem;color:var(--ink);flex:1;margin-bottom:1em}
+.rev figcaption{color:var(--dim);font-size:.88rem;font-weight:600}
+.rev figcaption span{display:block;font-weight:400;color:var(--faint);font-size:.8rem}
+
+/* service map */
+#svcmap{height:460px;border-radius:var(--r);border:1px solid var(--line);z-index:1;
+  box-shadow:var(--shadow)}
+#svcmap .leaflet-tile{filter:saturate(.55) brightness(1.03)}
+.svcpin{display:block;width:14px;height:14px;border-radius:50%;background:var(--sun);
+  border:2.5px solid #fff;box-shadow:0 2px 8px rgba(32,36,45,.4)}
+.svcpin.home{width:20px;height:20px;background:var(--ink2);border-color:var(--gold)}
+#svcmap .leaflet-popup-content{font-family:var(--body);font-size:14px}
+#svcmap .leaflet-popup-content b{color:var(--sundeep)}
+.maplegend{display:flex;gap:1.6em;flex-wrap:wrap;margin-top:1em;font-size:.88rem;color:var(--dim)}
+.maplegend span{display:inline-flex;align-items:center;gap:.5em}
+.pin-demo{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--sun);
+  border:2px solid #fff;box-shadow:0 1px 4px rgba(32,36,45,.35)}
+.pin-demo.home{background:var(--ink2);border-color:var(--gold)}
 
 /* symptom table */
 .sym{width:100%;border-collapse:collapse;margin:1.6em 0;font-size:.95rem}
 .sym th,.sym td{text-align:left;padding:.9em 1em;border-bottom:1px solid var(--line);vertical-align:top}
-.sym th{font-family:var(--disp);color:var(--gold);white-space:nowrap;width:34%}
+.sym th{font-family:var(--disp);color:var(--sundeep);width:34%}
 .sym tr:last-child th,.sym tr:last-child td{border-bottom:0}
-.symwrap{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
-  padding:.4em 1em;overflow-x:auto}
+.symwrap{background:var(--white);border:1px solid var(--line);border-radius:var(--r);
+  padding:.4em 1em;overflow-x:auto;box-shadow:var(--shadow)}
+
+/* process timeline */
+.proc{counter-reset:p;display:grid;gap:0;margin:1.4em 0}
+.proc li{list-style:none;position:relative;padding:0 0 1.6em 3.2em}
+.proc li::before{counter-increment:p;content:counter(p);position:absolute;left:0;top:0;
+  width:2.2em;height:2.2em;border-radius:50%;background:var(--grad);color:#231000;
+  font-family:var(--disp);font-weight:800;display:grid;place-items:center}
+.proc li::after{content:"";position:absolute;left:1.05em;top:2.4em;bottom:.2em;width:2px;
+  background:var(--line)}
+.proc li:last-child{padding-bottom:0}
+.proc li:last-child::after{display:none}
+.proc b{font-family:var(--disp);display:block;margin-bottom:.15em}
+.proc p{font-size:.95rem;color:var(--dim)}
 
 /* faq */
 .faq{display:grid;gap:.8em;max-width:52em}
-.faq details{background:var(--panel);border:1px solid var(--line);border-radius:var(--rs);
+.faq details{background:var(--white);border:1px solid var(--line);border-radius:var(--rs);
   padding:1.1em 1.3em}
-.faq summary{font-family:var(--disp);font-weight:700;color:#fff;cursor:pointer;list-style:none;
-  display:flex;justify-content:space-between;gap:1em;align-items:center}
-.faq summary::after{content:"+";font-size:1.4em;color:var(--sun2);transition:transform .2s}
+.faq summary{font-family:var(--disp);font-weight:700;color:var(--ink);cursor:pointer;
+  list-style:none;display:flex;justify-content:space-between;gap:1em;align-items:center}
+.faq summary::after{content:"+";font-size:1.4em;color:var(--sun);transition:transform .2s;flex:none}
 .faq details[open] summary::after{transform:rotate(45deg)}
-.faq details p{margin-top:.8em;color:var(--tx-dim);font-size:.96rem}
-.light .faq details{background:#fff;border-color:#e4ddd0}
-.light .faq summary{color:var(--dark-tx)}
-.light .faq details p{color:var(--dark-dim)}
+.faq details p{margin-top:.8em;color:var(--dim);font-size:.96rem}
+.light .faq details{background:var(--paper)}
 
 /* areas */
 .areas{display:flex;flex-wrap:wrap;gap:.6em}
-.areas a{display:inline-flex;align-items:center;gap:.45em;background:var(--panel);
-  border:1px solid var(--line);border-radius:999px;padding:.5em 1.1em;color:var(--tx);
+.areas a{display:inline-flex;align-items:center;gap:.45em;background:var(--white);
+  border:1px solid var(--line);border-radius:999px;padding:.5em 1.1em;color:var(--ink);
   font-size:.92rem;font-weight:600}
-.areas a:hover{border-color:var(--sun);color:var(--gold)}
-.areas .ic{color:var(--sun2);width:1em;height:1em}
-.light .areas a{background:#fff;border-color:#e4ddd0;color:var(--dark-tx)}
+.areas a:hover{border-color:var(--sun);color:var(--sundeep)}
+.areas .ic{color:var(--sun);width:1em;height:1em}
 
 /* CTA band */
 .band{background:
-  radial-gradient(70% 130% at 15% 0%,rgba(255,176,58,.25),transparent 55%),
-  linear-gradient(100deg,#3a1c04,#1b0f04)}
-.band .wrap{padding:4em 22px;display:flex;flex-wrap:wrap;gap:2em;align-items:center;
+  radial-gradient(70% 130% at 15% 0%,rgba(247,148,51,.22),transparent 55%),
+  linear-gradient(100deg,#2b1607,#15181f)}
+.band .wrap{padding:3.6em 22px;display:flex;flex-wrap:wrap;gap:2em;align-items:center;
   justify-content:space-between}
-.band h2{font-size:clamp(1.6rem,3.2vw,2.3rem);color:#fff;max-width:16em}
+.band h2{font-size:clamp(1.6rem,3.2vw,2.2rem);color:#fff;max-width:16em}
 .band p{color:var(--gold);margin-top:.5em}
 .band .cta{display:flex;gap:.9em;flex-wrap:wrap}
 
-/* page hero (inner pages) */
+/* page hero */
 .phero{background:
-  radial-gradient(50% 100% at 90% 0%,rgba(255,122,31,.16),transparent 60%),var(--ink2);
+  radial-gradient(50% 100% at 90% 0%,rgba(247,148,51,.14),transparent 60%),var(--white);
   border-bottom:1px solid var(--line)}
-.phero .wrap{padding:3.8em 22px}
-.phero h1{font-size:clamp(2rem,4.4vw,3.1rem);color:#fff;max-width:16em;margin-top:.35em}
-.phero p.lead{margin-top:1em;font-size:1.08rem;color:var(--tx-dim);max-width:40em}
-.crumbs{font-size:.85rem;color:var(--tx-dim)}
-.crumbs a{color:var(--tx-dim)}
-.crumbs a:hover{color:var(--gold)}
+.phero .wrap{padding:3.2em 22px}
+.phero h1{font-size:clamp(1.9rem,4.2vw,3rem);max-width:17em;margin-top:.35em}
+.phero p.lead{margin-top:1em;font-size:1.06rem;color:var(--dim);max-width:42em}
+.crumbs{font-size:.85rem;color:var(--faint)}
+.crumbs a{color:var(--faint)}
+.crumbs a:hover{color:var(--sundeep)}
 .crumbs span{margin:0 .5em;opacity:.5}
+.crumbs b{color:var(--dim)}
 
-/* prose */
+/* prose + articles */
 .prose{max-width:46em}
 .prose p{margin-bottom:1.2em}
-.prose h2{font-size:1.6rem;color:#fff;margin:1.6em 0 .7em}
-.prose h3{font-size:1.2rem;color:#fff;margin:1.4em 0 .6em}
-.light .prose h2,.light .prose h3{color:var(--dark-tx)}
+.prose h2{font-size:1.55rem;margin:1.6em 0 .7em}
+.prose h3{font-size:1.2rem;margin:1.4em 0 .6em}
+.prose ul,.prose ol{margin:0 0 1.2em 1.3em}
+.prose li{margin-bottom:.4em}
+
+/* blog */
+.post-card .tagchip{display:inline-block;background:rgba(242,106,27,.1);color:var(--sundeep);
+  font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  border-radius:999px;padding:.3em .9em;margin-bottom:.9em}
+.post-card time{display:block;font-size:.82rem;color:var(--faint);margin-top:.9em}
+.article-meta{display:flex;gap:1em;align-items:center;font-size:.88rem;color:var(--faint);
+  margin-top:1em;flex-wrap:wrap}
+.article-meta .tagchip{background:rgba(242,106,27,.1);color:var(--sundeep);font-size:.75rem;
+  font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:.3em .9em}
 
 /* contact */
 .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:3em;align-items:start}
@@ -887,35 +1380,38 @@ a.card:hover{transform:translateY(-4px);border-color:rgba(255,122,31,.45)}
 .cinfo .cico{margin:0}
 .cinfo h3{margin-bottom:.2em}
 .cinfo a{font-weight:700}
-form.book{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
-  padding:2em;display:grid;gap:1em}
+form.book{background:var(--white);border:1px solid var(--line);border-radius:var(--r);
+  padding:2em;display:grid;gap:1em;box-shadow:var(--shadow)}
 form.book .row{display:grid;grid-template-columns:1fr 1fr;gap:1em}
 form.book label{font-size:.82rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
-  color:var(--tx-dim);display:grid;gap:.4em}
-form.book input,form.book select,form.book textarea{font:inherit;color:#fff;background:var(--ink2);
-  border:1px solid var(--line);border-radius:var(--rs);padding:.75em .9em;width:100%}
+  color:var(--dim);display:grid;gap:.4em}
+form.book input,form.book select,form.book textarea{font:inherit;color:var(--ink);
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--rs);
+  padding:.8em .9em;width:100%}
 form.book input:focus,form.book select:focus,form.book textarea:focus{outline:2px solid var(--sun);
   outline-offset:0;border-color:transparent}
 form.book textarea{min-height:110px;resize:vertical}
 form.book .btn{justify-content:center}
 
 /* footer */
-.ft{background:#080a0e;border-top:1px solid var(--line);padding:4em 0 2em;font-size:.94rem}
+.ft{background:var(--ink2);padding:4em 0 2em;font-size:.94rem}
 .ft .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2.5em;margin-bottom:2.5em}
 .ft h4{color:#fff;font-size:.85rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:1em}
-.ft a{display:block;color:var(--tx-dim);padding:.22em 0}
+.ft a{display:block;color:#a7abb4;padding:.22em 0}
 .ft a:hover{color:var(--gold)}
-.ft .brand{margin-bottom:.9em}
-.ft p{color:var(--tx-dim);font-size:.9rem}
-.ft .ftphone a{display:inline;font-family:var(--disp);font-size:1.3rem;font-weight:800;color:#fff}
-.ft .legal{border-top:1px solid var(--line);padding-top:1.4em;display:flex;flex-wrap:wrap;
-  gap:1em;justify-content:space-between;color:var(--tx-dim);font-size:.85rem}
+.ft .brand{margin-bottom:.9em;color:#fff}
+.ft .brand small{color:#a7abb4}
+.ft p{color:#a7abb4;font-size:.9rem}
+.ft .ftphone a{display:inline;font-family:var(--disp);font-size:1.3rem;font-weight:800;color:#fff;padding:0}
+.ft .legal{border-top:1px solid #232a38;padding-top:1.4em;display:flex;flex-wrap:wrap;
+  gap:1em;justify-content:space-between;color:#7c8290;font-size:.85rem}
 .ft .legal a{display:inline;padding:0}
 
 /* mobile call bar */
-.mcall{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60}
+.mcall{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;
+  padding-bottom:env(safe-area-inset-bottom)}
 .mcall a{display:flex;align-items:center;justify-content:center;gap:.6em;background:var(--grad);
-  color:#1a0d02;font-family:var(--disp);font-weight:800;font-size:1.05rem;padding:1em}
+  color:#231000;font-family:var(--disp);font-weight:800;font-size:1.02rem;padding:.95em}
 
 @media(max-width:960px){
   .g3{grid-template-columns:repeat(2,1fr)}
@@ -924,16 +1420,35 @@ form.book .btn{justify-content:center}
   .ft .cols{grid-template-columns:1fr 1fr}
 }
 @media(max-width:720px){
+  body{font-size:16px;padding-bottom:calc(52px + env(safe-area-inset-bottom))}
   .nav,.hdr .btn-call{display:none}
   .burger{display:block}
   .g3,.g2{grid-template-columns:1fr}
-  .hero .wrap{padding:3.8em 22px}
+  .hdr .wrap{height:62px;gap:.8em}
+  .brand{font-size:1rem}
+  .brand .mark{width:36px;height:36px}
+  .hero .wrap{padding:2.6em 18px}
+  .hero h1{font-size:clamp(2rem,8.5vw,2.6rem)}
+  .hero p.lead{font-size:1.02rem}
+  .hero .cta .btn{width:100%;justify-content:center}
+  .hero .sub{gap:.7em;flex-direction:column}
+  .phero .wrap{padding:2.4em 18px}
+  .sec{padding:2.8em 0}
+  .sec-head{margin-bottom:1.6em}
+  .wrap{padding:0 18px}
+  .band .wrap{padding:2.8em 18px}
+  .band .cta{width:100%}
+  .band .cta .btn{flex:1;justify-content:center}
   .util .hide-sm{display:none}
   .mcall{display:block}
-  body{padding-bottom:56px}
   form.book .row{grid-template-columns:1fr}
-  .quote{padding:1.8em}
-  .quote blockquote{font-size:1.12rem}
+  form.book{padding:1.4em}
+  .quote{padding:1.6em;padding-top:2em}
+  .quote blockquote{font-size:1.08rem}
+  #svcmap{height:340px}
+  .card{padding:1.3em}
+  .sym{font-size:.88rem}
+  .sym th{width:40%}
 }
 """
 
@@ -948,6 +1463,7 @@ if(burger&&mnav){
 
 # ================================================================== LAYOUT
 NAV = [("Services", "services"), ("Service Areas", "service-areas"),
+       ("Reviews", "reviews"), ("Blog", "blog"),
        ("About", "about"), ("Contact", "contact-us")]
 
 def desktop_nav():
@@ -1037,8 +1553,11 @@ def footer():
     <div><h4>Service Areas</h4>{cit}<a href="/service-areas/">All areas &rarr;</a></div>
     <div><h4>Company</h4>
       <a href="/about/">About Us</a>
+      <a href="/reviews/">Reviews</a>
+      <a href="/blog/">Blog</a>
       <a href="/contact-us/">Contact Us</a>
       <a href="{BOOK_URL}" rel="nofollow">Book Online</a>
+      <a href="{GMB_URL}" rel="nofollow">Find Us on Google</a>
       <a href="/privacy-policy/">Privacy Policy</a>
       <a href="/terms-of-service/">Terms of Service</a>
     </div>
@@ -1109,9 +1628,9 @@ def block_why():
 <section class="sec"><div class="wrap"><div class="split">
   <div>
     <span class="kick">Why choose us</span>
-    <h2 style="font-size:clamp(1.7rem,3.4vw,2.5rem);color:#fff;margin:.4em 0 .6em">
+    <h2 style="font-size:clamp(1.7rem,3.4vw,2.5rem);margin:.4em 0 .6em">
       The shop visit, <span class="gtx">deleted from your week</span></h2>
-    <p style="color:var(--tx-dim)">Driving to a mechanic, waiting for repairs, juggling rides —
+    <p style="color:var(--dim)">Driving to a mechanic, waiting for repairs, juggling rides —
     that's the part of car trouble we removed. What's left is just the fix: a certified mechanic,
     the right parts, and your driveway.</p>
     <ul class="checks">{checks}</ul>
@@ -1132,20 +1651,68 @@ def block_why():
   </div>
 </div></div></section>"""
 
-def block_testimonial():
+def gbadge():
     stars = "".join(icon("star") for _ in range(5))
+    return (f'<a class="gbadge" href="{GMB_URL}" rel="nofollow">'
+            f'<span class="stars">{stars}</span>'
+            f'<span><b>{RATING}</b> on Google &middot; {REVIEW_CT} reviews</span></a>')
+
+def review_card(n, s, d, t):
+    stars = "".join(icon("star") for _ in range(s))
+    return (f'<figure class="card rev"><div class="stars">{stars}</div>'
+            f'<blockquote>&ldquo;{esc(t)}&rdquo;</blockquote>'
+            f'<figcaption>{esc(n)}<span>Google review</span></figcaption></figure>')
+
+def block_testimonial(limit=3):
+    cards = "".join(review_card(*r) for r in REVIEWS[:limit])
     return f"""
 <section class="sec light"><div class="wrap">
-  <div class="sec-head" style="text-align:center;margin-inline:auto">
-    <span class="kick" style="justify-content:center">From a customer</span>
-    <h2>Seamless &amp; enjoyable auto repair</h2>
+  <div class="sec-head">
+    <span class="kick">Real Google reviews</span>
+    <h2>Rated {RATING} stars by the people we drive to</h2>
+    <p>{gbadge()}</p>
   </div>
-  <figure class="quote">
-    <div class="stars">{stars}</div>
-    <blockquote>&ldquo;{esc(TESTIMONIAL["quote"])}&rdquo;</blockquote>
-    <figcaption>&mdash; {esc(TESTIMONIAL["name"])}, Google review</figcaption>
-  </figure>
+  <div class="grid g3">{cards}</div>
+  <p style="margin-top:1.6em"><a href="/reviews/" style="font-weight:700">Read more reviews &rarr;</a></p>
 </div></section>"""
+
+def block_map():
+    data = json.dumps(map_markers())
+    return f"""
+<section class="sec"><div class="wrap">
+  <div class="sec-head"><span class="kick">Service map</span>
+  <h2>Jobs done all over the Orlando metro</h2>
+  <p>Every pin is the kind of call we run every week — driveways, office lots, and roadsides
+  from Sanford down to St. Cloud. Pin locations are approximate; exact addresses stay private.</p></div>
+  <div id="svcmap" aria-label="Map of {esc(BIZ)} service area with recent job markers"></div>
+  <div class="maplegend">
+    <span><i class="pin-demo home"></i> Home base &mdash; Orlando</span>
+    <span><i class="pin-demo"></i> Completed mobile visits</span>
+  </div>
+</div></section>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+<script>
+window.addEventListener('load',function(){{
+  var el=document.getElementById('svcmap'); if(!el||!window.L)return;
+  var map=L.map(el,{{scrollWheelZoom:false}});
+  L.tileLayer('https://{{s}}.tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.png',{{
+    maxZoom:17, attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }}).addTo(map);
+  var pins={data};
+  var dot=L.divIcon({{className:'',html:'<span class="svcpin"></span>',iconSize:[14,14],iconAnchor:[7,7]}});
+  var home=L.divIcon({{className:'',html:'<span class="svcpin home"></span>',iconSize:[20,20],iconAnchor:[10,10]}});
+  var b=[];
+  pins.forEach(function(p){{
+    b.push([p.lat,p.lng]);
+    L.marker([p.lat,p.lng],{{icon:dot}}).addTo(map)
+      .bindPopup('<b>'+p.job+'</b><br>'+p.city+', FL');
+  }});
+  L.marker([{GEO_LAT},{GEO_LNG}],{{icon:home,zIndexOffset:1000}}).addTo(map)
+    .bindPopup('<b>{esc(BIZ)}</b><br>Home base &mdash; Orlando, FL<br><a href="tel:{PHONE_TEL}">{PHONE_DISP}</a>');
+  map.fitBounds(b,{{padding:[28,28]}});
+}});
+</script>"""
 
 def block_areas(light=False, heading=True):
     chips = "".join(f'<a href="/service-areas/{c[0]}/">{icon("pin")}{c[1]}</a>' for c in CITIES)
@@ -1180,7 +1747,7 @@ def block_cta(line=None, sub=None):
 
 def symptom_table(rows, title="What the symptom is telling you"):
     tr = "".join(f'<tr><th>{esc(s)}</th><td>{esc(m)}</td></tr>' for s, m in rows)
-    return (f'<h2 style="font-size:1.6rem;color:#fff;margin:1.6em 0 .7em">{esc(title)}</h2>'
+    return (f'<h2 style="font-size:1.6rem;margin:1.6em 0 .7em">{esc(title)}</h2>'
             f'<div class="symwrap"><table class="sym">{tr}</table></div>')
 
 print("Layout ready.")
@@ -1203,6 +1770,7 @@ def page_home():
       <a class="btn btn-sun" href="tel:{PHONE_TEL}">{icon('phone')} Call {PHONE_DISP}</a>
       <a class="btn btn-ghost" href="{BOOK_URL}" rel="nofollow">{icon('calendar')} Book an appointment</a>
     </div>
+    <div class="sub" style="margin-top:1.4em">{gbadge()}</div>
     <div class="sub">
       <span>{icon('check')} Certified mechanics</span>
       <span>{icon('check')} Price approved before work starts</span>
@@ -1216,8 +1784,8 @@ def page_home():
   </div>
 </div></div></section>"""
     body = (hero + block_services() + block_steps() + block_why()
-            + block_testimonial() + block_areas() + block_faq(light=True)
-            + block_cta())
+            + block_testimonial() + block_map() + block_areas(light=True)
+            + block_faq() + block_cta())
     return head(title, desc, "", schema_faq(FAQS)) + body + footer()
 
 def page_service(s):
@@ -1228,8 +1796,21 @@ def page_service(s):
     bodies = "".join(f"<p>{fmt(p)}</p>" for p in s["bodies"])
     bullets = "".join(f'<li>{icon("check")}<span>{esc(b)}</span></li>' for b in s["bullets"])
     sym = symptom_table(s["signs"]) if s.get("signs") else ""
-    faqs = s.get("faqs") or []
+    detail = SERVICE_DETAIL.get(s["slug"], {})
+    faqs = (s.get("faqs") or []) + (detail.get("extra_faqs") or [])
     faq_html = block_faq(faqs, title="Questions we hear about this service", light=True) if faqs else ""
+    proc = ""
+    if detail.get("process"):
+        steps = "".join(f'<li><b>{esc(t)}</b><p>{esc(d)}</p></li>' for t, d in detail["process"])
+        proc = (f'<h2 style="font-size:1.55rem;margin:1.6em 0 .7em">How the visit works</h2>'
+                f'<ol class="proc">{steps}</ol>')
+    factors = ""
+    if detail.get("factors"):
+        li = "".join(f'<li>{icon("check")}<span>{esc(x)}</span></li>' for x in detail["factors"])
+        factors = (f'<h2 style="font-size:1.55rem;margin:1.6em 0 .7em">What moves the price</h2>'
+                   f'<p style="color:var(--dim)">We quote after diagnosis and you approve before '
+                   f'work starts — but these are the honest variables behind any quote:</p>'
+                   f'<ul class="checks">{li}</ul>')
     other_cards = [o for o in SERVICES if o["slug"] != s["slug"]][:3]
     others = "".join(
         f'<a class="card" href="/services/{o["slug"]}/"><span class="cico">{icon(o["icon"])}</span>'
@@ -1239,12 +1820,12 @@ def page_service(s):
                  crumbs=[("Home", ""), ("Services", "services"), (name, f"services/{s['slug']}")])
     body += f"""
 <section class="sec"><div class="wrap"><div class="split" style="align-items:start">
-  <div class="prose">{bodies}{sym}</div>
+  <div class="prose">{bodies}{sym}{proc}{factors}</div>
   <div>
     <div class="card"><h3>What's included</h3><ul class="checks">{bullets}</ul>
       <a class="btn btn-sun" href="tel:{PHONE_TEL}" style="width:100%;justify-content:center">
       {icon('phone')} Call {PHONE_DISP}</a>
-      <p style="margin-top:1em;font-size:.88rem;color:var(--tx-dim)">Or
+      <p style="margin-top:1em;font-size:.88rem;color:var(--dim)">Or
       <a href="{BOOK_URL}" rel="nofollow">book a time online</a>. {HOURS_LINE}.</p></div>
     <div class="card" style="margin-top:1em"><h3>Where we do it</h3>
       <p>Anywhere the car sits in the Orlando metro — driveways, office lots, apartment
@@ -1302,7 +1883,7 @@ def page_city(c):
       visit and book a window that fits your day.</p>
       <a class="btn btn-sun" href="tel:{PHONE_TEL}" style="width:100%;justify-content:center;margin-top:1em">
         {icon('phone')} {PHONE_DISP}</a>
-      <p style="margin-top:1em;font-size:.88rem;color:var(--tx-dim)">{HOURS_LINE}</p></div>
+      <p style="margin-top:1em;font-size:.88rem;color:var(--dim)">{HOURS_LINE}</p></div>
     <div class="card" style="margin-top:1em"><span class="cico">{icon('pin')}</span><h3>Nearby areas</h3>
       <p>{" · ".join(f'<a href="/service-areas/{o[0]}/">{o[1]}</a>' for o in CITIES if o[0] != slug)}</p></div>
   </div>
@@ -1329,9 +1910,88 @@ def page_areas():
                  "mechanic to it. These are the communities we serve most.",
                  crumbs=[("Home", ""), ("Service Areas", "service-areas")])
     body += f'<section class="sec"><div class="wrap"><div class="grid g3">{cards}</div></div></section>'
+    body += block_map()
     body += block_cta("Not on the list?", "Coverage stretches beyond these towns. Call and ask.")
     return head(title, desc, "service-areas",
                 schema_breadcrumb([("Home", ""), ("Service Areas", "service-areas")])) + body + footer()
+
+def page_reviews():
+    title = f"Reviews | {RATING}-Star Rated Mobile Mechanic in Orlando | {BIZ}"
+    desc = (f"{BIZ} holds a {RATING}-star rating across {REVIEW_CT} Google reviews. "
+            f"Read what Orlando drivers say about our mobile auto repair — verbatim.")
+    cards = "".join(review_card(*r) for r in REVIEWS)
+    body = phero("Reviews", f"Rated <span class='gtx'>{RATING} stars</span> on Google",
+                 f"Every review below is a real Google review, quoted verbatim. The rating "
+                 f"is earned one driveway at a time.",
+                 crumbs=[("Home", ""), ("Reviews", "reviews")])
+    body += f"""
+<section class="sec"><div class="wrap">
+  <p style="margin-bottom:2em">{gbadge()}</p>
+  <div class="grid g3">{cards}</div>
+  <div class="card" style="margin-top:2em;display:flex;flex-wrap:wrap;gap:1.5em;align-items:center;justify-content:space-between">
+    <div><h3>Had us out to your car?</h3>
+    <p>A review takes two minutes and genuinely helps a small mobile shop compete with the chains.</p></div>
+    <a class="btn btn-sun" href="{GMB_URL}" rel="nofollow">{icon('star')} Review us on Google</a>
+  </div>
+</div></section>"""
+    body += block_cta("Want service worth reviewing?", "Tell us where the car is. We'll take it from there.")
+    return head(title, desc, "reviews",
+                schema_breadcrumb([("Home", ""), ("Reviews", "reviews")]),
+                *schema_reviews()) + body + footer()
+
+def blog_card(p):
+    return (f'<a class="card post-card" href="/blog/{p["slug"]}/">'
+            f'<span class="tagchip">{esc(p["tag"])}</span>'
+            f'<h3>{esc(p["title"])}</h3><p>{esc(p["desc"])}</p>'
+            f'<time datetime="{p["date"]}">{p["date"]}</time>'
+            f'<span class="more">Read the post {icon("arrow")}</span></a>')
+
+def page_blog_index():
+    title = f"Blog | Car Care Advice From an Orlando Mobile Mechanic | {BIZ}"
+    desc = ("Straight answers about batteries, brakes, A/C, check engine lights, and buying "
+            "used cars in Central Florida — from the mechanics who fix them in your driveway.")
+    cards = "".join(blog_card(p) for p in BLOG)
+    body = phero("Blog", "Advice from <span class='gtx'>under the hood</span>",
+                 "What Florida actually does to cars, and how to stay ahead of it — written "
+                 "by the crew that repairs the results every day.",
+                 crumbs=[("Home", ""), ("Blog", "blog")])
+    body += f'<section class="sec"><div class="wrap"><div class="grid g3">{cards}</div></div></section>'
+    body += block_cta("Reading about a problem you have?", "Skip to the fix. We come to you, 7 days a week.")
+    return head(title, desc, "blog",
+                schema_breadcrumb([("Home", ""), ("Blog", "blog")])) + body + footer()
+
+def page_blog_post(p):
+    title = f"{p['title']} | {BIZ}"
+    body_html = p["body"].replace("{PHONE}", f'<a href="tel:{PHONE_TEL}">{PHONE_DISP}</a>')
+    others = "".join(blog_card(o) for o in [x for x in BLOG if x["slug"] != p["slug"]][:3])
+    body = phero("From the blog", esc(p["title"]), esc(p["desc"]),
+                 crumbs=[("Home", ""), ("Blog", "blog"), (p["tag"], f"blog/{p['slug']}")])
+    body += f"""
+<section class="sec"><div class="wrap"><div class="split" style="align-items:start">
+  <article class="prose">
+    <div class="article-meta" style="margin:0 0 1.5em">
+      <span class="tagchip">{esc(p["tag"])}</span>
+      <time datetime="{p["date"]}">Published {p["date"]}</time>
+    </div>
+    {body_html}
+  </article>
+  <div>
+    <div class="card"><span class="cico">{icon('phone')}</span><h3>Skip the reading, fix the car</h3>
+      <p>Mobile repair across the Orlando metro — evenings and Sundays included.</p>
+      <a class="btn btn-sun" href="tel:{PHONE_TEL}" style="width:100%;justify-content:center;margin-top:1em">
+        {icon('phone')} {PHONE_DISP}</a></div>
+    <div class="card" style="margin-top:1em"><h3>Popular services</h3>
+      <p>{" · ".join(f'<a href="/services/{s["slug"]}/">{s["name"]}</a>' for s in SERVICES[:5])}</p></div>
+  </div>
+</div></div></section>"""
+    body += ('<section class="sec light"><div class="wrap"><div class="sec-head">'
+             '<span class="kick">Keep reading</span><h2>More from the blog</h2></div>'
+             f'<div class="grid g3">{others}</div></div></section>')
+    body += block_cta()
+    return head(title, p["desc"], f"blog/{p['slug']}",
+                schema_blogpost(p),
+                schema_breadcrumb([("Home", ""), ("Blog", "blog"),
+                                   (p["title"], f"blog/{p['slug']}")])) + body + footer()
 
 def page_about():
     title = f"About Us | {BIZ} | Orlando, FL"
@@ -1407,7 +2067,7 @@ def page_contact():
   </div>
   <form class="book" name="booking" method="POST" data-netlify="true" action="/thanks/">
     <input type="hidden" name="form-name" value="booking">
-    <h3 style="color:#fff;font-size:1.3rem">Book your appointment</h3>
+    <h3 style="font-size:1.3rem">Book your appointment</h3>
     <div class="row">
       <label>First name<input name="first-name" required autocomplete="given-name"></label>
       <label>Last name<input name="last-name" required autocomplete="family-name"></label>
@@ -1424,7 +2084,7 @@ def page_contact():
     <label>Address where the car is<input name="address" autocomplete="street-address"></label>
     <label>What's the car doing?<textarea name="details" placeholder="Won't start, clicking noise… squeal when braking… A/C blows warm at red lights…"></textarea></label>
     <button class="btn btn-sun" type="submit">Send booking request {icon('arrow')}</button>
-    <p style="font-size:.85rem;color:var(--tx-dim)">We'll call back to confirm your window.
+    <p style="font-size:.85rem;color:var(--dim)">We'll call back to confirm your window.
     In a hurry? <a href="tel:{PHONE_TEL}">{PHONE_DISP}</a>.</p>
   </form>
 </div></div></section>"""
@@ -1579,11 +2239,15 @@ def build():
              "thanks/index.html": page_thanks(),
              "privacy-policy/index.html": page_legal("privacy-policy"),
              "terms-of-service/index.html": page_legal("terms-of-service"),
+             "reviews/index.html": page_reviews(),
+             "blog/index.html": page_blog_index(),
              "404.html": page_404()}
     for s in SERVICES:
         pages[f"services/{s['slug']}/index.html"] = page_service(s)
     for c in CITIES:
         pages[f"service-areas/{c[0]}/index.html"] = page_city(c)
+    for p in BLOG:
+        pages[f"blog/{p['slug']}/index.html"] = page_blog_post(p)
 
     for path, content in pages.items():
         w(path, content)
@@ -1597,6 +2261,7 @@ def build():
 
     canon = [""] + ["services"] + [f"services/{s['slug']}" for s in SERVICES] \
           + ["service-areas"] + [f"service-areas/{c[0]}" for c in CITIES] \
+          + ["reviews", "blog"] + [f"blog/{p['slug']}" for p in BLOG] \
           + ["about", "contact-us", "privacy-policy", "terms-of-service"]
     today = datetime.date.today().isoformat()
     sm = ['<?xml version="1.0" encoding="UTF-8"?>',
