@@ -46,6 +46,17 @@ sitemap.xml). `netlify.toml` at the repo root publishes `site/`.
 - Google Business Profile URL / review count (none found; add
   aggregateRating only once GMB-verified)
 
+## Photos
+
+`wix-assets/` (gitignored) holds all 9 originals pulled from the Wix site;
+`prep_images.py` produces the optimized `assets/` set that `build.py` copies to
+`site/img/`. Real assets used: the logo, an under-hood shot, a steering-column
+shot, and a driveway Land Rover job — **cropped to remove a van branded
+"Tampa Bay's Finest Mobile Mechanic, 813 530-6727"**. That branding (also on a
+two-van photo we did NOT use) indicates the Orlando business is an expansion of
+a Tampa sister company. The four remaining originals are Wix stock renders
+(black sports cars, red leather seat) — intentionally unused.
+
 ## Design
 
 Midnight ink (#0b0e13) + Florida-sunset orange/gold gradient (#ff7a1f→#ffc86b),
