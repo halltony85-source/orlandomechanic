@@ -34,10 +34,17 @@ sitemap.xml). `netlify.toml` at the repo root publishes `site/`.
 ## Structure
 
 - `/` and `/contact-us/` — original slugs preserved
-- `/services/` + 9 service pages (diagnostics, brakes, oil, battery,
-  starter/alternator, A/C, no-start, PPI, general mobile repair)
-- `/service-areas/` + 14 city pages (Orange/Seminole/Osceola metro)
+- `/services/` + 9 deep service pages (symptom tables, visit process,
+  price factors, per-service FAQs)
+- `/service-areas/` + 14 city pages, plus a Leaflet service map with
+  approximate job pins (deterministic offsets — never real addresses)
+- `/reviews/` — 9 verbatim Google reviews + Review schema; business
+  emits verified aggregateRating 4.9/35 (GMB cid 18270203320577713487)
+- `/blog/` + 6 Orlando-specific posts with BlogPosting schema
 - `/about/`, `/thanks/` (form target), privacy, terms, 404
+
+Theme is light-first (warm paper + sunset orange) as of 2026-08-20; the
+original dark theme was replaced at the client's request.
 
 ## Needs client confirmation
 
