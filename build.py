@@ -777,6 +777,120 @@ def map_markers():
                          "city": nm, "job": job})
     return pins
 
+# ------------------------------------------------------------------ BITE / SNACK
+# Bite-snack-meal content layering: every deep page opens with a one-line
+# answer (bite) and a skimmable summary (snack) before the full content (meal).
+SERVICE_BITE = {
+    "mobile-auto-repair": (
+        "Most repairs a shop does in a bay, we do in your driveway — <b>diagnosed, quoted, "
+        "and usually finished in one visit.</b>",
+        ["We come to homes, offices, and roadsides metro-wide",
+         "Written price approved before work starts",
+         "Most repairs done in a single visit",
+         "Open 7 days, evenings Mon–Sat"]),
+    "check-engine-light-diagnostics": (
+        "A trouble code names a circuit, not a part. <b>We test the circuit and replace only "
+        "what actually failed</b> — so you don't pay twice.",
+        ["Flashing light? Stop driving and call",
+         "Steady light? Usually safe, still needs diagnosis",
+         "Full scan + live data + physical testing",
+         "Diagnostic fee credited when we do the repair"]),
+    "brake-repair": (
+        "A squeal is a cheap fix; a grind is an expensive one. <b>We measure at your curb and "
+        "show you the numbers</b> before a wheel comes off.",
+        ["Pads, rotors, calipers, fluid — done on-site",
+         "Measurements shown, old parts in your hand",
+         "Orlando stop-and-go wears pads in 25–40k miles",
+         "Per-axle written quote before work starts"]),
+    "mobile-oil-change": (
+        "The exact oil your engine specifies — <b>changed at your home or office</b>, with a "
+        "multi-point check and the used oil hauled away.",
+        ["Conventional, blend, or full synthetic per the manual",
+         "New filter, correct-torque drain plug",
+         "Free health check with every change",
+         "Fleet rounds at offices welcome"]),
+    "battery-replacement": (
+        "Florida heat kills batteries in three to four years. <b>We test the battery, "
+        "alternator, and drain first</b> — then replace on the spot if it's truly the battery.",
+        ["Load test with readings you can see",
+         "Charging system and drain checked too",
+         "Correct group size installed, settings preserved",
+         "Old battery recycled for you"]),
+    "starter-alternator-repair": (
+        "A car that won't crank can't drive to a shop. <b>We test the whole circuit and "
+        "replace the failed unit where the car sits</b> — no tow involved.",
+        ["Battery, cables, relay, and unit tested in order",
+         "Starters replaced in driveways and garages",
+         "Alternator output verified under real load",
+         "Belt and tensioner checked while we're in there"]),
+    "ac-repair": (
+        "Cold on the highway but warm at red lights? <b>That's usually a fan, not low "
+        "refrigerant.</b> We diagnose before anything goes into the system.",
+        ["Pressures read on both sides first",
+         "Fans, compressor, and switches tested at idle",
+         "Leak detection before any refrigerant",
+         "Vent temps verified cold before we leave"]),
+    "no-start-repair": (
+        "Don't tow a car nobody has diagnosed. <b>Most no-starts are fixed in one visit</b> "
+        "for around what the tow alone would cost.",
+        ["Won't-crank and cranks-no-fire both covered",
+         "Batteries, starters, cables fixed on the spot",
+         "We work in garages, lots, and roadsides",
+         "Multiple restart cycles proven before we go"]),
+    "pre-purchase-inspection": (
+        "An hour of inspection before you buy beats a year of surprises after. <b>We meet "
+        "the car wherever it's for sale</b> and report before money moves.",
+        ["Deep scan including recently-cleared codes",
+         "Florida flood-damage tells checked",
+         "Brakes, tires, suspension, fluids measured",
+         "Same-day verdict plus a negotiating list"]),
+}
+
+BLOG_BITE = {
+    "florida-heat-car-battery": (
+        "Heat — not cold — is what kills car batteries, and Orlando summers cut battery life "
+        "to <b>three or four years.</b>",
+        ["Heat ages the battery all summer; failure just picks its moment",
+         "Florida batteries often die with no slow-crank warning",
+         "Past year three, get a free load test annually",
+         "Repeated jumps? Test battery, alternator, AND drain"]),
+    "mobile-mechanic-vs-tow-to-shop": (
+        "For a car that won't start, <b>diagnosing it where it sits usually beats towing it</b> "
+        "— on cost, on time, and on stress.",
+        ["Tow route = tow fee + shop diagnostic + days in a queue",
+         "Most no-starts are same-visit fixes at your address",
+         "Lift-only jobs exist — a good mobile mechanic says so upfront",
+         "Worst case: you tow once, to the right place, informed"]),
+    "check-engine-light-what-to-do": (
+        "<b>Steady light: drive gently, diagnose soon. Flashing light: pull over now</b> — "
+        "you're cooking the catalytic converter.",
+        ["A code names a circuit, not a part",
+         "Free code reads sell parts, not answers",
+         "Real diagnosis = live data + physical testing",
+         "A light that 'went away' is still stored and coming back"]),
+    "car-ac-warm-at-idle": (
+        "A/C warm at stoplights but cold at speed is <b>almost always a condenser-fan "
+        "problem, not low refrigerant.</b>",
+        ["Highway speed cools the condenser for free; idle needs the fan",
+         "Recharge cans mask leaks and can overcharge the system",
+         "The compressor pays for every shortcut",
+         "Proper diagnosis: pressures, fans, leak check — then refrigerant"]),
+    "used-car-flood-damage-orlando": (
+        "After every storm season, flood cars enter Florida's used market — <b>some with "
+        "clean titles.</b> The car tells the truth even when the paperwork doesn't.",
+        ["Check seat tracks and under-carpet for silt",
+         "Corroded connector pins above the floor line = red flag",
+         "Flooded electronics fail for years, one module at a time",
+         "A seller who refuses an inspection has answered your question"]),
+    "i4-traffic-brake-wear": (
+        "Brakes wear per stop, not per mile — <b>I-4 commuters wear pads in half the "
+        "'normal' mileage.</b>",
+        ["Squeal = pads due, rotors probably still fine",
+         "Grind = rotors being damaged at every stop",
+         "Shudder from speed = warped rotors, growing distances",
+         "Acting on the squeal is routinely a three-figure savings"]),
+}
+
 # ------------------------------------------------------------------ BLOG
 BLOG = [
     {
@@ -1292,6 +1406,21 @@ a.card:hover{transform:translateY(-4px);border-color:rgba(242,106,27,.5);box-sha
   border:2px solid #fff;box-shadow:0 1px 4px rgba(32,36,45,.35)}
 .pin-demo.home{background:var(--ink2);border-color:var(--gold)}
 
+/* bite / snack / meal layers */
+.bite{display:flex;gap:1em;align-items:flex-start;background:linear-gradient(100deg,rgba(242,106,27,.09),rgba(247,185,85,.12));
+  border:1px solid rgba(242,106,27,.25);border-left:5px solid var(--sun);border-radius:var(--rs);
+  padding:1.2em 1.4em;margin:0 0 1.6em}
+.bite .ic{color:var(--sundeep);width:1.5em;height:1.5em;margin-top:.15em}
+.bite p{font-family:var(--disp);font-weight:600;font-size:1.12rem;line-height:1.45;color:var(--ink)}
+.bite p b{color:var(--sundeep)}
+.snackbox{background:var(--white);border:1px solid var(--line);border-radius:var(--r);
+  padding:1.4em 1.6em;margin:0 0 1.8em;box-shadow:var(--shadow)}
+.snackbox h3{font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sundeep);
+  display:flex;gap:.5em;align-items:center;margin-bottom:.8em}
+.snackbox ul{list-style:none;display:grid;gap:.5em}
+.snackbox li{display:flex;gap:.6em;align-items:flex-start;font-size:.95rem}
+.snackbox .ic{color:var(--sun);margin-top:.25em;width:1em;height:1em}
+
 /* symptom table */
 .sym{width:100%;border-collapse:collapse;margin:1.6em 0;font-size:.95rem}
 .sym th,.sym td{text-align:left;padding:.9em 1em;border-bottom:1px solid var(--line);vertical-align:top}
@@ -1651,6 +1780,14 @@ def block_why():
   </div>
 </div></div></section>"""
 
+def bite_box(text_html):
+    return (f'<div class="bite">{icon("bolt")}<p>{text_html}</p></div>')
+
+def snack_box(items, title="At a glance"):
+    li = "".join(f'<li>{icon("check")}<span>{esc(x)}</span></li>' for x in items)
+    return (f'<div class="snackbox"><h3>{icon("clipboard")} {esc(title)}</h3>'
+            f'<ul>{li}</ul></div>')
+
 def gbadge():
     stars = "".join(icon("star") for _ in range(5))
     return (f'<a class="gbadge" href="{GMB_URL}" rel="nofollow">'
@@ -1797,6 +1934,11 @@ def page_service(s):
     bullets = "".join(f'<li>{icon("check")}<span>{esc(b)}</span></li>' for b in s["bullets"])
     sym = symptom_table(s["signs"]) if s.get("signs") else ""
     detail = SERVICE_DETAIL.get(s["slug"], {})
+    bite, snack = "", ""
+    if s["slug"] in SERVICE_BITE:
+        b_text, s_items = SERVICE_BITE[s["slug"]]
+        bite = bite_box(b_text)
+        snack = snack_box(s_items)
     faqs = (s.get("faqs") or []) + (detail.get("extra_faqs") or [])
     faq_html = block_faq(faqs, title="Questions we hear about this service", light=True) if faqs else ""
     proc = ""
@@ -1820,7 +1962,7 @@ def page_service(s):
                  crumbs=[("Home", ""), ("Services", "services"), (name, f"services/{s['slug']}")])
     body += f"""
 <section class="sec"><div class="wrap"><div class="split" style="align-items:start">
-  <div class="prose">{bodies}{sym}{proc}{factors}</div>
+  <div class="prose">{bite}{snack}{bodies}{sym}{proc}{factors}</div>
   <div>
     <div class="card"><h3>What's included</h3><ul class="checks">{bullets}</ul>
       <a class="btn btn-sun" href="tel:{PHONE_TEL}" style="width:100%;justify-content:center">
@@ -1963,6 +2105,9 @@ def page_blog_index():
 def page_blog_post(p):
     title = f"{p['title']} | {BIZ}"
     body_html = p["body"].replace("{PHONE}", f'<a href="tel:{PHONE_TEL}">{PHONE_DISP}</a>')
+    if p["slug"] in BLOG_BITE:
+        b_text, takeaways = BLOG_BITE[p["slug"]]
+        body_html = (bite_box(b_text) + snack_box(takeaways, "Key takeaways") + body_html)
     others = "".join(blog_card(o) for o in [x for x in BLOG if x["slug"] != p["slug"]][:3])
     body = phero("From the blog", esc(p["title"]), esc(p["desc"]),
                  crumbs=[("Home", ""), ("Blog", "blog"), (p["tag"], f"blog/{p['slug']}")])
