@@ -33,7 +33,7 @@ TAGLINE    = "The repair shop that comes to you"
 YEAR       = datetime.date.today().year
 OUT        = "site"
 
-HOURS_LINE = "Mon–Sat 9am–10pm · Sun 9am–6pm"
+HOURS_LINE = "Mon to Sat 9am to 10pm, Sun 9am to 6pm"
 
 # GMB — verified live from the Google listing 2026-08-20
 RATING    = "4.9"
@@ -50,13 +50,13 @@ SERVICES = [
         "icon": "van",
         "hero": "Auto Repair Without the Repair Shop",
         "intro": "Most of what a shop does in a bay, we do at your curb. {BIZ} sends a certified "
-                 "mechanic to your home, your office, or wherever the car quit — with the tools, "
+                 "mechanic to your home, your office, or wherever the car quit. With the tools, "
                  "the scan gear, and the parts to handle the job on the spot.",
         "bodies": [
             "Think about what a shop visit actually costs you in Orlando: fighting I-4 both ways, "
             "sitting in a waiting room, maybe paying for a tow before any of that. We cut all of it "
-            "out. You tell us where the car is parked and what it's doing, and we come to it — "
-            "apartment complexes, office parks, theme-park employee lots, your own garage. Brakes, "
+            "out. You tell us where the car is parked and what it's doing, and we come to it. "
+            "Apartment complexes, office parks, theme-park employee lots, your own garage. Brakes, "
             "batteries, alternators, starters, belts, sensors, fluids, and the long list of jobs in "
             "between all get done right where the car sits.",
             "Every visit starts the same way: we confirm the actual fault before touching a wrench, "
@@ -74,7 +74,7 @@ SERVICES = [
         "signs": None,
         "faqs": [
             ("Where will you work on my car?",
-             "Anywhere it's parked safely and legally — driveways, apartment lots, office parking, "
+             "Anywhere it's parked safely and legally. Driveways, apartment lots, office parking, "
              "or the shoulder where it broke down. We just need enough room to work around the vehicle."),
             ("Do I need to be there the whole time?",
              "No. Plenty of customers hand us the key, go back to work, and come out to a fixed car. "
@@ -88,8 +88,8 @@ SERVICES = [
         "icon": "scan",
         "hero": "Check Engine Light On? Find Out Before You Buy Parts.",
         "intro": "The free code read at a parts counter names a circuit, not a part. {BIZ} scans the "
-                 "car, then actually tests the sensor, the wiring, and the systems behind the code — "
-                 "so the part you pay for is the part that was broken.",
+                 "car, then actually tests the sensor, the wiring, and the systems behind the code. "
+                 "So the part you pay for is the part that was broken.",
         "bodies": [
             "Here's how people waste money on a check engine light: the reader says the code "
             "mentions an oxygen sensor, so they buy an oxygen sensor. Two weeks later the light is "
@@ -101,7 +101,7 @@ SERVICES = [
             "repair, the diagnostic visit goes toward the bill.",
         ],
         "bullets": [
-            "Full OBD-II scan — stored, pending, and history codes",
+            "Full OBD-II scan. Stored, pending, and history codes",
             "Live data and freeze-frame analysis",
             "Voltage, pressure, and smoke testing as needed",
             "ABS, airbag, and transmission codes too",
@@ -111,7 +111,7 @@ SERVICES = [
             ("Steady check engine light", "A fault is stored but the car is usually driveable. "
              "It won't fix itself, and Florida heat tends to make marginal parts worse fast."),
             ("Flashing check engine light", "An active misfire is dumping raw fuel into the "
-             "catalytic converter. Pull over and call — a converter costs many times what a misfire does."),
+             "catalytic converter. Pull over and call. A converter costs many times what a misfire does."),
             ("Light on, car feels fine", "Very common with evap-system faults and loose gas caps. "
              "Harmless-feeling, but it will hide any new fault that appears behind it."),
             ("Light came on, then went off", "The fault was intermittent, but the code is still in "
@@ -122,25 +122,25 @@ SERVICES = [
              "Call us with the year, make, model, and what the car is doing and we'll quote it "
              "straight. If we do the repair, the diagnostic goes toward the total."),
             ("Can you clear the light so I pass?",
-             "Clearing a code without fixing the fault just turns the light back on later — and the "
+             "Clearing a code without fixing the fault just turns the light back on later. And the "
              "computer remembers. We'd rather find the real problem and fix it once."),
         ],
     },
     {
         "slug": "brake-repair",
         "name": "Brake Repair & Replacement",
-        "short": "Pads, rotors, calipers, and fluid — replaced where the car is parked.",
+        "short": "Pads, rotors, calipers, and fluid. Replaced where the car is parked.",
         "icon": "brake",
         "hero": "Brakes Done in Your Driveway",
         "intro": "Brakes give you warnings long before they become dangerous, and every warning is "
                  "cheaper to fix than the one after it. {BIZ} replaces pads and rotors, services "
-                 "calipers, and bleeds fluid at your location — with the old parts shown to you, "
+                 "calipers, and bleeds fluid at your location. With the old parts shown to you, "
                  "not just described.",
         "bodies": [
             "Stop-and-go on I-4 and the 408 eats brake pads faster than open-road driving ever "
             "will. A squeal at low speed is usually the wear indicator telling you it's time. A "
             "grind means the pad is gone and the rotor is being machined down by bare metal every "
-            "time you stop — and a pad-and-rotor job costs real money more than a pad job.",
+            "time you stop. And a pad-and-rotor job costs real money more than a pad job.",
             "We measure pad and rotor thickness and show you the numbers. If your pads still have "
             "honest life left, we tell you that and put the wheel back on. When work is needed, "
             "you approve the price first, and the old parts come off in front of you.",
@@ -154,20 +154,20 @@ SERVICES = [
         ],
         "signs": [
             ("Squealing when you brake", "Usually the built-in wear indicator. It's the cheap "
-             "warning — act on it and you save the rotors."),
+             "warning. Act on it and you save the rotors."),
             ("Grinding under the pedal", "Metal on metal. The rotors are being damaged with every "
              "stop, and the car should be looked at now, not next week."),
             ("Pulling to one side when braking", "Often a sticking caliper or collapsed hose "
              "putting uneven pressure on one wheel. It gets worse, not better."),
             ("Soft pedal that sinks", "Air in the lines, a leak, or a failing master cylinder. "
-             "Urgent — call before driving it again."),
+             "Urgent. Call before driving it again."),
             ("Shudder when slowing from highway speed", "Warped or unevenly worn rotors. Stopping "
              "distance grows with every mile."),
         ],
         "faqs": [
             ("Can you really do rotors in a driveway?",
              "Yes. Pads, rotors, calipers, and bleeding are all standard mobile jobs. We bring the "
-             "jack, stands, and torque tools — we just need level ground."),
+             "jack, stands, and torque tools. We just need level ground."),
             ("Do I buy the parts or do you?",
              "Either. Most customers have us bring quality parts matched to the vehicle; if you've "
              "already bought parts, we can usually install them."),
@@ -176,12 +176,12 @@ SERVICES = [
     {
         "slug": "mobile-oil-change",
         "name": "Mobile Oil Change",
-        "short": "The right oil, a new filter, and a health check — at your home or office.",
+        "short": "The right oil, a new filter, and a health check. At your home or office.",
         "icon": "oil",
         "hero": "An Oil Change That Doesn't Cost You a Saturday",
         "intro": "Oil changes are the cheapest thing you'll ever do for an engine and the easiest "
                  "thing to put off. {BIZ} comes to you with the grade your manufacturer actually "
-                 "specifies — conventional, blend, or full synthetic — and hauls the used oil away "
+                 "specifies, conventional, blend, or full synthetic, and hauls the used oil away "
                  "for recycling.",
         "bodies": [
             "Modern engines are picky. Turbocharged and direct-injection motors punish the wrong "
@@ -190,7 +190,7 @@ SERVICES = [
             "sale, and we torque the drain plug instead of gorilla-tightening it.",
             "Every oil service includes a quick once-over while we're under the hood: fluid "
             "levels, belt condition, visible leaks, air filter, tire pressures, battery voltage. "
-            "If something's coming due, we tell you what and how urgent — no upsell theater.",
+            "If something's coming due, we tell you what and how urgent. No upsell theater.",
         ],
         "bullets": [
             "Conventional, synthetic blend, and full synthetic",
@@ -202,8 +202,8 @@ SERVICES = [
         "signs": None,
         "faqs": [
             ("How often should I change oil in Florida?",
-             "Follow your manufacturer's interval, but know that Orlando duty — short trips, "
-             "brutal heat, A/C always on — is 'severe service' in most owner's manuals, which "
+             "Follow your manufacturer's interval, but know that Orlando duty (short trips, "
+             "brutal heat, A/C always on) is 'severe service' in most owner's manuals, which "
              "usually means the shorter interval."),
             ("Do you take the old oil?",
              "Always. It leaves with us and gets recycled. No pans, no mess, no jug of used oil "
@@ -216,7 +216,7 @@ SERVICES = [
         "short": "Florida heat is the #1 battery killer. We test first, then replace on the spot.",
         "icon": "battery",
         "hero": "Dead Battery? We Test Before We Sell.",
-        "intro": "In Florida it isn't winter that kills batteries — it's summer. Heat cooks the "
+        "intro": "In Florida it isn't winter that kills batteries. It's summer. Heat cooks the "
                  "plates all year, and the battery that cranked fine in May clicks at you in "
                  "August. {BIZ} load-tests the battery, checks the alternator, and looks for a "
                  "parasitic drain before replacing anything.",
@@ -227,7 +227,7 @@ SERVICES = [
             "you the readings, so you don't buy a new battery and have the same dead car next week.",
             "If it is the battery, we install the correct group size on-site, clean the terminals "
             "and grounds, and handle the memory-saver and battery-registration steps that newer "
-            "cars need so you don't lose your settings — then the old battery leaves with us for "
+            "cars need so you don't lose your settings. Then the old battery leaves with us for "
             "recycling.",
         ],
         "bullets": [
@@ -239,17 +239,17 @@ SERVICES = [
         ],
         "signs": [
             ("Slow, dragging crank", "The starter is turning but the battery can't deliver the "
-             "amps. Classic end-of-life battery — especially after an Orlando summer."),
+             "amps. Classic end-of-life battery. Especially after an Orlando summer."),
             ("Rapid clicking at the key", "Not enough current to hold the starter solenoid in. "
              "Usually the battery, sometimes a corroded cable."),
             ("Needs a jump more than once", "A healthy system recharges the battery as you drive. "
              "If it keeps dying, the battery can't hold charge or something is draining it."),
             ("Battery light while driving", "That's the charging system, not the battery. Pull "
-             "over soon — the car is running on borrowed electrons."),
+             "over soon. The car is running on borrowed electrons."),
         ],
         "faqs": [
             ("How long do batteries last in Orlando?",
-             "Around three to four years is typical here — noticeably shorter than up north, "
+             "Around three to four years is typical here. Noticeably shorter than up north, "
              "because heat is harder on a battery than cold. Year four is borrowed time."),
             ("Can you come jump-start me instead?",
              "We can, but a jump without a test is a coin flip. Since we're already there, we test "
@@ -262,12 +262,12 @@ SERVICES = [
         "short": "The two parts everyone blames the battery for. Tested and replaced on-site.",
         "icon": "bolt",
         "hero": "Starters and Alternators, Replaced Where the Car Died",
-        "intro": "A starter or alternator failure looks a lot like a dead battery — which is why "
+        "intro": "A starter or alternator failure looks a lot like a dead battery. Which is why "
                  "so many people buy a battery first. {BIZ} tests the whole starting and charging "
                  "circuit at your location and replaces the part that actually failed.",
         "bodies": [
             "The nice thing about a bad starter is that the car tells you where it is: it won't "
-            "crank, so it isn't going anywhere — including to a shop. That's precisely the job a "
+            "crank, so it isn't going anywhere. Including to a shop. That's precisely the job a "
             "mobile mechanic exists for. We come to the parking spot where it quit, confirm the "
             "starter is the fault (and not a cable, relay, or immobilizer issue), and swap it "
             "right there.",
@@ -289,13 +289,13 @@ SERVICES = [
             ("Whirring without the engine turning", "The starter drive is spinning without "
              "engaging the flywheel. The starter is done."),
             ("Lights dim, whine rises with RPM", "Textbook failing alternator. It will strand you "
-             "soon — have it tested now."),
+             "soon. Have it tested now."),
             ("New battery, dead again in days", "The alternator isn't recharging it, or a draw is "
              "emptying it overnight. Either way, testing beats another battery."),
         ],
         "faqs": [
             ("My car won't crank at all. Can you still fix it?",
-             "That's our specialty — a car that won't crank can't drive to a shop. We diagnose and "
+             "That's our specialty. A car that won't crank can't drive to a shop. We diagnose and "
              "replace starters right in the parking spot where the car gave up."),
         ],
     },
@@ -306,11 +306,11 @@ SERVICES = [
         "icon": "snow",
         "hero": "Cold Air Is Not Optional in Florida",
         "intro": "Ten months a year, a broken A/C makes a car nearly undriveable here. {BIZ} "
-                 "diagnoses weak or warm air at your location — compressor, condenser fan, "
-                 "pressure faults, electrical — and gets cold air blowing again.",
+                 "diagnoses weak or warm air at your location. Compressor, condenser fan, "
+                 "pressure faults, electrical. And gets cold air blowing again.",
         "bodies": [
             "The most common story we hear is 'it blows cold on the highway but warm at red "
-            "lights.' That's rarely low refrigerant — it's usually a condenser fan that isn't "
+            "lights.' That's rarely low refrigerant. It's usually a condenser fan that isn't "
             "pulling air at idle. Just topping off refrigerant without diagnosis wastes money and "
             "can mask a leak until the compressor runs dry, which turns a small repair into the "
             "most expensive one on the menu.",
@@ -326,40 +326,40 @@ SERVICES = [
             "Blend door and airflow electrical faults traced",
         ],
         "signs": [
-            ("Cold on the highway, warm in traffic", "Almost always airflow through the condenser "
-             "— a fan that quit at idle. Common, and fixable at your curb."),
+            ("Cold on the highway, warm in traffic", "Almost always airflow through the condenser. "
+             "A fan that quit at idle. Common, and fixable at your curb."),
             ("Blows warm everywhere", "Compressor not engaging, a large leak, or an electrical "
              "fault. Pressures and a scan narrow it down fast."),
             ("A/C clicks on and off rapidly", "Usually low refrigerant short-cycling the "
-             "compressor. It's protecting itself — running it that way kills it."),
+             "compressor. It's protecting itself. Running it that way kills it."),
             ("Musty smell from the vents", "Moisture living in the evaporator box. Florida "
              "humidity makes this one practically a local tradition."),
         ],
         "faqs": [
             ("Can't I just buy a recharge can?",
              "The parts-store can with the gauge tops up pressure without telling you where the "
-             "refrigerant went. If there's a leak, you're renting cold air by the week — and "
+             "refrigerant went. If there's a leak, you're renting cold air by the week. And "
              "overfilling can damage the compressor. A proper diagnosis is cheaper than either."),
         ],
     },
     {
         "slug": "no-start-repair",
         "name": "Car Won't Start? On-Site Help",
-        "short": "Won't crank, cranks but won't fire, or died in traffic — we come to it.",
+        "short": "Won't crank, cranks but won't fire, or died in traffic. We come to it.",
         "icon": "key",
-        "hero": "The Car Won't Start. Don't Tow It — Diagnose It.",
+        "hero": "The Car Won't Start. Don't Tow It. Diagnose It.",
         "intro": "A no-start car has a fact going for it: the problem is right there where it's "
                  "parked. Before you pay for a tow to a shop that will look at it Thursday, {BIZ} "
-                 "comes to the car and finds out why it won't run — often fixing it on the spot.",
+                 "comes to the car and finds out why it won't run. Often fixing it on the spot.",
         "bodies": [
-            "No-starts sort into two families. 'Won't crank' — silence or clicking — points at "
+            "No-starts sort into two families. 'Won't crank', silence or clicking, points at "
             "the battery, cables, starter, or a security system doing its job too well. 'Cranks "
             "but won't fire' points at fuel, spark, or timing: a fuel pump that hums its last, an "
             "ignition fault, a crank sensor that quit in the heat. Each family has a short list, "
             "and testing walks the list in minutes.",
             "Most no-starts we see are fixed in a single visit for less than the price of the "
             "tow the owner almost paid. On the ones that need parts we don't carry, we secure "
-            "the car, get the part, and finish the job — you still never arrange a tow.",
+            "the car, get the part, and finish the job. You still never arrange a tow.",
         ],
         "bullets": [
             "Won't-crank and cranks-no-start diagnosis",
@@ -371,11 +371,11 @@ SERVICES = [
         "signs": None,
         "faqs": [
             ("The car died in a parking garage. Can you get to it?",
-             "Usually yes — we work in garages, apartment complexes, and office decks all the "
+             "Usually yes. We work in garages, apartment complexes, and office decks all the "
              "time. Tell us the clearance and level when you call."),
             ("Should I try jump-starting it first?",
              "If you have cables and a donor car handy, one careful try is fine. If it starts and "
-             "dies again, stop — repeated jumps can mask the real fault and hurt modern "
+             "dies again, stop. Repeated jumps can mask the real fault and hurt modern "
              "electronics. Call us and we'll test it properly."),
         ],
     },
@@ -386,8 +386,8 @@ SERVICES = [
         "icon": "clipboard",
         "hero": "Get the Car Inspected Before You Buy It",
         "intro": "Orlando's used-car market moves fast, and every seller's car 'runs great.' "
-                 "{BIZ} meets the car wherever it's being sold — dealer lot, driveway, parking "
-                 "lot handoff — and gives you an independent read before you commit.",
+                 "{BIZ} meets the car wherever it's being sold. Dealer lot, driveway, parking "
+                 "lot handoff. And gives you an independent read before you commit.",
         "bodies": [
             "We scan the computer for stored and recently-cleared codes, check for the flood "
             "damage that quietly follows Florida hurricanes into the used market, look at frame "
@@ -407,7 +407,7 @@ SERVICES = [
         "signs": None,
         "faqs": [
             ("The seller says I can't take it to a shop.",
-             "You don't have to — we come to the car. Most legitimate sellers are fine with an "
+             "You don't have to. We come to the car. Most legitimate sellers are fine with an "
              "inspection on their own lot. A seller who refuses any inspection is telling you "
              "something; believe them."),
             ("Is this worth it on a cheap car?",
@@ -419,113 +419,113 @@ SERVICES = [
 
 # ------------------------------------------------------------------ SERVICE DETAIL
 # Deep-content layer for service pages: how the visit runs, what moves the
-# price (factors only — no invented dollar amounts), and extra FAQs.
+# price (factors only. No invented dollar amounts), and extra FAQs.
 SERVICE_DETAIL = {
     "mobile-auto-repair": {
         "process": [
             ("You describe the problem", "Year, make, model, where the car sits, and what it's doing. Photos or a video of the noise help."),
             ("We quote the visit", "You know what showing up and diagnosing costs before we roll a wheel."),
-            ("Diagnose and confirm", "We test at the vehicle and show you what we found — the actual failed part, not a guess."),
+            ("Diagnose and confirm", "We test at the vehicle and show you what we found. The actual failed part, not a guess."),
             ("Approve and repair", "You green-light the written price. Most jobs finish the same visit; we clean up after ourselves."),
         ],
         "factors": [
-            "Parts cost for your specific vehicle — a Corolla alternator and a BMW alternator are different animals",
+            "Parts cost for your specific vehicle. A Corolla alternator and a BMW alternator are different animals",
             "Labor time the job book assigns (we quote from the same guides shops use)",
             "Whether the car is on a driveway, street, or inside a tight garage",
             "Same-day and evening slots versus a scheduled window",
         ],
         "extra_faqs": [
-            ("What can't be done mobile?", "Internal engine and transmission teardowns, alignment, and anything needing a lift or press. It's a short list — and we tell you upfront if your job is on it."),
+            ("What can't be done mobile?", "Internal engine and transmission teardowns, alignment, and anything needing a lift or press. It's a short list. And we tell you upfront if your job is on it."),
             ("Do you work in the rain?", "Orlando afternoons, we plan around. Pop-up storms can pause an outdoor job briefly; garages and carports keep us moving."),
             ("Is mobile repair more expensive than a shop?", "Usually comparable, and often cheaper once you count the tow you didn't pay for and the workday you didn't lose."),
         ],
     },
     "check-engine-light-diagnostics": {
         "process": [
-            ("Full scan", "Stored, pending, and history codes from every module — not just the engine."),
+            ("Full scan", "Stored, pending, and history codes from every module. Not just the engine."),
             ("Data review", "Live sensor data and freeze-frame from the moment the fault set."),
             ("Physical testing", "Voltage, pressure, smoke, and resistance tests on the suspect circuit."),
             ("Plain-English verdict", "What failed, what it costs, whether it's safe to drive meanwhile."),
         ],
         "factors": [
-            "How intermittent the fault is — a code that only sets on cold mornings takes longer to pin down",
+            "How intermittent the fault is. A code that only sets on cold mornings takes longer to pin down",
             "Whether the fault is electrical (tracing time) or mechanical (test time)",
             "Multiple stacked codes: one root cause can light up four codes, or four problems can each set one",
         ],
         "extra_faqs": [
-            ("Will you just tell me the code for free?", "The code alone is worth what the parts store charges for it: nothing. What you're paying for is knowing which part actually failed — that's the part that saves you money."),
+            ("Will you just tell me the code for free?", "The code alone is worth what the parts store charges for it: nothing. What you're paying for is knowing which part actually failed. That's the part that saves you money."),
             ("My mechanic replaced the part and the light came back.", "Classic symptom-chasing. We test the circuit behind the code, which is exactly how you avoid paying for the same repair twice."),
-            ("Can you do emissions-related diagnostics?", "Yes — evap leaks, O2 and cat-efficiency codes, all of it. Florida has no emissions test, but the light still hides new faults behind it."),
+            ("Can you do emissions-related diagnostics?", "Yes. Evap leaks, O2 and cat-efficiency codes, all of it. Florida has no emissions test, but the light still hides new faults behind it."),
         ],
     },
     "brake-repair": {
         "process": [
-            ("Measure first", "Pad thickness, rotor thickness and runout — you see the numbers."),
+            ("Measure first", "Pad thickness, rotor thickness and runout. You see the numbers."),
             ("Quote in writing", "Per-axle pricing with the parts named, approved before work starts."),
             ("Replace and torque", "New parts installed, hardware lubed, wheels torqued to spec."),
             ("Bed-in and road test", "We seat the new pads properly so they stop straight from day one."),
         ],
         "factors": [
-            "Pads only versus pads and rotors — caught early, rotors often survive",
+            "Pads only versus pads and rotors. Caught early, rotors often survive",
             "One axle or both",
             "Caliper condition: a seized slide pin or piston adds parts and time",
             "Electronic parking brakes on newer cars need a scan tool for rear service",
         ],
         "extra_faqs": [
-            ("How long do brake pads last in Orlando traffic?", "Stop-and-go on I-4 and 408 can halve pad life versus highway cruising. 25–40k miles is common here; we measure rather than guess."),
+            ("How long do brake pads last in Orlando traffic?", "Stop-and-go on I-4 and 408 can halve pad life versus highway cruising. 25 to 40k miles is common here; we measure rather than guess."),
             ("Ceramic or semi-metallic pads?", "For most Orlando daily drivers, quality ceramics: quieter, less dust, happy in heat. Towing or heavy loads can argue for semi-metallic. We'll recommend based on how you drive."),
             ("Do you resurface rotors?", "On-site we replace rather than machine. By the time a rotor needs cutting, a new one is usually close in price and better in result."),
         ],
     },
     "mobile-oil-change": {
         "process": [
-            ("Confirm the spec", "We look up your engine's exact oil grade and capacity — not a one-size drum."),
+            ("Confirm the spec", "We look up your engine's exact oil grade and capacity. Not a one-size drum."),
             ("Drain and fill", "Warm drain, new filter, correct-torque plug with a fresh washer where specified."),
             ("The once-over", "Fluids, belt, visible leaks, air filter, tires, battery voltage."),
             ("Reset and recycle", "Maintenance light reset; old oil and filter leave with us."),
         ],
         "factors": [
-            "Oil type — full synthetic costs more than blend, and European specs more again",
-            "Capacity: a 4-cylinder takes 4–5 quarts, a diesel truck can take 10+",
+            "Oil type. Full synthetic costs more than blend, and European specs more again",
+            "Capacity: a 4-cylinder takes 4 to 5 quarts, a diesel truck can take 10+",
             "Cartridge versus spin-on filters on some engines",
         ],
         "extra_faqs": [
             ("Synthetic or conventional?", "If your car was built in the last decade, it almost certainly calls for synthetic or a blend, and Florida heat is exactly the condition synthetic exists for. We follow the manual, not the upsell."),
-            ("Can you service my fleet at the office?", "Yes — several vehicles in one lot in one visit is the most efficient thing we do. Ask about scheduling a recurring round."),
+            ("Can you service my fleet at the office?", "Yes. Several vehicles in one lot in one visit is the most efficient thing we do. Ask about scheduling a recurring round."),
         ],
     },
     "battery-replacement": {
         "process": [
-            ("Load test", "The battery under real load, plus resting and cranking voltage — you see the readings."),
+            ("Load test", "The battery under real load, plus resting and cranking voltage. You see the readings."),
             ("Charging test", "Alternator output and drain check, so the new battery doesn't die the same death."),
             ("Install correctly", "Right group size, terminals cleaned, hold-down secured, settings preserved."),
             ("Register and recycle", "Battery registration where the vehicle requires it; the old core leaves with us."),
         ],
         "factors": [
-            "Group size and chemistry — AGM batteries (start-stop cars) cost more than flooded",
+            "Group size and chemistry. AGM batteries (start-stop cars) cost more than flooded",
             "Battery location: trunk, under-seat, and fender-well batteries add labor",
             "Registration requirement on many newer European and start-stop vehicles",
         ],
         "extra_faqs": [
             ("Why did my battery die with no warning?", "Heat does the damage quietly all summer; the failure just picks its moment. Florida batteries often skip the slow-cranking warning phase entirely."),
-            ("Is a parts-store free install good enough?", "For an easy under-hood battery on an older car, sometimes. But no load test, no drain test, no registration — which is how people buy three batteries for one alternator problem."),
+            ("Is a parts-store free install good enough?", "For an easy under-hood battery on an older car, sometimes. But no load test, no drain test, no registration. Which is how people buy three batteries for one alternator problem."),
         ],
     },
     "starter-alternator-repair": {
         "process": [
-            ("Circuit test", "Battery, cables, grounds, relay, and the unit itself — in that order."),
+            ("Circuit test", "Battery, cables, grounds, relay, and the unit itself. In that order."),
             ("Confirm the failure", "Voltage-drop and output tests under load, not parts-cannon guessing."),
             ("Replace on-site", "Even buried starters come out in a driveway with the right tools."),
             ("Verify the fix", "Charging output and crank speed rechecked before we leave."),
         ],
         "factors": [
             "Access: some starters are two bolts, some hide under intake manifolds",
-            "New versus quality reman units — we quote both when it makes sense",
-            "Belt and tensioner condition — smart to renew while the alternator is out",
+            "New versus quality reman units. We quote both when it makes sense",
+            "Belt and tensioner condition. Smart to renew while the alternator is out",
         ],
         "extra_faqs": [
-            ("The dash flickers and the car whines. Battery or alternator?", "Whine that rises with RPM plus flickering points at the alternator. But the test takes minutes and removes the guess — that's the whole point."),
-            ("Can you replace a starter in a parking garage?", "Usually yes — we work in garages constantly. Very low clearances are the only real obstacle; tell us the height when you call."),
+            ("The dash flickers and the car whines. Battery or alternator?", "Whine that rises with RPM plus flickering points at the alternator. But the test takes minutes and removes the guess. That's the whole point."),
+            ("Can you replace a starter in a parking garage?", "Usually yes. We work in garages constantly. Very low clearances are the only real obstacle; tell us the height when you call."),
         ],
     },
     "ac-repair": {
@@ -537,46 +537,46 @@ SERVICE_DETAIL = {
         ],
         "factors": [
             "What failed: a fan or pressure switch versus a compressor are very different jobs",
-            "Refrigerant type — newer 1234yf systems cost more to service than R-134a",
+            "Refrigerant type. Newer 1234yf systems cost more to service than R-134a",
             "How long it ran low: compressors running starved of oil shorten their own lives",
         ],
         "extra_faqs": [
-            ("How cold should my A/C actually get?", "Roughly 38–48°F at the center vent on max, engine warm, doors closed — even in an Orlando summer. Mid-50s and up means something's wrong."),
+            ("How cold should my A/C actually get?", "Roughly 38 to 48°F at the center vent on max, engine warm, doors closed. Even in an Orlando summer. Mid-50s and up means something's wrong."),
             ("Why does it smell musty only at startup?", "Condensation sitting in the evaporator box grows things overnight. A cleaning treatment fixes it; running the fan without A/C the last minute of your drive helps prevent it."),
         ],
     },
     "no-start-repair": {
         "process": [
-            ("Triage on the phone", "Won't crank versus cranks-won't-fire sends us down different checklists — and tells us what to load."),
+            ("Triage on the phone", "Won't crank versus cranks-won't-fire sends us down different checklists. And tells us what to load."),
             ("Test at the car", "Battery, starter circuit, fuel pressure, spark, and security system as the symptoms dictate."),
-            ("Fix on the spot", "Most no-starts are batteries, starters, cables, or relays — all same-visit repairs."),
+            ("Fix on the spot", "Most no-starts are batteries, starters, cables, or relays. All same-visit repairs."),
             ("Prove it", "Multiple restart cycles before we leave, so it starts again tomorrow."),
         ],
         "factors": [
-            "Which family the fault is in — crank faults are usually cheaper than fuel-system faults",
+            "Which family the fault is in. Crank faults are usually cheaper than fuel-system faults",
             "Parts availability for your vehicle same-day",
             "Location access: garages and aprons are easy; a busy roadside needs a safe setup",
         ],
         "extra_faqs": [
-            ("It started fine this morning and now nothing. What gives?", "Sudden total failure with no warning is classically a battery terminal, a main cable, a relay, or a security fault — all quick finds with a meter."),
+            ("It started fine this morning and now nothing. What gives?", "Sudden total failure with no warning is classically a battery terminal, a main cable, a relay, or a security fault. All quick finds with a meter."),
             ("Is it cheaper than a tow?", "A tow costs money and gets you a car that's still broken, now in a queue. Our visit usually costs in the same range and frequently ends with the car running."),
         ],
     },
     "pre-purchase-inspection": {
         "process": [
-            ("Meet the car anywhere", "Dealer lot, seller's driveway, parking-lot handoff — we come to the sale."),
+            ("Meet the car anywhere", "Dealer lot, seller's driveway, parking-lot handoff. We come to the sale."),
             ("Scan deep", "Current codes plus history and readiness monitors, which expose recently-cleared codes."),
             ("Inspect hands-on", "Flood tells, paint depth and panel gaps, brakes, tires, suspension, fluids, battery."),
             ("Report before you pay", "A straight verdict and an itemized list you can negotiate with, same day."),
         ],
         "factors": [
-            "Vehicle age and complexity — a 3-year-old lease return inspects faster than a 15-year-old project",
+            "Vehicle age and complexity. A 3-year-old lease return inspects faster than a 15-year-old project",
             "Whether a road test is permitted by the seller",
             "Add-ons like a compression test on higher-mileage engines",
         ],
         "extra_faqs": [
-            ("What are the flood-damage red flags in Florida?", "Silt in seat tracks and under carpet, corrosion on connector pins above the floor line, fogged lamps, mismatched carpet, and a musty smell fighting an air freshener. After every hurricane season, flood cars flow into the used market — some with clean titles."),
-            ("The car has a fresh oil change sticker and a shiny engine bay. Good sign?", "Sometimes it's care; sometimes it's staging. A degreased engine hides leaks for exactly a few days — one more reason an inspection beats a glance."),
+            ("What are the flood-damage red flags in Florida?", "Silt in seat tracks and under carpet, corrosion on connector pins above the floor line, fogged lamps, mismatched carpet, and a musty smell fighting an air freshener. After every hurricane season, flood cars flow into the used market. Some with clean titles."),
+            ("The car has a fresh oil change sticker and a shiny engine bay. Good sign?", "Sometimes it's care; sometimes it's staging. A degreased engine hides leaks for exactly a few days. One more reason an inspection beats a glance."),
         ],
     },
 }
@@ -587,7 +587,7 @@ CITIES = [
     ("orlando", "Orlando", "Orange County", [
         "From downtown high-rises to Lake Nona, from College Park bungalows to apartment "
         "complexes off Semoran, most of Orlando has one thing in common: nowhere convenient to "
-        "leave a car for three days. We fix it where it's parked — home, office, or the spot on "
+        "leave a car for three days. We fix it where it's parked. Home, office, or the spot on "
         "the shoulder where it quit.",
         "Our mechanics work around the rhythms of this city, with hours built for people who "
         "don't clock out at five. Seven days a week, we come to you.",
@@ -595,13 +595,13 @@ CITIES = [
     ("winter-park", "Winter Park", "Orange County", [
         "Winter Park driveways see everything from daily commuters to weekend classics, and "
         "none of them enjoys the trip to a service bay. We bring diagnostics, brakes, batteries, "
-        "and oil service to your address — Park Avenue side streets, Hannibal Square, or out by "
+        "and oil service to your address. Park Avenue side streets, Hannibal Square, or out by "
         "Cady Way.",
         "Squeezing a shop visit between work and everything else is exactly the errand we "
         "exist to delete. Book a window, hand us the key, get on with your day.",
     ]),
     ("kissimmee", "Kissimmee", "Osceola County", [
-        "Kissimmee runs on cars — commutes up the 417, shift work along 192, school runs, "
+        "Kissimmee runs on cars. Commutes up the 417, shift work along 192, school runs, "
         "airport trips. When one of them won't start or the brakes start talking, losing it to a "
         "shop for days isn't an option. We come to your driveway or workplace and fix it there.",
         "We serve the whole Kissimmee area, from downtown to Buenaventura Lakes to the resort "
@@ -609,29 +609,29 @@ CITIES = [
     ]),
     ("sanford", "Sanford", "Seminole County", [
         "From historic downtown Sanford to the subdivisions off Rinehart Road, we bring the "
-        "repair shop to you. Diagnostics, brakes, batteries, starters, A/C — done where the car "
+        "repair shop to you. Diagnostics, brakes, batteries, starters, A/C. Done where the car "
         "sits, with the price agreed before the work starts.",
         "A car that won't crank in your driveway can't drive itself to a shop, and a tow down "
         "17-92 isn't cheap. Skip both. Call us and we'll meet the car where it is.",
     ]),
     ("apopka", "Apopka", "Orange County", [
-        "Apopka's spread out enough that being without a car isn't an inconvenience — it's a "
+        "Apopka's spread out enough that being without a car isn't an inconvenience. It's a "
         "grounding. Instead of surrendering yours to a waiting room, have the mechanic come to "
         "your address, from downtown to Errol Estates to out toward Rock Springs.",
-        "We handle the everyday jobs — oil, brakes, batteries — and the day-ruiners like "
+        "We handle the everyday jobs like oil, brakes, and batteries, and the day-ruiners like "
         "no-starts and check engine lights, on your schedule, at your curb.",
     ]),
     ("altamonte-springs", "Altamonte Springs", "Seminole County", [
         "Between the 414, I-4, and 436, Altamonte drivers spend enough time around cars without "
         "adding a service-bay waiting room to the week. We come to your apartment complex, "
         "office lot, or driveway and do the work there.",
-        "Complex parking garages don't scare us — we work in them all the time. Tell us where "
+        "Complex parking garages don't scare us. We work in them all the time. Tell us where "
         "the car is and what it's doing, and we'll bring the shop to it.",
     ]),
     ("winter-garden", "Winter Garden", "Orange County", [
         "Winter Garden has grown fast, but the errand of dropping a car at a shop hasn't gotten "
         "any faster. We bring certified mechanics to Stoneybrook West, the downtown core, and "
-        "everything off the 429 — brakes, diagnostics, batteries, oil, A/C.",
+        "everything off the 429. Brakes, diagnostics, batteries, oil, A/C.",
         "You approve the price before we start, watch the work if you like, and keep your whole "
         "day. That's the entire pitch.",
     ]),
@@ -643,14 +643,14 @@ CITIES = [
         "week with evening hours that fit real schedules.",
     ]),
     ("oviedo", "Oviedo", "Seminole County", [
-        "Oviedo families tend to run tight logistics — school, practice, UCF, work across town. "
+        "Oviedo families tend to run tight logistics. School, practice, UCF, work across town. "
         "A car in the shop breaks the whole schedule. A mechanic in the driveway doesn't.",
         "We bring diagnostics, brake work, batteries, and maintenance to your address, on a "
         "booked window, with the price settled before a tool comes out.",
     ]),
     ("lake-mary", "Lake Mary", "Seminole County", [
-        "Lake Mary's office parks are full of cars that sit for eight predictable hours a day — "
-        "which happens to be the perfect service window. We do repairs and maintenance in "
+        "Lake Mary's office parks are full of cars that sit for eight predictable hours a day. "
+        "Which happens to be the perfect service window. We do repairs and maintenance in "
         "workplace lots all the time; you come out to a car that's ready to go.",
         "At home in Heathrow or Timacuan, same deal: the shop comes to the driveway, seven days "
         "a week.",
@@ -658,20 +658,20 @@ CITIES = [
     ("windermere", "Windermere", "Orange County", [
         "Windermere driveways are a better place for your car than any waiting room. We come to "
         "you for everything from routine maintenance to diagnostics and brake work, and we treat "
-        "the vehicle — and the driveway — with care.",
+        "the vehicle and the driveway with care.",
         "Booked windows, straight pricing, certified mechanics. The errand disappears; the car "
         "gets fixed.",
     ]),
     ("dr-phillips", "Dr. Phillips", "Orange County", [
         "Between Restaurant Row and the parks, Dr. Phillips traffic gives brakes and batteries "
         "a workout. When yours start complaining, we come to your home or office and fix them "
-        "there — no tow, no shuttle, no lost day.",
+        "there. No tow, no shuttle, no lost day.",
         "We work Sand Lake to Turkey Lake and everything between, seven days a week.",
     ]),
     ("st-cloud", "St. Cloud", "Osceola County", [
         "St. Cloud drivers put in real miles, and real miles wear real parts. Rather than "
-        "hauling the car up the Turnpike to a shop, have the mechanic come down to you — "
-        "brakes, batteries, starters, oil, and no-start calls, done at your address.",
+        "hauling the car up the Turnpike to a shop, have the mechanic come down to you. "
+        "Brakes, batteries, starters, oil, and no-start calls, done at your address.",
         "We cover St. Cloud and the surrounding Osceola communities on the same seven-day "
         "schedule as the rest of the metro.",
     ]),
@@ -679,7 +679,7 @@ CITIES = [
         "Winter Springs is quiet, which is exactly how your car repair should be: a service "
         "vehicle in the driveway for an hour or two, not a missing car for three days. We bring "
         "the tools and parts to you.",
-        "From Tuskawilla to the 434 corridor, book a window and we'll be there — evenings and "
+        "From Tuskawilla to the 434 corridor, book a window and we'll be there. Evenings and "
         "Sundays included.",
     ]),
 ]
@@ -687,12 +687,12 @@ CITIES = [
 # ------------------------------------------------------------------ FAQ
 FAQS = [
     ("Do you really come to me?",
-     "Yes — that's the whole business. Home, office, apartment complex, parking garage, or "
+     "Yes. That's the whole business. Home, office, apartment complex, parking garage, or "
      "roadside, anywhere in the Orlando metro. You never arrange a tow or sit in a waiting room."),
     ("What areas do you cover?",
      "Orlando and the surrounding area, including Winter Park, Kissimmee, Sanford, Apopka, "
-     "Altamonte Springs, Winter Garden, Ocoee, Oviedo, Lake Mary, and more. Not sure? Call — "
-     "if we can get to you, we will."),
+     "Altamonte Springs, Winter Garden, Ocoee, Oviedo, Lake Mary, and more. Not sure? Call. "
+     "If we can get to you, we will."),
     ("What are your hours?",
      "Monday through Saturday 9am to 10pm, and Sunday 9am to 6pm. Evening appointments are "
      "normal for us, not a favor."),
@@ -701,7 +701,7 @@ FAQS = [
      "starts. No surprise line items when the job is done."),
     ("What if the repair can't be done on-site?",
      "A small number of jobs genuinely need a lift or specialty equipment. When that's the "
-     "case, we tell you straight, explain what it needs, and you decide — we don't start work "
+     "case, we tell you straight, explain what it needs, and you decide. We don't start work "
      "we can't finish."),
     ("How do I book?",
      f"Call or text {PHONE_DISP}, use the booking form, or book a slot directly online. "
@@ -745,7 +745,7 @@ REVIEWS = [
 
 # ------------------------------------------------------------------ MAP
 # Approximate city-center coordinates for the service map. Markers are
-# plotted with deterministic offsets around these centers — illustrative
+# plotted with deterministic offsets around these centers. Illustrative
 # "jobs we do here" pins, NOT real customer addresses (privacy).
 CITY_COORDS = {
     "orlando": (28.5383, -81.3792), "winter-park": (28.6000, -81.3392),
@@ -782,15 +782,15 @@ def map_markers():
 # answer (bite) and a skimmable summary (snack) before the full content (meal).
 SERVICE_BITE = {
     "mobile-auto-repair": (
-        "Most repairs a shop does in a bay, we do in your driveway — <b>diagnosed, quoted, "
+        "Most repairs a shop does in a bay, we do in your driveway. <b>Diagnosed, quoted, "
         "and usually finished in one visit.</b>",
         ["We come to homes, offices, and roadsides metro-wide",
          "Written price approved before work starts",
          "Most repairs done in a single visit",
-         "Open 7 days, evenings Mon–Sat"]),
+         "Open 7 days, evenings Mon to Sat"]),
     "check-engine-light-diagnostics": (
         "A trouble code names a circuit, not a part. <b>We test the circuit and replace only "
-        "what actually failed</b> — so you don't pay twice.",
+        "what actually failed</b>. So you don't pay twice.",
         ["Flashing light? Stop driving and call",
          "Steady light? Usually safe, still needs diagnosis",
          "Full scan + live data + physical testing",
@@ -798,12 +798,12 @@ SERVICE_BITE = {
     "brake-repair": (
         "A squeal is a cheap fix; a grind is an expensive one. <b>We measure at your curb and "
         "show you the numbers</b> before a wheel comes off.",
-        ["Pads, rotors, calipers, fluid — done on-site",
+        ["Pads, rotors, calipers, fluid. Done on-site",
          "Measurements shown, old parts in your hand",
-         "Orlando stop-and-go wears pads in 25–40k miles",
+         "Orlando stop-and-go wears pads in 25 to 40k miles",
          "Per-axle written quote before work starts"]),
     "mobile-oil-change": (
-        "The exact oil your engine specifies — <b>changed at your home or office</b>, with a "
+        "The exact oil your engine specifies. <b>Changed at your home or office</b>, with a "
         "multi-point check and the used oil hauled away.",
         ["Conventional, blend, or full synthetic per the manual",
          "New filter, correct-torque drain plug",
@@ -811,14 +811,14 @@ SERVICE_BITE = {
          "Fleet rounds at offices welcome"]),
     "battery-replacement": (
         "Florida heat kills batteries in three to four years. <b>We test the battery, "
-        "alternator, and drain first</b> — then replace on the spot if it's truly the battery.",
+        "alternator, and drain first</b>. Then replace on the spot if it's truly the battery.",
         ["Load test with readings you can see",
          "Charging system and drain checked too",
          "Correct group size installed, settings preserved",
          "Old battery recycled for you"]),
     "starter-alternator-repair": (
         "A car that won't crank can't drive to a shop. <b>We test the whole circuit and "
-        "replace the failed unit where the car sits</b> — no tow involved.",
+        "replace the failed unit where the car sits</b>. No tow involved.",
         ["Battery, cables, relay, and unit tested in order",
          "Starters replaced in driveways and garages",
          "Alternator output verified under real load",
@@ -848,22 +848,22 @@ SERVICE_BITE = {
 
 BLOG_BITE = {
     "florida-heat-car-battery": (
-        "Heat — not cold — is what kills car batteries, and Orlando summers cut battery life "
+        "Heat, not cold, is what kills car batteries, and Orlando summers cut battery life "
         "to <b>three or four years.</b>",
         ["Heat ages the battery all summer; failure just picks its moment",
          "Florida batteries often die with no slow-crank warning",
          "Past year three, get a free load test annually",
          "Repeated jumps? Test battery, alternator, AND drain"]),
     "mobile-mechanic-vs-tow-to-shop": (
-        "For a car that won't start, <b>diagnosing it where it sits usually beats towing it</b> "
-        "— on cost, on time, and on stress.",
+        "For a car that won't start, <b>diagnosing it where it sits usually beats towing it</b>. "
+        "On cost, on time, and on stress.",
         ["Tow route = tow fee + shop diagnostic + days in a queue",
          "Most no-starts are same-visit fixes at your address",
-         "Lift-only jobs exist — a good mobile mechanic says so upfront",
+         "Lift-only jobs exist. A good mobile mechanic says so upfront",
          "Worst case: you tow once, to the right place, informed"]),
     "check-engine-light-what-to-do": (
-        "<b>Steady light: drive gently, diagnose soon. Flashing light: pull over now</b> — "
-        "you're cooking the catalytic converter.",
+        "<b>Steady light: drive gently, diagnose soon. Flashing light: pull over now</b>. "
+        "You're cooking the catalytic converter.",
         ["A code names a circuit, not a part",
          "Free code reads sell parts, not answers",
          "Real diagnosis = live data + physical testing",
@@ -874,16 +874,16 @@ BLOG_BITE = {
         ["Highway speed cools the condenser for free; idle needs the fan",
          "Recharge cans mask leaks and can overcharge the system",
          "The compressor pays for every shortcut",
-         "Proper diagnosis: pressures, fans, leak check — then refrigerant"]),
+         "Proper diagnosis: pressures, fans, leak check. Then refrigerant"]),
     "used-car-flood-damage-orlando": (
-        "After every storm season, flood cars enter Florida's used market — <b>some with "
+        "After every storm season, flood cars enter Florida's used market. <b>Some with "
         "clean titles.</b> The car tells the truth even when the paperwork doesn't.",
         ["Check seat tracks and under-carpet for silt",
          "Corroded connector pins above the floor line = red flag",
          "Flooded electronics fail for years, one module at a time",
          "A seller who refuses an inspection has answered your question"]),
     "i4-traffic-brake-wear": (
-        "Brakes wear per stop, not per mile — <b>I-4 commuters wear pads in half the "
+        "Brakes wear per stop, not per mile. <b>I-4 commuters wear pads in half the "
         "'normal' mileage.</b>",
         ["Squeal = pads due, rotors probably still fine",
          "Grind = rotors being damaged at every stop",
@@ -895,33 +895,32 @@ BLOG_BITE = {
 BLOG = [
     {
         "slug": "florida-heat-car-battery",
-        "title": "Why Florida Heat — Not Cold — Kills Your Car Battery",
+        "title": "Why Florida Heat, Not Cold, Kills Your Car Battery",
         "desc": "Orlando batteries die young, and summer is the murderer. How heat wrecks a "
                 "battery, the warning signs, and when to test instead of guess.",
         "date": "2026-08-10", "tag": "Batteries",
         "body": """
 <p>Up north, everyone blames winter for dead batteries. In Orlando, the killer works the
-opposite shift. Heat is what actually destroys a car battery — cold just delivers the news.</p>
+opposite shift. Heat is what actually destroys a car battery. Cold just delivers the news.</p>
 <h2>What heat does inside the battery</h2>
 <p>A car battery is a box of chemistry, and chemistry speeds up with temperature. At Florida
-underhood temperatures, the reactions that age a battery — plate corrosion and water loss —
-run at double speed or worse. Every July cooking session permanently shaves capacity. The
+underhood temperatures, the reactions that age a battery, plate corrosion and water loss, run at double speed or worse. Every July cooking session permanently shaves capacity. The
 battery still starts the car all summer, because a hot battery cranks easily. Then the first
 cool snap or a week of short trips asks it for capacity it no longer has, and you get the
 click.</p>
 <h2>Why Orlando batteries skip the warning phase</h2>
-<p>The classic warning — slow, dragging cranks — often never happens here, because warm
+<p>The classic warning of slow, dragging cranks often never happens here, because warm
 batteries crank briskly right up until they can't. That's why so many Central Florida
 batteries seem to die "suddenly." They didn't. They died over two summers, quietly.</p>
 <h2>The three-to-four-year rule</h2>
 <p>National battery-life averages run four to five years. Florida trims that to roughly three
 to four. If your battery is past its third birthday, a free load test once a year is cheap
-insurance — it takes minutes and tells you the truth a jump-start hides.</p>
+insurance. It takes minutes and tells you the truth a jump-start hides.</p>
 <h2>Before you buy a battery, test the system</h2>
 <p>A car that keeps needing jumps has one of three problems: a battery that can't hold
 charge, an alternator that isn't refilling it, or a parasitic drain emptying it overnight. A
 new battery only fixes the first one. We test all three at your driveway before selling
-anything — that's the whole point of our <a href="/services/battery-replacement/">mobile
+anything. That's the whole point of our <a href="/services/battery-replacement/">mobile
 battery service</a>, and it's why our customers don't buy three batteries for one alternator
 problem.</p>
 <p>Battery acting suspicious? Call {PHONE} and we'll test it where it sits.</p>""",
@@ -934,27 +933,25 @@ problem.</p>
         "date": "2026-07-28", "tag": "Guides",
         "body": """
 <p>Your car won't start in the driveway. The reflex is: call a tow, send it to a shop. Before
-you do, run the actual numbers — because the tow route carries costs nobody mentions.</p>
+you do, run the actual numbers. Because the tow route carries costs nobody mentions.</p>
 <h2>The tow route, itemized</h2>
-<p>First the tow itself — a local hook in Orlando typically runs well north of a hundred
+<p>First the tow itself. A local hook in Orlando typically runs well north of a hundred
 dollars once mileage is counted. Then the shop's diagnostic fee. Then the queue: your car
 takes its place behind everyone else's, which is often measured in days. Add the rides
-you'll need while it sits, or the rental. And at the end, the repair bill itself — the one
+you'll need while it sits, or the rental. And at the end, the repair bill itself. The one
 part both routes share.</p>
 <h2>The mobile route</h2>
 <p>A mobile mechanic drives to the problem. One visit fee covers the trip and the diagnosis,
-and the most common no-start causes — <a href="/services/battery-replacement/">batteries</a>,
-<a href="/services/starter-alternator-repair/">starters, alternators</a>, cables, relays —
-are fixed on the spot, usually inside a couple of hours. The car never leaves your driveway,
+and the most common no-start causes, <a href="/services/battery-replacement/">batteries</a>,
+<a href="/services/starter-alternator-repair/">starters, alternators</a>, cables, relays. Are fixed on the spot, usually inside a couple of hours. The car never leaves your driveway,
 and you never leave your day.</p>
 <h2>When the shop route wins</h2>
-<p>Honesty matters here: some jobs genuinely need a lift, a press, or a machine shop —
-internal transmission work, clutch jobs, alignment. If yours is one, a good mobile mechanic
+<p>Honesty matters here: some jobs genuinely need a lift, a press, or a machine shop. Internal transmission work, clutch jobs, alignment. If yours is one, a good mobile mechanic
 says so at the diagnosis stage, and now you're towing the car <em>once, to the right place,
-knowing what's wrong</em> — which is still a better position than towing it blind.</p>
+knowing what's wrong</em>. Which is still a better position than towing it blind.</p>
 <h2>The rule of thumb</h2>
 <p>If the car won't crank, won't fire, or died where it's parked, have it diagnosed where it
-sits. Worst case you pay for an answer. Best case — which is most cases — the car is running
+sits. Worst case you pay for an answer. Best case, which is most cases, the car is running
 by lunch. That's the service: <a href="/services/no-start-repair/">no-start help across the
 Orlando metro</a>, seven days a week.</p>""",
     },
@@ -971,29 +968,28 @@ refuses to tell you is how bad. Here's how to read the situation like a mechanic
 <p>A <strong>steady light</strong> means a fault is logged but the engine isn't in immediate
 danger. Drive gently, get it diagnosed soon. A <strong>flashing light</strong> means an
 active misfire is pumping raw fuel into the catalytic converter, which is being cooked as
-you drive. Pull over, shut it down, and call — a converter costs many times what a misfire
+you drive. Pull over, shut it down, and call. A converter costs many times what a misfire
 costs.</p>
 <h2>The free code read trap</h2>
 <p>The parts store will read your code for free and sell you the part the code mentions.
 Here's the problem: a code names a <em>circuit</em>, not a <em>part</em>. A lean code can be
 a vacuum leak, a tired fuel pump, a dirty airflow sensor, or a failing O2 sensor. Guess
-wrong and you've spent real money to keep the light on. The store isn't being dishonest —
-reading a code just isn't diagnosis.</p>
+wrong and you've spent real money to keep the light on. The store isn't being dishonest. Reading a code just isn't diagnosis.</p>
 <h2>What actual diagnosis looks like</h2>
-<p>Live data. Freeze-frame from the moment the fault set. Then physical tests — smoke,
-voltage, pressure — on the suspect circuit until the failed component is proven. That's what
+<p>Live data. Freeze-frame from the moment the fault set. Then physical tests. Smoke,
+voltage, pressure. On the suspect circuit until the failed component is proven. That's what
 our <a href="/services/check-engine-light-diagnostics/">mobile diagnostic visit</a> does in
 your driveway, and it's why the part we replace is the part that was broken.</p>
 <h2>"But the light went off by itself"</h2>
 <p>The fault is still stored, and it will vote again. Intermittent faults are the cheapest
-ones to fix early and the most expensive ones to ignore — they choose their moment, and the
+ones to fix early and the most expensive ones to ignore. They choose their moment, and the
 moment is never good. We can read history codes even after the light clears.</p>
-<p>Light on right now? Call {PHONE} — we come to you anywhere in the Orlando area.</p>""",
+<p>Light on right now? Call {PHONE}. We come to you anywhere in the Orlando area.</p>""",
     },
     {
         "slug": "car-ac-warm-at-idle",
         "title": "Car A/C Cold on the Highway but Warm at Red Lights? Classic Orlando Problem",
-        "desc": "The stoplight-warm A/C almost always has one cause — and it isn't low "
+        "desc": "The stoplight-warm A/C almost always has one cause. And it isn't low "
                 "refrigerant. What's actually happening and how it gets fixed.",
         "date": "2026-06-30", "tag": "A/C",
         "body": """
@@ -1002,20 +998,20 @@ warmer sitting at a light on Colonial. Most people assume it needs "a recharge."
 it doesn't.</p>
 <h2>Why speed changes your A/C</h2>
 <p>Your A/C dumps heat through the condenser at the front of the car. At highway speed,
-airflow through it is free — the car's motion does the work. Stopped at a light, that
+airflow through it is free. The car's motion does the work. Stopped at a light, that
 airflow has to come from a fan. If the condenser fan is weak, slow, or dead, the system
 can't shed heat at idle, pressures climb, and cold air fades exactly when the car stops
 moving.</p>
 <h2>Why the recharge-can shortcut backfires</h2>
 <p>A can of refrigerant with a gauge tops up pressure without asking where the refrigerant
 went. If there's a leak, you're renting cold air by the week. If the real fault is the fan,
-you've added refrigerant a system that wasn't low — and overcharging raises pressures that
+you've added refrigerant a system that wasn't low. And overcharging raises pressures that
 are already too high at idle. Either way the compressor absorbs the abuse, and the
 compressor is the most expensive part in the system.</p>
 <h2>What a real diagnosis checks</h2>
 <p>Pressures on both sides, compressor engagement, fan operation at idle, and leak detection
 before anything is added. Our <a href="/services/ac-repair/">mobile A/C service</a> runs
-that whole checklist at your home or office — and in a town where A/C is life support ten
+that whole checklist at your home or office. And in a town where A/C is life support ten
 months a year, it's one of our most-booked visits.</p>
 <p>One more Florida special: a musty smell at startup is condensation living in the
 evaporator box. It's fixable, and running the fan without A/C for the last minute of your
@@ -1025,30 +1021,29 @@ drive helps keep it from coming back.</p>""",
         "slug": "used-car-flood-damage-orlando",
         "title": "Buying a Used Car in Orlando? Check for Flood Damage First",
         "desc": "After every hurricane season, flooded cars quietly enter the Florida used "
-                "market — some with clean titles. The tells, and how an inspection protects you.",
+                "market. Some with clean titles. The tells, and how an inspection protects you.",
         "date": "2026-06-16", "tag": "Buying",
         "body": """
 <p>Florida's used-car market has a seasonal rhythm nobody advertises: a few months after
-every major storm, flood-damaged cars start appearing on lots and marketplace listings —
-dried out, detailed, and priced to move. Some carry salvage titles. The dangerous ones
+every major storm, flood-damaged cars start appearing on lots and marketplace listings. Dried out, detailed, and priced to move. Some carry salvage titles. The dangerous ones
 don't.</p>
 <h2>Why clean titles lie</h2>
-<p>Title washing — moving a car through states with looser branding rules — can launder a
+<p>Title washing, moving a car through states with looser branding rules, can launder a
 flood history off the paperwork. Insurance databases catch some of it. The car itself,
 though, always tells the truth if you know where to look.</p>
 <h2>The tells</h2>
 <p>Silt or fine sand in the seat tracks and under the carpet. Corrosion on electrical
-connector pins above the floor line — pins never get wet in normal life. Foggy headlamps or
+connector pins above the floor line. Pins never get wet in normal life. Foggy headlamps or
 a water line inside them. Brand-new carpet in an old car. Rust on seat springs and under-dash
 brackets. And the classic: a musty smell losing a fight with a powerful air freshener.</p>
 <h2>Why flood cars are a special kind of bad</h2>
 <p>A flooded engine can be cleaned. Flooded <em>electronics</em> fail one connector at a
-time for years — a window here, a sensor there, an airbag module eventually. You don't buy
+time for years. A window here, a sensor there, an airbag module eventually. You don't buy
 one repair bill, you subscribe to them.</p>
 <h2>The hundred-dollar-class defense</h2>
 <p>A <a href="/services/pre-purchase-inspection/">pre-purchase inspection</a> checks the
 flood tells, scans for stored and recently-cleared codes, measures the brakes, and road
-tests the car — before the money moves. We meet the car wherever it's being sold, anywhere
+tests the car. Before the money moves. We meet the car wherever it's being sold, anywhere
 in the Orlando area. A seller who won't allow an inspection has answered your question for
 free.</p>""",
     },
@@ -1065,21 +1060,21 @@ free.</p>""",
 <p>Brakes wear per <em>stop</em>, not per mile. A highway mile costs your pads almost
 nothing; a crawling mile through the Ultimate interchange can involve a dozen brake
 applications. Commuters doing I-4, the 408, or the tourist-corridor crawl routinely wear
-pads in 25–40k miles — half of what the manual implies. Rideshare and delivery drivers,
+pads in 25 to 40k miles. Half of what the manual implies. Rideshare and delivery drivers,
 faster still.</p>
 <h2>The sounds, ranked by expense</h2>
-<p><strong>Squeal at low speed</strong> — the wear indicator. This is the cheap warning:
-pads are due, rotors are probably fine. <strong>Grinding</strong> — the pad is gone and
+<p><strong>Squeal at low speed</strong>. The wear indicator. This is the cheap warning:
+pads are due, rotors are probably fine. <strong>Grinding</strong>. The pad is gone and
 its steel backing is machining your rotor with every stop. The bill just grew.
-<strong>Shudder from highway speed</strong> — uneven or warped rotors; stopping distances
-are growing. <strong>A soft pedal that sinks</strong> — hydraulics. Stop driving and call.</p>
+<strong>Shudder from highway speed</strong>. Uneven or warped rotors; stopping distances
+are growing. <strong>A soft pedal that sinks</strong>. Hydraulics. Stop driving and call.</p>
 <h2>The cheap-to-fix window</h2>
 <p>Almost every expensive brake job we do was a cheap brake job a month earlier. Acting on
 the squeal instead of the grind is routinely a three-figure difference. This is also the
 easiest repair to have done at work: we do <a href="/services/brake-repair/">complete brake
-jobs</a> in office parking lots all week — measurements shown, price approved first, old
+jobs</a> in office parking lots all week. Measurements shown, price approved first, old
 parts in your hand.</p>
-<p>Hearing something at stops? Call {PHONE} and we'll measure it — at your place, with the
+<p>Hearing something at stops? Call {PHONE} and we'll measure it. At your place, with the
 numbers in front of you.</p>""",
     },
 ]
@@ -1112,7 +1107,7 @@ def schema_business():
         "logo": DOMAIN + "/img/logo.png",
         "description": f"Mobile mechanic serving {CITY_MAIN}, {STATE_FULL} and the surrounding "
                        "area. On-site auto repair, diagnostics, brakes, batteries, oil changes, "
-                       "A/C repair and pre-purchase inspections — we come to you.",
+                       "A/C repair and pre-purchase inspections. We come to you.",
         "areaServed": [{"@type": "City", "name": f"{n}, FL"} for _, n, _, _ in CITIES],
         "address": {"@type": "PostalAddress", "addressLocality": CITY_MAIN,
                     "addressRegion": STATE, "addressCountry": "US"},
@@ -1210,7 +1205,7 @@ CSS = """
 :root{
   --paper:#faf7f1; --white:#ffffff; --line:#e9e1d3; --line2:#f1ebdf;
   --ink:#20242d; --ink2:#12151c; --dim:#5c6370; --faint:#8a8f9a;
-  --sun:#f26a1b; --sun2:#f79433; --gold:#f7b955; --sundeep:#d4550e;
+  --sun:#f26a1b; --sun2:#f79433; --gold:#f7b955; --sundeep:#b8460a;
   --grad:linear-gradient(100deg,var(--sun) 0%,var(--sun2) 55%,var(--gold) 100%);
   --r:16px; --rs:10px;
   --shadow:0 14px 40px -18px rgba(32,36,45,.18);
@@ -1225,14 +1220,16 @@ body{font-family:var(--body);font-size:16.5px;line-height:1.68;color:var(--ink);
 img,svg{max-width:100%}
 a{color:var(--sundeep);text-decoration:none}
 a:hover{color:var(--sun)}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--sundeep);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
 .wrap{max-width:1140px;margin:0 auto;padding:0 22px}
 h1,h2,h3,h4{font-family:var(--disp);font-weight:700;line-height:1.12;
   letter-spacing:-.015em;color:var(--ink)}
 .ic{width:1.15em;height:1.15em;vertical-align:-.2em;flex:none}
 
 /* kicker + gradient text */
-.kick{display:inline-flex;align-items:center;gap:.5em;font-size:.78rem;font-weight:700;
-  letter-spacing:.22em;text-transform:uppercase;color:var(--sundeep)}
+.kick{display:inline-flex;align-items:center;gap:.5em;font-size:.95rem;font-weight:700;
+  color:var(--sundeep)}
 .kick::before{content:"";width:26px;height:2px;background:var(--grad);border-radius:2px}
 .gtx{background:linear-gradient(100deg,var(--sundeep),var(--sun2));
   -webkit-background-clip:text;background-clip:text;color:transparent}
@@ -1478,11 +1475,11 @@ a.card:hover{transform:translateY(-4px);border-color:rgba(242,106,27,.5);box-sha
 .phero .wrap{padding:3.2em 22px}
 .phero h1{font-size:clamp(1.9rem,4.2vw,3rem);max-width:17em;margin-top:.35em}
 .phero p.lead{margin-top:1em;font-size:1.06rem;color:var(--dim);max-width:42em}
-.crumbs{font-size:.85rem;color:var(--faint)}
-.crumbs a{color:var(--faint)}
+.crumbs{font-size:.85rem;color:var(--dim)}
+.crumbs a{color:var(--dim)}
 .crumbs a:hover{color:var(--sundeep)}
 .crumbs span{margin:0 .5em;opacity:.5}
-.crumbs b{color:var(--dim)}
+.crumbs b{color:var(--ink)}
 
 /* prose + articles */
 .prose{max-width:46em}
@@ -1496,8 +1493,8 @@ a.card:hover{transform:translateY(-4px);border-color:rgba(242,106,27,.5);box-sha
 .post-card .tagchip{display:inline-block;background:rgba(242,106,27,.1);color:var(--sundeep);
   font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
   border-radius:999px;padding:.3em .9em;margin-bottom:.9em}
-.post-card time{display:block;font-size:.82rem;color:var(--faint);margin-top:.9em}
-.article-meta{display:flex;gap:1em;align-items:center;font-size:.88rem;color:var(--faint);
+.post-card time{display:block;font-size:.82rem;color:var(--dim);margin-top:.9em}
+.article-meta{display:flex;gap:1em;align-items:center;font-size:.88rem;color:var(--dim);
   margin-top:1em;flex-wrap:wrap}
 .article-meta .tagchip{background:rgba(242,106,27,.1);color:var(--sundeep);font-size:.75rem;
   font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:.3em .9em}
@@ -1535,6 +1532,7 @@ form.book .btn{justify-content:center}
 .ft .legal{border-top:1px solid #232a38;padding-top:1.4em;display:flex;flex-wrap:wrap;
   gap:1em;justify-content:space-between;color:#7c8290;font-size:.85rem}
 .ft .legal a{display:inline;padding:0}
+.ft .legal .links{display:flex;flex-wrap:wrap;gap:1.1em}
 
 /* mobile call bar */
 .mcall{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;
@@ -1546,15 +1544,17 @@ form.book .btn{justify-content:center}
   .g3{grid-template-columns:repeat(2,1fr)}
   .split,.contact-grid,.hero-grid{grid-template-columns:1fr;gap:2.2em}
   .hero-shot .photo-card{aspect-ratio:4/3}
-  .ft .cols{grid-template-columns:1fr 1fr}
+  .ft .cols{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media(max-width:720px){
   body{font-size:16px;padding-bottom:calc(52px + env(safe-area-inset-bottom))}
-  .nav,.hdr .btn-call{display:none}
-  .burger{display:block}
+  .nav{display:none}
+  .hdr .btn-call{font-size:.84rem;padding:.7em .85em;min-height:44px}
+  .brand small{display:none}
+  .burger{display:grid;place-items:center;min-width:44px;min-height:44px;padding:0}
   .g3,.g2{grid-template-columns:1fr}
   .hdr .wrap{height:62px;gap:.8em}
-  .brand{font-size:1rem}
+  .brand{font-size:.98rem}
   .brand .mark{width:36px;height:36px}
   .hero .wrap{padding:2.6em 18px}
   .hero h1{font-size:clamp(2rem,8.5vw,2.6rem)}
@@ -1578,6 +1578,9 @@ form.book .btn{justify-content:center}
   .card{padding:1.3em}
   .sym{font-size:.88rem}
   .sym th{width:40%}
+}
+@media(max-width:380px){
+  .brand>span{display:none}
 }
 """
 
@@ -1618,11 +1621,79 @@ def mobile_nav():
             out.append(f'<a href="/{u}/">{n}</a>')
     return "".join(out)
 
+MANIFESTO = """<!--
+═══════════════════════════════════════════════════════════════════════════════════════
+
+        O R L A N D O ' S   F I N E S T   M O B I L E   M E C H A N I C
+
+               ───────────────────────────────────────────────
+                    The repair shop that comes to you
+               ───────────────────────────────────────────────
+
+
+    /* TEAM */
+
+      Built by:            Clickflame - Anthony Limpert
+      Location:            Orlando, Florida
+      Studio reach:        support@clickflame.com - clickflame.com
+
+
+    /* MANIFESTO */
+
+      We fight for the weak and the weary. The one-van outfits, the mechanics who answer their own phone,
+      the businesses that close when somebody gets sick.
+
+      We do not work for big corporations. Ever.
+      They have agencies. They have budgets.
+      They do not need us, and we do not want them.
+
+      What we have is technology,
+      and we use it the way a crowbar was meant to be used:
+      to pry the playing field level.
+
+      We are a mom-and-pop operation,
+      and pop happens to be the best top-ranked pop
+      in the business.
+
+      Fighting for what's right in a chaotic universe.
+      - Clickflame
+
+
+    /* STACK */
+
+      One Python file - static HTML - zero bloat
+      Netlify - GitHub - no page builders, no bloat
+
+
+    /* THANKS */
+
+      To Yair, Paul, and every mechanic who fixed a car in a parking lot
+      while the owner watched and learned something.
+      To every dev who reads source.
+      // hello, fellow dev.
+
+═══════════════════════════════════════════════════════════════════════════════════════
+-->"""
+
+GTAG = """<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WWQR41HGJQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WWQR41HGJQ');
+</script>"""
+
 def head(title, desc, path, *extra_ld):
     canon = url(path)
+    website = ({"@type": "WebSite", "@id": DOMAIN + "/#website", "name": BIZ,
+                "url": DOMAIN + "/", "publisher": {"@id": DOMAIN + "/#business"}}
+               if path in ("", "/", "index") else None)
     return f"""<!DOCTYPE html>
+{MANIFESTO}
 <html lang="en">
 <head>
+{GTAG}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)}</title>
@@ -1644,12 +1715,12 @@ def head(title, desc, path, *extra_ld):
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
 <link rel="icon" href="{FAVICON}">
-{ldjson(schema_business(), *extra_ld)}
+{ldjson(schema_business(), website, *extra_ld)}
 </head>
 <body>
 <div class="util"><div class="wrap">
-  <span>{icon('van')} We come to you — {CITY_MAIN} &amp; surrounding areas</span>
-  <span class="hide-sm">{icon('clock')} {HOURS_LINE} &nbsp;·&nbsp; <a href="tel:{PHONE_TEL}">{PHONE_DISP}</a></span>
+  <span>{icon('van')} We come to you across {CITY_MAIN} and nearby towns</span>
+  <span class="hide-sm">{icon('clock')} {HOURS_LINE} &nbsp; <a href="tel:{PHONE_TEL}">{PHONE_DISP}</a></span>
 </div></div>
 <header class="hdr"><div class="wrap">
   <a class="brand" href="/"><span class="mark">{icon('wrench')}</span>
@@ -1676,10 +1747,10 @@ def footer():
       <p>{TAGLINE}. Certified mobile mechanics serving {CITY_MAIN} and the surrounding
       Central {STATE_FULL} communities, seven days a week.</p>
       <div class="ftphone"><a href="tel:{PHONE_TEL}">{PHONE_DISP}</a></div>
-      <p>{HOURS_LINE}<br><a href="mailto:{EMAIL}" style="display:inline;padding:0">{EMAIL}</a></p>
+      <p>{HOURS_LINE}<br><a href="mailto:{EMAIL}" style="display:inline;padding:0;overflow-wrap:anywhere">{EMAIL}</a></p>
     </div>
-    <div><h4>Services</h4>{svc}<a href="/services/">All services &rarr;</a></div>
-    <div><h4>Service Areas</h4>{cit}<a href="/service-areas/">All areas &rarr;</a></div>
+    <div><h4>Services</h4>{svc}<a href="/services/">All services</a></div>
+    <div><h4>Service Areas</h4>{cit}<a href="/service-areas/">All areas</a></div>
     <div><h4>Company</h4>
       <a href="/about/">About Us</a>
       <a href="/reviews/">Reviews</a>
@@ -1693,10 +1764,10 @@ def footer():
   </div>
   <div class="legal">
     <span>&copy; {YEAR} {esc(BIZ)}. All rights reserved.</span>
-    <span><a href="/privacy-policy/">Privacy</a> &middot; <a href="/terms-of-service/">Terms</a> &middot; <a href="/sitemap.xml">Sitemap</a></span>
+    <span class="links"><a href="/privacy-policy/">Privacy</a> <a href="/terms-of-service/">Terms</a> <a href="/sitemap.xml">Sitemap</a> <a href="https://mechanicrank.com">Website by MechanicRank</a></span>
   </div>
 </div></footer>
-<div class="mcall"><a href="tel:{PHONE_TEL}">{icon('phone')} Tap to Call &middot; {PHONE_DISP}</a></div>
+<div class="mcall"><a href="tel:{PHONE_TEL}">{icon('phone')} Tap to call {PHONE_DISP}</a></div>
 <script src="/main.js" defer></script>
 </body></html>"""
 
@@ -1719,9 +1790,9 @@ def block_services(heading=True, light=False):
         f'<a class="card" href="/services/{s["slug"]}/">'
         f'<span class="cico">{icon(s["icon"])}</span>'
         f'<h3>{s["name"]}</h3><p>{esc(s["short"])}</p>'
-        f'<span class="more">Learn more {icon("arrow")}</span></a>'
+        f'<span class="more">Learn more</span></a>'
         for s in SERVICES)
-    head_html = ('<div class="sec-head"><span class="kick">What we do</span>'
+    head_html = ('<div class="sec-head">'
                  '<h2>One call covers the whole repair shop menu</h2>'
                  '<p>Every service below is performed at your location by a certified mechanic '
                  'with the parts and tools on board.</p></div>') if heading else ""
@@ -1733,22 +1804,22 @@ def block_steps():
         ("Tell us what's wrong", "Call, text, or book online. Give us the year, make, model, "
          "where the car is parked, and what it's doing."),
         ("We come to the car", "A certified mechanic arrives in your booked window with the "
-         "tools, scan gear, and parts — home, office, or roadside."),
+         "tools, scan gear, and parts. Home, office, or roadside."),
         ("Approve, then we fix it", "We confirm the fault, quote the price, and only start when "
          "you say go. Most jobs are done in a single visit."),
     ]
     cards = "".join(f'<div class="card step"><h3>{t}</h3><p>{d}</p></div>' for t, d in steps)
     return (f'<section class="sec light"><div class="wrap">'
-            f'<div class="sec-head"><span class="kick">How it works</span>'
+            f'<div class="sec-head">'
             f'<h2>Three steps, zero waiting rooms</h2></div>'
             f'<div class="grid g3 steps">{cards}</div></div></section>')
 
 def block_why():
     points = [
-        "Certified mechanics — not a parts-swapper with a code reader",
+        "Certified mechanics. Not a parts-swapper with a code reader",
         "Diagnosis confirmed by testing before any parts go on",
         "Price agreed up front, before the work starts",
-        "Open seven days, with evening hours Monday–Saturday",
+        "Open seven days, with evening hours Monday to Saturday",
         "We come to homes, offices, apartments, and roadsides",
         "No tow bill, no shuttle, no lost day",
     ]
@@ -1756,11 +1827,9 @@ def block_why():
     return f"""
 <section class="sec"><div class="wrap"><div class="split">
   <div>
-    <span class="kick">Why choose us</span>
     <h2 style="font-size:clamp(1.7rem,3.4vw,2.5rem);margin:.4em 0 .6em">
-      The shop visit, <span class="gtx">deleted from your week</span></h2>
-    <p style="color:var(--dim)">Driving to a mechanic, waiting for repairs, juggling rides —
-    that's the part of car trouble we removed. What's left is just the fix: a certified mechanic,
+      The shop visit, deleted from your week</h2>
+    <p style="color:var(--dim)">Driving to a mechanic, waiting for repairs, juggling rides. That's the part of car trouble we removed. What's left is just the fix: a certified mechanic,
     the right parts, and your driveway.</p>
     <ul class="checks">{checks}</ul>
     <a class="btn btn-sun" href="tel:{PHONE_TEL}">{icon('phone')} Call {PHONE_DISP}</a>
@@ -1772,10 +1841,9 @@ def block_why():
       <p>Monday to Saturday we run until 10pm, and we work Sundays too. Book the evening slot
       and never miss an hour of work over a brake job.</p></div>
     <div class="card"><span class="cico">{icon('shield')}</span><h3>Honest calls, in writing</h3>
-      <p>If a job truly needs a lift or a specialty shop, we say so before taking a dime —
-      and you keep the diagnosis either way.</p></div>
+      <p>If a job truly needs a lift or a specialty shop, we say so before taking a dime. And you keep the diagnosis either way.</p></div>
     <div class="card"><span class="cico">{icon('sun')}</span><h3>Built for Florida cars</h3>
-      <p>Heat-killed batteries, overworked A/C, brake wear from I-4 crawls — we fix what
+      <p>Heat-killed batteries, overworked A/C, brake wear from I-4 crawls. We fix what
       Central Florida actually does to vehicles.</p></div>
   </div>
 </div></div></section>"""
@@ -1792,7 +1860,7 @@ def gbadge():
     stars = "".join(icon("star") for _ in range(5))
     return (f'<a class="gbadge" href="{GMB_URL}" rel="nofollow">'
             f'<span class="stars">{stars}</span>'
-            f'<span><b>{RATING}</b> on Google &middot; {REVIEW_CT} reviews</span></a>')
+            f'<span><b>{RATING}</b> on Google, {REVIEW_CT} reviews</span></a>')
 
 def review_card(n, s, d, t):
     stars = "".join(icon("star") for _ in range(s))
@@ -1805,25 +1873,23 @@ def block_testimonial(limit=3):
     return f"""
 <section class="sec light"><div class="wrap">
   <div class="sec-head">
-    <span class="kick">Real Google reviews</span>
     <h2>Rated {RATING} stars by the people we drive to</h2>
     <p>{gbadge()}</p>
   </div>
   <div class="grid g3">{cards}</div>
-  <p style="margin-top:1.6em"><a href="/reviews/" style="font-weight:700">Read more reviews &rarr;</a></p>
+  <p style="margin-top:1.6em"><a href="/reviews/" style="font-weight:700">Read more reviews</a></p>
 </div></section>"""
 
 def block_map():
     data = json.dumps(map_markers())
     return f"""
 <section class="sec"><div class="wrap">
-  <div class="sec-head"><span class="kick">Service map</span>
-  <h2>Jobs done all over the Orlando metro</h2>
-  <p>Every pin is the kind of call we run every week — driveways, office lots, and roadsides
+  <div class="sec-head"><h2>Jobs done all over the Orlando metro</h2>
+  <p>Every pin is the kind of call we run every week. Driveways, office lots, and roadsides
   from Sanford down to St. Cloud. Pin locations are approximate; exact addresses stay private.</p></div>
   <div id="svcmap" aria-label="Map of {esc(BIZ)} service area with recent job markers"></div>
   <div class="maplegend">
-    <span><i class="pin-demo home"></i> Home base &mdash; Orlando</span>
+    <span><i class="pin-demo home"></i> Home base, Orlando</span>
     <span><i class="pin-demo"></i> Completed mobile visits</span>
   </div>
 </div></section>
@@ -1846,14 +1912,14 @@ window.addEventListener('load',function(){{
       .bindPopup('<b>'+p.job+'</b><br>'+p.city+', FL');
   }});
   L.marker([{GEO_LAT},{GEO_LNG}],{{icon:home,zIndexOffset:1000}}).addTo(map)
-    .bindPopup('<b>{esc(BIZ)}</b><br>Home base &mdash; Orlando, FL<br><a href="tel:{PHONE_TEL}">{PHONE_DISP}</a>');
+    .bindPopup('<b>{esc(BIZ)}</b><br>Home base, Orlando, FL<br><a href="tel:{PHONE_TEL}">{PHONE_DISP}</a>');
   map.fitBounds(b,{{padding:[28,28]}});
 }});
 </script>"""
 
 def block_areas(light=False, heading=True):
     chips = "".join(f'<a href="/service-areas/{c[0]}/">{icon("pin")}{c[1]}</a>' for c in CITIES)
-    head_html = ('<div class="sec-head"><span class="kick">Where we work</span>'
+    head_html = ('<div class="sec-head">'
                  '<h2>Serving Orlando and the towns around it</h2>'
                  '<p>If your car is anywhere in the Orlando metro, odds are we can get to it. '
                  'Don’t see your town? Call anyway.</p></div>') if heading else ""
@@ -1867,7 +1933,7 @@ def block_faq(faqs=None, title="Common questions", light=False):
                     for q, a in faqs)
     cls = "sec light" if light else "sec"
     return (f'<section class="{cls}"><div class="wrap">'
-            f'<div class="sec-head"><span class="kick">FAQ</span><h2>{esc(title)}</h2></div>'
+            f'<div class="sec-head"><h2>{esc(title)}</h2></div>'
             f'<div class="faq">{items}</div></div></section>')
 
 def block_cta(line=None, sub=None):
@@ -1891,18 +1957,18 @@ print("Layout ready.")
 
 # ================================================================== PAGES
 def page_home():
-    title = f"Mobile Mechanic Orlando FL | {BIZ} | {PHONE_DISP}"
+    title = "Mobile Mechanic Orlando FL | Orlando's Finest"
     desc = (f"Certified mobile mechanics who come to you across Orlando, FL. Brakes, "
-            f"diagnostics, batteries, oil changes, A/C and more — at your home or office, "
+            f"diagnostics, batteries, oil changes, A/C and more at your home or office, "
             f"7 days a week. Call {PHONE_DISP}.")
     hero = f"""
 <section class="hero"><div class="wrap"><div class="hero-grid">
   <div>
-    <span class="kick">Mobile auto mechanic — Orlando, {STATE_FULL}</span>
-    <h1>The repair shop <span class="gtx">comes to you.</span></h1>
+    <span class="kick">Mobile auto mechanic in Orlando, {STATE_FULL}</span>
+    <h1>The repair shop comes to you.</h1>
     <p class="lead">Certified mechanics, a fully stocked service vehicle, and your driveway.
     {BIZ} brings expert auto repair to your home, your office, or the roadside where the car
-    quit — across Orlando and the surrounding areas, seven days a week.</p>
+    quit. Across Orlando and the surrounding areas, seven days a week.</p>
     <div class="cta">
       <a class="btn btn-sun" href="tel:{PHONE_TEL}">{icon('phone')} Call {PHONE_DISP}</a>
       <a class="btn btn-ghost" href="{BOOK_URL}" rel="nofollow">{icon('calendar')} Book an appointment</a>
@@ -1911,7 +1977,7 @@ def page_home():
     <div class="sub">
       <span>{icon('check')} Certified mechanics</span>
       <span>{icon('check')} Price approved before work starts</span>
-      <span>{icon('check')} Open 7 days &middot; evenings too</span>
+      <span>{icon('check')} Open 7 days, evenings too</span>
     </div>
   </div>
   <div class="hero-shot">
@@ -1927,7 +1993,7 @@ def page_home():
 
 def page_service(s):
     name = s["name"]
-    title = f"{name} in Orlando, FL | Mobile Service | {PHONE_DISP}"
+    title = f"{name} | Orlando Mobile Mechanic"
     desc = (fmt(s["short"]) + f" {BIZ} comes to your home or office anywhere in the "
             f"Orlando area. Call {PHONE_DISP}.")
     bodies = "".join(f"<p>{fmt(p)}</p>" for p in s["bodies"])
@@ -1951,14 +2017,14 @@ def page_service(s):
         li = "".join(f'<li>{icon("check")}<span>{esc(x)}</span></li>' for x in detail["factors"])
         factors = (f'<h2 style="font-size:1.55rem;margin:1.6em 0 .7em">What moves the price</h2>'
                    f'<p style="color:var(--dim)">We quote after diagnosis and you approve before '
-                   f'work starts — but these are the honest variables behind any quote:</p>'
+                   f'work starts. But these are the honest variables behind any quote:</p>'
                    f'<ul class="checks">{li}</ul>')
     other_cards = [o for o in SERVICES if o["slug"] != s["slug"]][:3]
     others = "".join(
         f'<a class="card" href="/services/{o["slug"]}/"><span class="cico">{icon(o["icon"])}</span>'
         f'<h3>{o["name"]}</h3><p>{esc(o["short"])}</p>'
-        f'<span class="more">Learn more {icon("arrow")}</span></a>' for o in other_cards)
-    body = phero("Mobile service — we come to you", esc(s["hero"]), esc(fmt(s["intro"])),
+        f'<span class="more">Learn more</span></a>' for o in other_cards)
+    body = phero("We come to you", esc(s["hero"]), esc(fmt(s["intro"])),
                  crumbs=[("Home", ""), ("Services", "services"), (name, f"services/{s['slug']}")])
     body += f"""
 <section class="sec"><div class="wrap"><div class="split" style="align-items:start">
@@ -1970,13 +2036,13 @@ def page_service(s):
       <p style="margin-top:1em;font-size:.88rem;color:var(--dim)">Or
       <a href="{BOOK_URL}" rel="nofollow">book a time online</a>. {HOURS_LINE}.</p></div>
     <div class="card" style="margin-top:1em"><h3>Where we do it</h3>
-      <p>Anywhere the car sits in the Orlando metro — driveways, office lots, apartment
+      <p>Anywhere the car sits in the Orlando metro. Driveways, office lots, apartment
       complexes, parking garages, roadsides. See all <a href="/service-areas/">service areas</a>.</p></div>
   </div>
 </div></div></section>"""
     body += faq_html
     body += ('<section class="sec"><div class="wrap"><div class="sec-head">'
-             '<span class="kick">More services</span><h2>Also done at your curb</h2></div>'
+             '<h2>Also done at your curb</h2></div>'
              f'<div class="grid g3">{others}</div></div></section>')
     body += block_cta(f"Need {name.lower()}?", "Tell us where the car is. We'll bring the shop.")
     ld = [schema_service(name, fmt(s["short"])),
@@ -1985,11 +2051,11 @@ def page_service(s):
     return head(title, desc, f"services/{s['slug']}", *ld) + body + footer()
 
 def page_services_index():
-    title = f"Mobile Mechanic Services in Orlando, FL | {BIZ}"
-    desc = (f"Every service on the shop menu, done at your location: diagnostics, brakes, "
+    title = "Mobile Mechanic Services in Orlando, FL | Orlando's Finest"
+    desc = (f"Every service on the shop menu, done at your location. Diagnostics, brakes, "
             f"batteries, starters, oil, A/C and more. Orlando metro, 7 days. {PHONE_DISP}.")
-    body = phero("Our services", "Comprehensive services, <span class='gtx'>zero shop visits</span>",
-                 "If it can be done where the car is parked, we do it — and that covers far more "
+    body = phero("Our services", "Comprehensive services, zero shop visits",
+                 "If it can be done where the car is parked, we do it. And that covers far more "
                  "than most people expect. Pick a service to see how it works.",
                  crumbs=[("Home", ""), ("Services", "services")])
     body += block_services(heading=False)
@@ -2002,15 +2068,21 @@ def page_services_index():
 
 def page_city(c):
     slug, name, county, paras = c
-    title = f"Mobile Mechanic {name}, FL | We Come to You | {PHONE_DISP}"
-    desc = (f"Mobile mechanic serving {name}, FL ({county}). Brakes, diagnostics, batteries, "
-            f"oil, A/C — repaired at your home or office. Open 7 days. Call {PHONE_DISP}.")
-    paras_html = "".join(f"<p>{esc(p)}</p>" for p in paras)
+    title = f"Mobile Mechanic {name}, FL | Orlando's Finest"
+    desc = (f"Mobile mechanic serving {name}, FL in {county}. Brakes, diagnostics, batteries, "
+            f"oil and A/C repaired at your home or office. Open 7 days. Call {PHONE_DISP}.")
+    bite = bite_box(f"<b>Mobile mechanic in {esc(name)}, FL.</b> We come to your home, office, "
+                    f"or roadside in {esc(name)} and fix the car where it sits.")
+    snack = snack_box([f"We come to you anywhere in {name}",
+                       "Fault confirmed by testing before parts go on",
+                       "Price approved before work starts",
+                       "Open 7 days, evenings until 10pm Mon to Sat"])
+    paras_html = bite + snack + "".join(f"<p>{esc(p)}</p>" for p in paras)
     svc_list = "".join(
         f'<li>{icon("check")}<span><a href="/services/{s["slug"]}/">{s["name"]}</a> in {esc(name)}</span></li>'
         for s in SERVICES)
-    body = phero(f"{county} · Florida", f"Mobile Mechanic in <span class='gtx'>{esc(name)}, FL</span>",
-                 f"A certified mechanic at your {esc(name)} address — with the tools, the parts, "
+    body = phero(f"{county}, Florida", f"Mobile Mechanic in {esc(name)}, FL",
+                 f"A certified mechanic at your {esc(name)} address, with the tools, the parts, "
                  f"and a price you approve before work starts.",
                  crumbs=[("Home", ""), ("Service Areas", "service-areas"), (name, f"service-areas/{slug}")])
     body += f"""
@@ -2027,27 +2099,27 @@ def page_city(c):
         {icon('phone')} {PHONE_DISP}</a>
       <p style="margin-top:1em;font-size:.88rem;color:var(--dim)">{HOURS_LINE}</p></div>
     <div class="card" style="margin-top:1em"><span class="cico">{icon('pin')}</span><h3>Nearby areas</h3>
-      <p>{" · ".join(f'<a href="/service-areas/{o[0]}/">{o[1]}</a>' for o in CITIES if o[0] != slug)}</p></div>
+      <p>{", ".join(f'<a href="/service-areas/{o[0]}/">{o[1]}</a>' for o in CITIES if o[0] != slug)}</p></div>
   </div>
 </div></div></section>"""
     body += block_testimonial()
     body += block_cta(f"Need a mechanic in {name}?", "Skip the tow. We'll meet the car where it is.")
     return head(title, desc, f"service-areas/{slug}",
-                schema_service(f"Mobile Mechanic — {name}, FL",
+                schema_service(f"Mobile Mechanic in {name}, FL",
                                f"On-site auto repair in {name}, {STATE_FULL}.", f"{name}, FL"),
                 schema_breadcrumb([("Home", ""), ("Service Areas", "service-areas"),
                                    (name, f"service-areas/{slug}")])) + body + footer()
 
 def page_areas():
-    title = f"Service Areas | Mobile Mechanic Across the Orlando Metro | {BIZ}"
+    title = f"Service Areas | {BIZ}"
     desc = (f"We bring mobile auto repair to Orlando, Winter Park, Kissimmee, Sanford, Apopka "
             f"and the surrounding Central Florida towns. 7 days a week. {PHONE_DISP}.")
     cards = "".join(
         f'<a class="card" href="/service-areas/{c[0]}/"><span class="cico">{icon("pin")}</span>'
         f'<h3>{c[1]}, FL</h3><p>{esc(c[2])}</p>'
-        f'<span class="more">Mobile mechanic in {c[1]} {icon("arrow")}</span></a>'
+        f'<span class="more">Mobile mechanic in {c[1]}</span></a>'
         for c in CITIES)
-    body = phero("Coverage", "One metro, <span class='gtx'>one phone call</span>",
+    body = phero("Coverage", "One metro, one phone call",
                  "Wherever your car is parked in the Orlando area, we can probably get a "
                  "mechanic to it. These are the communities we serve most.",
                  crumbs=[("Home", ""), ("Service Areas", "service-areas")])
@@ -2058,11 +2130,11 @@ def page_areas():
                 schema_breadcrumb([("Home", ""), ("Service Areas", "service-areas")])) + body + footer()
 
 def page_reviews():
-    title = f"Reviews | {RATING}-Star Rated Mobile Mechanic in Orlando | {BIZ}"
+    title = f"Reviews | {BIZ}"
     desc = (f"{BIZ} holds a {RATING}-star rating across {REVIEW_CT} Google reviews. "
-            f"Read what Orlando drivers say about our mobile auto repair — verbatim.")
+            f"Read what Orlando drivers say about our mobile auto repair, word for word.")
     cards = "".join(review_card(*r) for r in REVIEWS)
-    body = phero("Reviews", f"Rated <span class='gtx'>{RATING} stars</span> on Google",
+    body = phero("Reviews", f"Rated {RATING} stars on Google",
                  f"Every review below is a real Google review, quoted verbatim. The rating "
                  f"is earned one driveway at a time.",
                  crumbs=[("Home", ""), ("Reviews", "reviews")])
@@ -2086,15 +2158,15 @@ def blog_card(p):
             f'<span class="tagchip">{esc(p["tag"])}</span>'
             f'<h3>{esc(p["title"])}</h3><p>{esc(p["desc"])}</p>'
             f'<time datetime="{p["date"]}">{p["date"]}</time>'
-            f'<span class="more">Read the post {icon("arrow")}</span></a>')
+            f'<span class="more">Read the post</span></a>')
 
 def page_blog_index():
-    title = f"Blog | Car Care Advice From an Orlando Mobile Mechanic | {BIZ}"
+    title = f"Blog | {BIZ}"
     desc = ("Straight answers about batteries, brakes, A/C, check engine lights, and buying "
-            "used cars in Central Florida — from the mechanics who fix them in your driveway.")
+            "used cars in Central Florida. From the mechanics who fix them in your driveway.")
     cards = "".join(blog_card(p) for p in BLOG)
-    body = phero("Blog", "Advice from <span class='gtx'>under the hood</span>",
-                 "What Florida actually does to cars, and how to stay ahead of it — written "
+    body = phero("Blog", "Advice from under the hood",
+                 "What Florida actually does to cars, and how to stay ahead of it. Written "
                  "by the crew that repairs the results every day.",
                  crumbs=[("Home", ""), ("Blog", "blog")])
     body += f'<section class="sec"><div class="wrap"><div class="grid g3">{cards}</div></div></section>'
@@ -2103,7 +2175,7 @@ def page_blog_index():
                 schema_breadcrumb([("Home", ""), ("Blog", "blog")])) + body + footer()
 
 def page_blog_post(p):
-    title = f"{p['title']} | {BIZ}"
+    title = f"{p['title']} | Orlando's Finest"
     body_html = p["body"].replace("{PHONE}", f'<a href="tel:{PHONE_TEL}">{PHONE_DISP}</a>')
     if p["slug"] in BLOG_BITE:
         b_text, takeaways = BLOG_BITE[p["slug"]]
@@ -2122,15 +2194,15 @@ def page_blog_post(p):
   </article>
   <div>
     <div class="card"><span class="cico">{icon('phone')}</span><h3>Skip the reading, fix the car</h3>
-      <p>Mobile repair across the Orlando metro — evenings and Sundays included.</p>
+      <p>Mobile repair across the Orlando metro. Evenings and Sundays included.</p>
       <a class="btn btn-sun" href="tel:{PHONE_TEL}" style="width:100%;justify-content:center;margin-top:1em">
         {icon('phone')} {PHONE_DISP}</a></div>
     <div class="card" style="margin-top:1em"><h3>Popular services</h3>
-      <p>{" · ".join(f'<a href="/services/{s["slug"]}/">{s["name"]}</a>' for s in SERVICES[:5])}</p></div>
+      <p>{", ".join(f'<a href="/services/{s["slug"]}/">{s["name"]}</a>' for s in SERVICES[:5])}</p></div>
   </div>
 </div></div></section>"""
     body += ('<section class="sec light"><div class="wrap"><div class="sec-head">'
-             '<span class="kick">Keep reading</span><h2>More from the blog</h2></div>'
+             '<h2>More from the blog</h2></div>'
              f'<div class="grid g3">{others}</div></div></section>')
     body += block_cta()
     return head(title, p["desc"], f"blog/{p['slug']}",
@@ -2139,10 +2211,10 @@ def page_blog_post(p):
                                    (p["title"], f"blog/{p['slug']}")])) + body + footer()
 
 def page_about():
-    title = f"About Us | {BIZ} | Orlando, FL"
+    title = f"About Us | {BIZ}"
     desc = (f"{BIZ} is a team of certified mechanics who bring the repair shop to you across "
             f"Orlando and Central Florida. Honest diagnosis, up-front pricing, 7 days a week.")
-    body = phero("About us", "Highly trained professionals <span class='gtx'>you can trust</span>",
+    body = phero("About us", "Highly trained professionals you can trust",
                  "We believe car repairs should be stress-free and convenient. So we removed the "
                  "stressful, inconvenient part: the trip to the shop.",
                  crumbs=[("Home", ""), ("About", "about")])
@@ -2152,27 +2224,27 @@ def page_about():
     <p>{BIZ} exists because of a simple observation: for most repairs, the shop building adds
     nothing but inconvenience. The lift gets used on a fraction of jobs. The waiting room adds
     misery. The tow adds cost. What actually fixes the car is a trained mechanic with good
-    tools and the right parts — and all three of those travel.</p>
+    tools and the right parts. And all three of those travel.</p>
     <p>So that's what we built. Our certified mechanics carry diagnostic gear, hand and power
     tools, and common parts to your home, your workplace, or the roadside anywhere in the
     Orlando area. You see the work happen. You approve the price before it starts. And your
     car never leaves your sight.</p>
     <h2>How we work</h2>
-    <p>Every job starts with a real diagnosis — testing, not guessing. Once we know what's
+    <p>Every job starts with a real diagnosis. Testing, not guessing. Once we know what's
     wrong, you get the price in plain numbers and plain English. If you say go, most repairs
     are finished the same visit. If a job genuinely needs a lift or a machine shop, we tell
     you that instead of starting something we can't finish. That honesty costs us a few jobs
     and wins us customers for years.</p>
     <h2>Built around real schedules</h2>
     <p>Orlando doesn't work nine-to-five, so neither do we. We run Monday through Saturday
-    from 9am to 10pm and Sundays 9am to 6pm — which means the repair can happen after your
+    from 9am to 10pm and Sundays 9am to 6pm. Which means the repair can happen after your
     shift, during your workday in the office lot, or on a Sunday without wrecking the week.</p>
   </div>
   <div>
     <div class="photo-card"><img src="/img/interior-work.jpg" width="1100" height="1467" loading="lazy"
       alt="Mobile mechanic repairing a steering column at the customer's location in Orlando"></div>
     <div class="card" style="margin-top:1em"><span class="cico">{icon('shield')}</span><h3>Certified mechanics</h3>
-      <p>Trained, experienced techs who diagnose by testing — and show you what they found.</p></div>
+      <p>Trained, experienced techs who diagnose by testing. And show you what they found.</p></div>
     <div class="card" style="margin-top:1em"><span class="cico">{icon('clock')}</span><h3>Seven days a week</h3>
       <p>{HOURS_LINE}. Evening slots are normal, not special favors.</p></div>
     <div class="card" style="margin-top:1em"><span class="cico">{icon('phone')}</span><h3>Talk to us</h3>
@@ -2186,11 +2258,11 @@ def page_about():
                 schema_breadcrumb([("Home", ""), ("About", "about")])) + body + footer()
 
 def page_contact():
-    title = f"Contact Us | Book a Mobile Mechanic in Orlando | {PHONE_DISP}"
+    title = f"Contact Us | {BIZ}"
     desc = (f"Book a mobile mechanic in Orlando, FL. Call {PHONE_DISP}, email, or send the "
-            f"booking form — we come to your home or office, 7 days a week.")
+            f"booking form. We come to your home or office, 7 days a week.")
     svc_opts = "".join(f'<option>{s["name"]}</option>' for s in SERVICES) + "<option>Something else</option>"
-    body = phero("Contact us", "Skip the form if you like — <span class='gtx'>just call</span>",
+    body = phero("Contact us", "Skip the form if you like. Just call",
                  f"Fastest way to a booked mechanic: call or text {PHONE_DISP} with the year, "
                  "make, model, and what the car is doing. Prefer typing? The form works too.",
                  crumbs=[("Home", ""), ("Contact", "contact-us")])
@@ -2202,12 +2274,12 @@ def page_contact():
     <div class="card"><span class="cico">{icon('mail')}</span>
       <div><h3>Email</h3><p><a href="mailto:{EMAIL}" style="word-break:break-all">{EMAIL}</a></p></div></div>
     <div class="card"><span class="cico">{icon('clock')}</span>
-      <div><h3>Hours of operation</h3><p>Monday – Saturday: 9:00am – 10:00pm<br>Sunday: 9:00am – 6:00pm</p></div></div>
+      <div><h3>Hours of operation</h3><p>Monday to Saturday, 9:00am to 10:00pm<br>Sunday, 9:00am to 6:00pm</p></div></div>
     <div class="card"><span class="cico">{icon('calendar')}</span>
       <div><h3>Book online</h3><p>Pick your own slot on our
       <a href="{BOOK_URL}" rel="nofollow">online booking calendar</a>.</p></div></div>
     <div class="card"><span class="cico">{icon('pin')}</span>
-      <div><h3>Service area</h3><p>Orlando and the surrounding Central Florida communities —
+      <div><h3>Service area</h3><p>Orlando and the surrounding Central Florida communities,
       <a href="/service-areas/">see the list</a>.</p></div></div>
   </div>
   <form class="book" name="booking" method="POST" data-netlify="true" action="/thanks/">
@@ -2228,7 +2300,7 @@ def page_contact():
     <label>Vehicle (year / make / model)<input name="vehicle" placeholder="2019 Honda CR-V"></label>
     <label>Address where the car is<input name="address" autocomplete="street-address"></label>
     <label>What's the car doing?<textarea name="details" placeholder="Won't start, clicking noise… squeal when braking… A/C blows warm at red lights…"></textarea></label>
-    <button class="btn btn-sun" type="submit">Send booking request {icon('arrow')}</button>
+    <button class="btn btn-sun" type="submit">Send booking request</button>
     <p style="font-size:.85rem;color:var(--dim)">We'll call back to confirm your window.
     In a hurry? <a href="tel:{PHONE_TEL}">{PHONE_DISP}</a>.</p>
   </form>
@@ -2241,7 +2313,7 @@ def page_contact():
 
 def page_thanks():
     title = f"Request Received | {BIZ}"
-    body = phero("Thank you", "Got it — <span class='gtx'>we're on it</span>",
+    body = phero("Thank you", "Got it. We're on it",
                  f"Your booking request is in. We'll call you back shortly to confirm a window. "
                  f"Need us right now? Call {PHONE_DISP}.")
     body += block_cta("While you wait", "Browse what else we can knock out in the same visit.")
@@ -2256,7 +2328,7 @@ def page_legal(kind):
 how we use it.</p>
 <h2>What we collect</h2>
 <p>When you call, text, email, or submit our booking form, we receive the contact and vehicle
-details you choose to share — typically your name, phone number, email, service address, and
+details you choose to share. Typically your name, phone number, email, service address, and
 a description of the problem. Online bookings are processed by Square, whose own privacy
 policy governs that service.</p>
 <h2>How we use it</h2>
@@ -2291,12 +2363,12 @@ guarantee of a specific outcome for a specific vehicle. Diagnosis happens at the
     return head(title, f"{h1} for {BIZ}.", kind) + body + footer()
 
 def page_404():
-    body = phero("404", "That page drove off <span class='gtx'>without us</span>",
+    body = phero("404", "That page drove off without us",
                  "The address you tried doesn't exist on this site. The good news: everything "
                  "useful is one click away.")
     body += ('<section class="sec"><div class="wrap"><div class="cta" '
              'style="display:flex;gap:1em;flex-wrap:wrap">'
-             f'<a class="btn btn-sun" href="/">{icon("arrow")} Back to the homepage</a>'
+             f'<a class="btn btn-sun" href="/">Back to the homepage</a>'
              f'<a class="btn btn-ghost" href="/services/">Browse services</a>'
              f'<a class="btn btn-ghost" href="tel:{PHONE_TEL}">{icon("phone")} {PHONE_DISP}</a>'
              '</div></div></section>')
