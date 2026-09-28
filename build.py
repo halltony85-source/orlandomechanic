@@ -1587,9 +1587,10 @@ form.book .btn{justify-content:center}
 JS = """
 const burger=document.querySelector('.burger'),mnav=document.querySelector('.mnav');
 if(burger&&mnav){
-  burger.addEventListener('click',()=>mnav.classList.add('open'));
-  mnav.querySelector('.x').addEventListener('click',()=>mnav.classList.remove('open'));
-  mnav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mnav.classList.remove('open')));
+  const setOpen=v=>{mnav.classList.toggle('open',v);burger.setAttribute('aria-expanded',v?'true':'false');};
+  burger.addEventListener('click',()=>setOpen(true));
+  mnav.querySelector('.x').addEventListener('click',()=>setOpen(false));
+  mnav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setOpen(false)));
 }
 """
 
@@ -1727,9 +1728,9 @@ def head(title, desc, path, *extra_ld):
     <span>Orlando's Finest<small>Mobile Mechanic</small></span></a>
   <nav class="nav">{desktop_nav()}</nav>
   <a class="btn btn-sun btn-call" href="tel:{PHONE_TEL}">{icon('phone')} {PHONE_DISP}</a>
-  <button class="burger" aria-label="Open menu">{icon('menu')}</button>
+  <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mnav">{icon('menu')}</button>
 </div></header>
-<div class="mnav"><button class="x" aria-label="Close menu">{icon('close')}</button>
+<div class="mnav" id="mnav"><button class="x" aria-label="Close menu">{icon('close')}</button>
   {mobile_nav()}
   <a class="btn btn-sun" href="tel:{PHONE_TEL}">{icon('phone')} Call {PHONE_DISP}</a>
 </div>
@@ -2356,6 +2357,10 @@ service address you provide.</p>
 <h2>Website content</h2>
 <p>Content on this site is provided for general information about our services and is not a
 guarantee of a specific outcome for a specific vehicle. Diagnosis happens at the vehicle.</p>
+<h2>Limit on liability</h2>
+<p>Our liability for any claim arising from our work is limited to the amount paid for the
+service in question, and to $800 in total across all claims, whichever is lower. Nothing
+here limits any right you have under state law that cannot be waived.</p>
 <h2>Contact</h2>
 <p>Questions about these terms: <a href="mailto:{EMAIL}">{EMAIL}</a> or {PHONE_DISP}.</p>"""
     body = phero("Legal", esc(h1), "The plain-English version is short. Here it is in full.")
@@ -2498,3 +2503,23 @@ if __name__ == "__main__":
     build()
 
 
+
+
+# cf-a11y-hook  -- accessibility sweep, see _shared/a11y/README.md
+# A build regenerates every page from its templates, so the layer has to be
+# put back afterwards. Appended as its own entry point block, which runs
+# after the build's own, and is skipped when this file is imported.
+if __name__ == "__main__":
+    import sys as _a11y_sys, os as _a11y_os
+    _a11y_dir = _a11y_os.path.dirname(_a11y_os.path.abspath(__file__))
+    while _a11y_dir != _a11y_os.path.dirname(_a11y_dir):
+        _a11y_try = _a11y_os.path.join(_a11y_dir, "_shared", "a11y")
+        if _a11y_os.path.isdir(_a11y_try):
+            _a11y_sys.path.insert(0, _a11y_try)
+            break
+        _a11y_dir = _a11y_os.path.dirname(_a11y_dir)
+    try:
+        import hook as _a11y_hook
+        _a11y_hook.sweep(__file__)
+    except Exception as _a11y_err:
+        print("a11y sweep could not run: %s" % _a11y_err)
