@@ -379,3 +379,103 @@ form.book .btn{justify-content:center}
 @media(max-width:380px){
   .brand>span{display:none}
 }
+
+/* cf-a11y:start */
+/* ============================================================
+   Clickflame accessibility layer
+   Managed block. Edit _shared/a11y/a11y.css and re-run
+   _shared/a11y/apply_a11y.py. Do not hand edit the copies.
+
+   Design rule: nothing in here is visible to a mouse user who
+   has not asked for it. No overlay, no toolbar, no JavaScript.
+   ============================================================ */
+
+/* --- Skip link: off screen until a keyboard user focuses it --- */
+.cf-skip {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 2147483000;
+  display: inline-block;
+  padding: .75rem 1.15rem;
+  background: #10131a;
+  color: #fff;
+  font: 600 1rem/1.25 system-ui, -apple-system, "Segoe UI", sans-serif;
+  text-decoration: underline;
+  border-radius: 0 0 .4rem 0;
+}
+.cf-skip:focus {
+  left: 0;
+}
+
+/* --- Text for screen readers only --- */
+.cf-sr {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* --- Focus ring.
+   :focus-visible means mouse and touch users never see this.
+   Set --cf-focus in your own stylesheet to match the brand.
+   The default #1a73e8 clears 3:1 against both white and black. --- */
+:focus-visible {
+  outline: 3px solid var(--cf-focus, #1a73e8) !important;
+  outline-offset: 2px !important;
+}
+@supports not selector(:focus-visible) {
+  :focus {
+    outline: 3px solid var(--cf-focus, #1a73e8) !important;
+    outline-offset: 2px !important;
+  }
+}
+
+/* A programmatic focus target should not draw a ring. */
+[tabindex="-1"]:focus {
+  outline: none !important;
+}
+
+/* Focus must not be swallowed by a sticky header. */
+:target,
+[tabindex="-1"] {
+  scroll-margin-top: 6rem;
+}
+
+/* --- Respect a stated preference for less motion --- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --- Windows High Contrast / forced colours --- */
+@media (forced-colors: active) {
+  :focus-visible {
+    outline: 3px solid Highlight !important;
+  }
+  .cf-skip {
+    background: Canvas;
+    color: CanvasText;
+    border: 2px solid CanvasText;
+  }
+}
+
+/* --- Stronger ring for people who asked for more contrast --- */
+@media (prefers-contrast: more) {
+  :focus-visible {
+    outline-width: 4px !important;
+  }
+}
+/* cf-a11y:end */
