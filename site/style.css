@@ -220,6 +220,10 @@ a.card:hover{transform:translateY(-4px);border-color:rgba(242,106,27,.5);box-sha
 .sym th,.sym td{text-align:left;padding:.9em 1em;border-bottom:1px solid var(--line);vertical-align:top}
 .sym th{font-family:var(--disp);color:var(--sundeep);width:34%}
 .sym tr:last-child th,.sym tr:last-child td{border-bottom:0}
+.sym td b{font-family:var(--disp);color:var(--sundeep)}
+.prose .symwrap{margin:0 0 1.4em}
+.prose .sym{margin:.6em 0}
+.prose .sources{font-size:.9rem;color:var(--dim)}
 .symwrap{background:var(--white);border:1px solid var(--line);border-radius:var(--r);
   padding:.4em 1em;overflow-x:auto;box-shadow:var(--shadow)}
 

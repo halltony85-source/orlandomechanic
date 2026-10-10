@@ -35,6 +35,9 @@ OUT        = "site"
 
 HOURS_LINE = "Mon to Sat 9am to 10pm, Sun 9am to 6pm"
 
+# IndexNow key (public by design). tools/indexnow.py pings with it after a deploy.
+INDEXNOW_KEY = "7a235db8a65242529056b089b9015136"
+
 # GMB — verified live from the Google listing 2026-08-20
 RATING    = "4.9"
 REVIEW_CT = "35"
@@ -847,6 +850,16 @@ SERVICE_BITE = {
 }
 
 BLOG_BITE = {
+    "30-60-90-rule-for-cars": (
+        "The 30-60-90 rule says your car needs a bigger service at <b>30,000, 60,000 and "
+        "90,000 miles</b>. In Orlando, treat those marks as the latest you should go, because "
+        "heat, stop and go traffic and beach salt all count as severe driving.",
+        ["30k is filters, tire rotation and a full inspection",
+         "60k adds fluids, and spark plugs on some engines",
+         "90k is the timing belt and water pump, if your engine has a belt",
+         "Your owner's manual beats the rule every time",
+         "Orlando drivers should use the severe schedule in that manual",
+         "Batteries age by the calendar here, so test yearly from year three"]),
     "florida-heat-car-battery": (
         "Heat, not cold, is what kills car batteries, and Orlando summers cut battery life "
         "to <b>three or four years.</b>",
@@ -893,6 +906,210 @@ BLOG_BITE = {
 
 # ------------------------------------------------------------------ BLOG
 BLOG = [
+    {
+        "slug": "30-60-90-rule-for-cars",
+        "title": "What Is the 30-60-90 Rule for Cars? The Orlando Version",
+        "desc": "The 30-60-90 rule in plain English, what each service covers, what it costs, "
+                "and why Orlando heat, traffic and salt air move the dates up.",
+        "date": "2026-10-10", "tag": "Maintenance",
+        "faqs": [
+            ("What is the 30-60-90 rule for cars?",
+             "It is a rule of thumb that says a car needs a bigger service at 30,000, 60,000 "
+             "and 90,000 miles. At 30k you get filters, a tire rotation and an inspection. At "
+             "60k you add fluids and sometimes spark plugs. At 90k comes the timing belt and "
+             "water pump on engines that have a belt. Your owner's manual has the real list "
+             "for your car."),
+            ("Is the 30-60-90 rule the same for every car?",
+             "No. It is a shortcut, not a factory schedule. Some spark plugs now last up to "
+             "120,000 miles, many engines use a timing chain instead of a belt, and most cars "
+             "need oil far more often than every 30,000 miles. Use the rule to know when a big "
+             "visit is coming. Use the manual to know what goes in it."),
+            ("Does driving in Orlando count as severe service?",
+             "For most drivers, yes. The Car Care Council lists stop and go traffic, short "
+             "trips, salty air and very hot weather as severe driving. Orlando has a normal "
+             "July high of 92 degrees and a normal July low of 73, so the heat never really "
+             "lets up. Pick the severe schedule in your owner's manual."),
+            ("How long does a car battery last in Florida?",
+             "AAA says a battery in a hot southern place lasts about three years, compared "
+             "with five years or more up north. AAA suggests a yearly test once a battery hits "
+             "its third year. In Orlando that means most cars are on a second battery before "
+             "they reach the 60,000 mile service."),
+            ("Will using an independent mechanic void my warranty?",
+             "No. The FTC says you can choose a dealer, an independent shop or do the work "
+             "yourself, and a company cannot void your warranty just for that choice. It can "
+             "still deny a claim if the outside work caused the damage. Keep every receipt."),
+            ("How much does a 90,000 mile service cost?",
+             "It depends on whether your engine has a timing belt. RepairPal puts the "
+             "national average for a timing belt replacement at $918 to $1,338 before tax. "
+             "If your engine has a chain, the 90k visit is mostly inspection and fluids and "
+             "costs far less. Ask for the list item by item, not as one package price."),
+        ],
+        "body": """
+<p>The 30-60-90 rule is the oldest shortcut in car care. It says your car needs a bigger
+service at 30,000 miles, again at 60,000, and again at 90,000. It is a good rule. It is
+also a national rule, and Orlando is not a national kind of place to drive.</p>
+<p>Here is the whole thing in plain English, what goes into each visit, what the big items
+cost, and the three Central Florida conditions that move every date on the chart.</p>
+
+<h2>What the 30-60-90 Rule Really Means</h2>
+<p>The rule is a reminder, not a law and not a factory schedule. Jalopnik made the same
+point in a piece on November 25, 2025. It called the rule a good template, mainly for older
+and used cars, and said your owner's manual should win when the two disagree. It also noted
+that some spark plugs are now rated for up to 120,000 miles, which already breaks the 60k
+line for a lot of cars.</p>
+<p>So use the rule for one job. It tells you when a big visit is coming. The manual tells
+you what goes in it.</p>
+<p>Miles also turn into years. The Federal Highway Administration puts the average driver
+at 13,476 miles a year. At that pace, here is when each milestone shows up. This is a worked
+example, not a promise.</p>
+<div class="symwrap"><table class="sym">
+<tr><th>Milestone</th><td><b>About how old the car is at 13,476 miles a year</b></td></tr>
+<tr><th>30,000 miles</th><td>2 years and 3 months</td></tr>
+<tr><th>60,000 miles</th><td>4 years and 5 months</td></tr>
+<tr><th>90,000 miles</th><td>6 years and 8 months</td></tr>
+</table></div>
+<p>Keep those ages in mind. In Florida, some parts wear out by the calendar long before the
+odometer gets a vote.</p>
+
+<h2>The 30-60-90 Checklist, With the Orlando Add-Ons</h2>
+<p>The left column is what most guides and most manuals put at each stop. The right column
+is what we would add for a car that lives in Orange, Seminole or Osceola County.</p>
+<div class="symwrap"><table class="sym">
+<tr><th>Milestone</th><td><b>The usual list</b></td><td><b>Add this in Orlando</b></td></tr>
+<tr><th>30,000 miles</th><td>Oil and filter if due, engine air filter, cabin air filter,
+tire rotation, and a look at brakes, belts, hoses and every fluid</td><td>A real battery load
+test, an A/C check while the car idles, and a brake fluid moisture test</td></tr>
+<tr><th>60,000 miles</th><td>Brake fluid, coolant and transmission fluid as your manual
+lists them, spark plugs if they are the 60k kind, and a look at shocks, struts and ball
+joints</td><td>Expect a second battery by now, and check the brake lines and exhaust
+hangers for rust if the car sees the beach</td></tr>
+<tr><th>90,000 miles</th><td>Timing belt and water pump if your engine has a belt, a check
+of long life spark plugs, and the exhaust, suspension and steering</td><td>A full underbody
+look for salt rust, cooling hoses squeezed for soft spots, and the A/C condenser fan
+tested</td></tr>
+</table></div>
+<p>Oil is not really on this chart. Almost every car needs oil many times before 30,000
+miles. Follow the interval in your manual or your oil life monitor, and use the severe one.
+More on that next.</p>
+
+<h2>Why Orlando Driving Counts as Severe Service</h2>
+<p>Every owner's manual has two schedules. Normal and severe. Most people pick normal
+because it sounds like them. In Central Florida it almost never is.</p>
+<p>The Car Care Council lists what counts as severe driving. Stop and go traffic, short
+trips, heavy loads, dusty or salty air, and very hot or very cold weather. Orlando checks
+most of those boxes before lunch.</p>
+
+<h3>The Heat Never Clocks Out</h3>
+<p>The National Weather Service office in Melbourne lists Orlando's normal July high at 92
+degrees and the normal July low at 73, based on 1991 to 2020 data. That low matters. The
+car never gets a cool night to recover. July 2026 averaged 85.2 degrees in Orlando, tied for
+the second warmest July on that record, behind only July 2024.</p>
+<p>Under the hood it is far worse. AAA says engine bay heat can top 200 degrees in hot
+weather. Heat speeds up the chemistry that wears out batteries, cooks rubber hoses and
+thins tired oil.</p>
+<p>Batteries show it first. AAA says a battery in a hot southern place lasts about three
+years, compared with five or more up north, and it suggests a test every year once a battery
+reaches year three. Put that next to the table above. By the 60,000 mile visit, a typical
+Orlando car is about four and a half years old. If its batteries last three years, it is
+already on its second one, and the third is due around the 90k mark. That is why a battery
+test belongs in every big service, even when the car still cranks fine. Here is <a
+href="/blog/florida-heat-car-battery/">why Florida heat kills batteries without warning</a>.</p>
+
+<h3>Humidity Gets Into Your Brake Fluid</h3>
+<p>Most brake fluid pulls water out of the air. Florida has a lot of water in the air. The
+federal brake fluid standard tests for exactly this. New DOT 3 fluid must not boil below 401
+degrees. After a set dose of moisture in a lab, it only has to hold to 284 degrees. That is
+117 degrees of safety margin gone, and boiled brake fluid means a soft pedal when you need
+it most.</p>
+<p>So do not just flush brake fluid because the odometer says 60k. Have it tested at 30k and
+at every brake job, and change it on your manual's schedule or sooner if the test fails.</p>
+
+<h3>Salt Air Rides Home From the Beach</h3>
+<p>Orlando sits inland, but plenty of local cars spend weekends at Cocoa Beach or New Smyrna.
+The Car Care Council counts salty air as severe driving for a reason. Salt eats brake lines,
+exhaust hangers and the bolts that hold suspension parts. A rinse under the car after a beach
+day is cheap. At 60k and 90k, ask for someone to look up underneath, not just under the
+hood.</p>
+
+<h3>I-4 Is a Brake Test Every Day</h3>
+<p>Stop and go traffic is on the severe list too. Brakes wear per stop, not per mile, and a
+crawl on I-4 is a lot of stops. That is why pads on Orlando commuter cars often come due well
+before any 30-60-90 chart says so. We wrote up <a href="/blog/i4-traffic-brake-wear/">how
+I-4 traffic wears brakes</a> and what each brake noise means.</p>
+
+<h2>What the Big Items Cost</h2>
+<p>You will see guides quote one price for the whole 60k or 90k service. Ignore it. A
+milestone service is a list, not a product, and two cars at 60,000 miles can need very
+different lists. Price it line by line.</p>
+<p>Here are national averages from RepairPal for the three biggest line items, checked on
+October 10, 2026. They do not include tax and do not adjust for location, so use them as a
+gut check, not a quote.</p>
+<div class="symwrap"><table class="sym">
+<tr><th>Line item</th><td><b>National average (RepairPal)</b></td><td><b>When it usually comes up</b></td></tr>
+<tr><th>Timing belt replacement</th><td>$918 to $1,338</td><td>90k, only on engines with a belt</td></tr>
+<tr><th>Spark plug replacement</th><td>$288 to $399</td><td>60k for some plugs, up to 120k for others</td></tr>
+<tr><th>Transmission fluid change</th><td>$294 to $356</td><td>60k on many cars, per your manual</td></tr>
+</table></div>
+<p>The timing belt is the one that matters most. On many engines a snapped belt lets the
+valves hit the pistons, and a cheap belt job becomes an engine job. If your car has a belt
+and you are near or past the mileage in your manual, do not wait on it. If it has a chain,
+there is no 90k belt job at all, and nobody should be selling you one.</p>
+
+<h2>Where the 30-60-90 Rule Gets It Wrong</h2>
+<p>The rule is useful. It is also old. Here is where it can steer you wrong.</p>
+<ul>
+<li><b>It ignores time.</b> A car driven 5,000 miles a year still ages. Batteries, brake
+fluid, coolant and rubber all wear by the calendar, and Florida heat speeds that up.</li>
+<li><b>It assumes a timing belt.</b> Many newer engines use a chain. Check your manual
+before you budget for the biggest 90k item.</li>
+<li><b>It assumes old spark plugs.</b> Some plugs are rated far past 60,000 miles. Changing
+good plugs early is money spent for nothing.</li>
+<li><b>It gets sold as a package.</b> A shop menu can tuck in flushes your manual never
+calls for. Ask one question about every line. Where is that in my owner's manual?</li>
+</ul>
+
+<h2>Do You Have to Go Back to the Dealer?</h2>
+<p>No. On July 7, 2022, the Federal Trade Commission said plainly that you choose where your
+car gets serviced. A dealer, an independent shop, or your own garage. Under the
+Magnuson-Moss Warranty Act, a company cannot void your warranty just because someone else did
+the work. It can still deny a claim if the outside work caused the damage, so the job has to
+be done right.</p>
+<p>The fix is simple. Keep every receipt with the date, the mileage and what was done. A
+folder in the glove box or photos on your phone both work. Those records also help when you
+sell the car.</p>
+
+<h2>How to Use the Rule This Week</h2>
+<ol class="proc">
+<li><b>Find your schedule</b><p>Open the owner's manual or the maker's app and find the
+maintenance section. Pick the severe schedule if you drive in Orlando.</p></li>
+<li><b>Check the odometer and the age</b><p>Note both. Whichever one hits a service first
+wins.</p></li>
+<li><b>Look up your timing setup</b><p>Belt or chain. This one answer decides whether 90k is
+a small visit or a big one.</p></li>
+<li><b>Test the battery if it is three or older</b><p>AAA says yearly from year three. In
+Florida, do not skip it.</p></li>
+<li><b>Ask for the list, not the package</b><p>Every line should match your manual or a
+test result you can see.</p></li>
+<li><b>Save the receipt</b><p>Date, mileage and work done. It protects your warranty and
+your resale price.</p></li>
+</ol>
+<p>Coming up on 30, 60 or 90? We do the <a href="/services/mobile-oil-change/">oil
+service</a>, <a href="/services/battery-replacement/">battery testing</a>, and <a
+href="/services/brake-repair/">brake work</a> in your driveway, and we will tell you straight
+which items on the list need a shop lift instead. Call {PHONE}.</p>
+
+<h2>Sources</h2>
+<ul class="sources">
+<li>Jalopnik, <a href="https://www.jalopnik.com/2031332/does-30-60-90-rule-for-car-maintenance-make-sense/" rel="nofollow noopener">Does the 30-60-90 Rule for Car Maintenance Actually Make Sense?</a>, November 25, 2025</li>
+<li>Federal Highway Administration, <a href="https://www.fhwa.dot.gov/ohim/onh00/bar8.htm" rel="nofollow noopener">Average Annual Miles per Driver by Age Group</a></li>
+<li>Car Care Council via AutoInc, <a href="https://www.autoinc.org/?p=14025" rel="nofollow noopener">Take Action to Reduce Effects of Severe Driving</a>, October 1, 2019</li>
+<li>National Weather Service Melbourne, <a href="https://www.weather.gov/media/mlb/climate/mcoJUL.pdf" rel="nofollow noopener">Orlando July Normals and Records</a>, read October 10, 2026</li>
+<li>AAA, <a href="https://www.aaa.com/autorepair/articles/how-long-do-car-batteries-last" rel="nofollow noopener">How Long Do Car Batteries Last</a></li>
+<li>49 CFR 571.116, <a href="https://www.law.cornell.edu/cfr/text/49/571.116" rel="nofollow noopener">Federal Motor Vehicle Safety Standard 116, Brake Fluids</a></li>
+<li>RepairPal, <a href="https://repairpal.com/estimator/timing-belt-replacement-cost" rel="nofollow noopener">Timing Belt Replacement Cost</a>, <a href="https://repairpal.com/estimator/spark-plug-replacement-cost" rel="nofollow noopener">Spark Plug Replacement Cost</a> and <a href="https://repairpal.com/estimator/transmission-fluid-change-cost" rel="nofollow noopener">Transmission Fluid Change Cost</a>, read October 10, 2026</li>
+<li>Federal Trade Commission, <a href="https://consumer.ftc.gov/consumer-alerts/2022/07/ftc-says-companies-warranty-restrictions-were-illegal" rel="nofollow noopener">FTC Says Companies' Warranty Restrictions Were Illegal</a>, July 7, 2022</li>
+</ul>""",
+    },
     {
         "slug": "florida-heat-car-battery",
         "title": "Why Florida Heat, Not Cold, Kills Your Car Battery",
@@ -1423,6 +1640,10 @@ a.card:hover{transform:translateY(-4px);border-color:rgba(242,106,27,.5);box-sha
 .sym th,.sym td{text-align:left;padding:.9em 1em;border-bottom:1px solid var(--line);vertical-align:top}
 .sym th{font-family:var(--disp);color:var(--sundeep);width:34%}
 .sym tr:last-child th,.sym tr:last-child td{border-bottom:0}
+.sym td b{font-family:var(--disp);color:var(--sundeep)}
+.prose .symwrap{margin:0 0 1.4em}
+.prose .sym{margin:.6em 0}
+.prose .sources{font-size:.9rem;color:var(--dim)}
 .symwrap{background:var(--white);border:1px solid var(--line);border-radius:var(--r);
   padding:.4em 1em;overflow-x:auto;box-shadow:var(--shadow)}
 
@@ -2201,12 +2422,15 @@ def page_blog_post(p):
       <p>{", ".join(f'<a href="/services/{s["slug"]}/">{s["name"]}</a>' for s in SERVICES[:5])}</p></div>
   </div>
 </div></div></section>"""
+    if p.get("faqs"):
+        body += block_faq(p["faqs"], "Questions people ask")
     body += ('<section class="sec light"><div class="wrap"><div class="sec-head">'
              '<h2>More from the blog</h2></div>'
              f'<div class="grid g3">{others}</div></div></section>')
     body += block_cta()
+    extra = [schema_faq(p["faqs"])] if p.get("faqs") else []
     return head(title, p["desc"], f"blog/{p['slug']}",
-                schema_blogpost(p),
+                schema_blogpost(p), *extra,
                 schema_breadcrumb([("Home", ""), ("Blog", "blog"),
                                    (p["title"], f"blog/{p['slug']}")])) + body + footer()
 
@@ -2475,6 +2699,7 @@ def build():
         shutil.copytree("assets", os.path.join(OUT, "img"))
     w("humans.txt", HUMANS)
     w("robots.txt", ROBOTS)
+    w(f"{INDEXNOW_KEY}.txt", INDEXNOW_KEY)
 
     canon = [""] + ["services"] + [f"services/{s['slug']}" for s in SERVICES] \
           + ["service-areas"] + [f"service-areas/{c[0]}" for c in CITIES] \
