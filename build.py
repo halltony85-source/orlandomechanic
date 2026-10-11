@@ -1313,7 +1313,7 @@ def ldjson(*objs):
 def schema_business():
     return {
         "@type": ["AutoRepair", "LocalBusiness"],
-        "@id": DOMAIN + "/#business",
+        "@id": DOMAIN + "/#organization",
         "name": BIZ,
         "slogan": TAGLINE,
         "telephone": PHONE_TEL,
@@ -1330,6 +1330,9 @@ def schema_business():
                     "addressRegion": STATE, "addressCountry": "US"},
         "geo": {"@type": "GeoCoordinates", "latitude": GEO_LAT, "longitude": GEO_LNG},
         "hasMap": GMB_URL,
+        "sameAs": [GMB_URL],
+        "knowsAbout": [s["name"] for s in SERVICES],
+        "publishingPrinciples": DOMAIN + "/about/#check",
         "aggregateRating": {"@type": "AggregateRating", "ratingValue": RATING,
                             "reviewCount": REVIEW_CT, "bestRating": "5"},
         "openingHoursSpecification": [
@@ -1358,7 +1361,7 @@ def schema_faq(faqs):
 
 def schema_reviews():
     return [{"@type": "Review",
-             "itemReviewed": {"@id": DOMAIN + "/#business"},
+             "itemReviewed": {"@id": DOMAIN + "/#organization"},
              "author": {"@type": "Person", "name": n},
              "reviewRating": {"@type": "Rating", "ratingValue": str(s), "bestRating": "5"},
              "reviewBody": t, "datePublished": d}
@@ -1370,11 +1373,11 @@ def schema_blogpost(p):
             "dateModified": p["date"],
             "mainEntityOfPage": url(f"blog/{p['slug']}"),
             "author": {"@type": "Organization", "name": BIZ},
-            "publisher": {"@id": DOMAIN + "/#business"}}
+            "publisher": {"@id": DOMAIN + "/#organization"}}
 
 def schema_service(name, desc, area=None):
     return {"@type": "Service", "name": name, "description": desc,
-            "provider": {"@id": DOMAIN + "/#business"},
+            "provider": {"@id": DOMAIN + "/#organization"},
             "areaServed": {"@type": "City", "name": area or f"{CITY_MAIN}, {STATE}"},
             "serviceType": name}
 
@@ -1908,7 +1911,7 @@ GTAG = """<!-- Google tag (gtag.js) -->
 def head(title, desc, path, *extra_ld):
     canon = url(path)
     website = ({"@type": "WebSite", "@id": DOMAIN + "/#website", "name": BIZ,
-                "url": DOMAIN + "/", "publisher": {"@id": DOMAIN + "/#business"}}
+                "url": DOMAIN + "/", "publisher": {"@id": DOMAIN + "/#organization"}}
                if path in ("", "/", "index") else None)
     return f"""<!DOCTYPE html>
 {MANIFESTO}
@@ -1974,6 +1977,7 @@ def footer():
     <div><h4>Service Areas</h4>{cit}<a href="/service-areas/">All areas</a></div>
     <div><h4>Company</h4>
       <a href="/about/">About Us</a>
+      <a href="/about/#check">How to Check Us</a>
       <a href="/reviews/">Reviews</a>
       <a href="/blog/">Blog</a>
       <a href="/contact-us/">Contact Us</a>
@@ -2434,6 +2438,60 @@ def page_blog_post(p):
                 schema_breadcrumb([("Home", ""), ("Blog", "blog"),
                                    (p["title"], f"blog/{p['slug']}")])) + body + footer()
 
+# How To Check Us, on /about/#check. Only facts this site already states:
+# certified mechanics (no certifying body is named, so none is claimed), the
+# Google rating, the reviews page, hours, phone and email. No owner, license,
+# insurance or parent company is stated on the site, so none is added here.
+CHECK_BITE = (f"{BIZ} is a mobile auto repair service for Orlando and Central Florida. "
+              "You should be able to check us before you hand over a key, <b>so here is "
+              "what to look at and where to find it.</b>")
+CHECK_SNACK = [
+    f"{RATING} stars across {REVIEW_CT} reviews on our Google listing",
+    "Every service is done by a certified mechanic",
+    "You approve the price before any work starts",
+    f"Open {HOURS_LINE}",
+    f"Call {PHONE_DISP} or email {EMAIL}",
+]
+CHECK_MEAL = [
+    ("Read Our Google Reviews",
+     f"Our {RATING} star rating comes straight from our Google listing, across "
+     f"{REVIEW_CT} reviews. Nine of them are copied word for word on our "
+     f'<a href="/reviews/">reviews page</a>, with the name the reviewer used on Google. '
+     f'You can read every one on <a href="{GMB_URL}" rel="nofollow">our Google listing</a>.'),
+    ("Ask To See the Certificate",
+     "Every job is done by a certified mechanic. When your mechanic arrives, ask to see "
+     "the certificate. A good mechanic is glad to show it, and so are we."),
+    ("Hold Us to the Price",
+     "We test before we sell you a part. Then you get the price in plain numbers, and "
+     "nothing starts until you say yes. If a job needs a lift or a specialty shop, we tell "
+     "you before we take a dime, and you keep the diagnosis."),
+    ("Where Our Numbers Come From",
+     "The star rating and review count are read off our Google listing. The facts in our "
+     "blog posts name their source, such as AAA or the Federal Highway Administration, "
+     "right in the post."),
+]
+CHECK_FAQ = [
+    ("Are your mechanics certified?",
+     "Yes. Every service is done by a certified mechanic. Ask the mechanic who comes out "
+     "to show you the certificate before work starts."),
+    ("Where can I read your reviews?",
+     f"On our Google listing, where we hold a {RATING} star rating across {REVIEW_CT} "
+     "reviews. Nine of them are also copied word for word on our reviews page."),
+    ("How do I know the price before you start?",
+     "We test first, then tell you the price in plain numbers. Nothing starts until you "
+     "approve it."),
+]
+
+def check_section():
+    meal = "".join(f'<h3 style="margin-top:1.4em">{esc(h)}</h3><p>{t}</p>' for h, t in CHECK_MEAL)
+    return f"""
+<section class="sec light" id="check"><div class="wrap" style="max-width:860px">
+  <div class="sec-head"><h2>How To Check Us</h2></div>
+  {bite_box(CHECK_BITE)}
+  {snack_box(CHECK_SNACK)}
+  <div class="prose" style="margin-top:1.6em">{meal}</div>
+</div></section>""" + block_faq(CHECK_FAQ, title="Questions about checking us")
+
 def page_about():
     title = f"About Us | {BIZ}"
     desc = (f"{BIZ} is a team of certified mechanics who bring the repair shop to you across "
@@ -2476,10 +2534,14 @@ def page_about():
       <a href="mailto:{EMAIL}">{EMAIL}</a></p></div>
   </div>
 </div></div></section>"""
+    body += check_section()
     body += block_testimonial()
     body += block_cta()
     return head(title, desc, "about",
-                schema_breadcrumb([("Home", ""), ("About", "about")])) + body + footer()
+                schema_breadcrumb([("Home", ""), ("About", "about")]),
+                {"@type": "AboutPage", "url": url("about"),
+                 "about": {"@id": DOMAIN + "/#organization"}},
+                schema_faq(CHECK_FAQ)) + body + footer()
 
 def page_contact():
     title = f"Contact Us | {BIZ}"
@@ -2654,10 +2716,50 @@ NETLIFY = """[build]
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+
 [[redirects]]
   from = "/index.html"
   to = "/"
   status = 301
+"""
+
+def llms_txt():
+    """/llms.txt for AI readers. Only what the site states. Every link is a
+    page this build writes, in the trailing slash form url() makes canonical."""
+    svc = "\n".join(f"- [{s['name']}]({url('services/' + s['slug'])})" for s in SERVICES)
+    cit = "\n".join(f"- [{c[1]}, FL]({url('service-areas/' + c[0])})" for c in CITIES)
+    posts = "\n".join(f"- [{p['title']}]({url('blog/' + p['slug'])})" for p in BLOG)
+    return f"""# {BIZ}
+
+> {BIZ} is a mobile auto repair service in {CITY_MAIN}, {STATE_FULL}. Certified mechanics come to your home, office or roadside with the tools and parts to fix the car where it sits. Phone {PHONE_DISP}.
+
+Open {HOURS_LINE}. Rated {RATING} stars across {REVIEW_CT} reviews on Google. You approve the price before any work starts.
+
+## How To Check Us
+
+- [About and how to check us]({url('about')}): what we state, where each fact comes from, and how to check it
+- [Reviews]({url('reviews')}): nine Google reviews quoted word for word
+- [Google listing]({GMB_URL}): the source of the rating and review count
+- [Contact]({url('contact-us')}): phone, email and booking
+
+## Services
+
+- [All services]({url('services')})
+{svc}
+
+## Service Areas
+
+- [All service areas]({url('service-areas')})
+{cit}
+
+## Optional
+
+- [Blog]({url('blog')})
+{posts}
 """
 
 # ================================================================== WRITE
@@ -2699,6 +2801,7 @@ def build():
         shutil.copytree("assets", os.path.join(OUT, "img"))
     w("humans.txt", HUMANS)
     w("robots.txt", ROBOTS)
+    w("llms.txt", llms_txt())
     w(f"{INDEXNOW_KEY}.txt", INDEXNOW_KEY)
 
     canon = [""] + ["services"] + [f"services/{s['slug']}" for s in SERVICES] \
