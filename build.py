@@ -1549,6 +1549,19 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:700;line-height:1.12;
 .gbadge{display:inline-flex;align-items:center;gap:.6em;background:var(--white);
   border:1px solid var(--line);border-radius:999px;padding:.55em 1.2em;
   box-shadow:var(--shadow);font-size:.92rem;font-weight:600;color:var(--ink)}
+.mrchip{display:inline-flex;align-items:center;gap:.7em;background:var(--white);border:1px solid var(--line);
+  border-radius:999px;padding:.3em 1.1em .3em .5em;box-shadow:var(--shadow);color:var(--ink);text-decoration:none}
+.mrchip:hover{border-color:var(--sun)}
+.mrchip img{width:52px;height:auto;display:block}
+.mrchip span{display:flex;flex-direction:column;line-height:1.25}
+.mrchip b{font-family:var(--disp);font-size:15px}
+.mrchip .t{font-size:14.5px;color:var(--dim)}
+.mrcard{display:flex;align-items:center;gap:1.2em;flex-wrap:wrap}
+.mrcard img{width:150px;height:auto;flex:none}
+.mrcard div{flex:1 1 200px}
+.mrcard h3{margin-bottom:.3em}
+.mrcard p{font-size:15.5px;color:var(--dim);margin-bottom:.5em}
+.mrcard a{font-weight:700;color:var(--sundeep)}
 .gbadge .stars{color:var(--gold);display:inline-flex;gap:.1em}
 .gbadge .stars .ic{width:15px;height:15px;fill:currentColor;stroke:none}
 .gbadge b{font-family:var(--disp)}
@@ -2081,6 +2094,21 @@ def snack_box(items, title="At a glance"):
     return (f'<div class="snackbox"><h3>{icon("clipboard")} {esc(title)}</h3>'
             f'<ul>{li}</ul></div>')
 
+MR_LINK = "https://mechanicrank.com/m/orlandos-finest-mobile-mechanic/"
+def mr_badge(w, size):
+    return (f'<picture><source type="image/webp" srcset="/img/mr-verified-orlando-{size}.webp">'
+            f'<img src="/img/mr-verified-orlando-{size}.png" alt="MechanicRank Verified badge, Orlando" '
+            f'width="{w}" height="{round(w*419/520)}" loading="lazy" decoding="async"></picture>')
+
+def mr_chip():
+    return (f'<a class="mrchip" href="{MR_LINK}" rel="noopener">{mr_badge(52, 260)}'
+            f'<span><b>MechanicRank Verified</b><span class="t">Mobile mechanic, Orlando</span></span></a>')
+
+def mr_card():
+    return (f'<div class="card mrcard">{mr_badge(150, 520)}<div><h3>MechanicRank Verified</h3>'
+            f'<p>Listed and verified on MechanicRank as a mobile mechanic in Orlando, FL.</p>'
+            f'<a href="{MR_LINK}" rel="noopener">See the MechanicRank listing &rarr;</a></div></div>')
+
 def gbadge():
     stars = "".join(icon("star") for _ in range(5))
     return (f'<a class="gbadge" href="{GMB_URL}" rel="nofollow">'
@@ -2198,7 +2226,7 @@ def page_home():
       <a class="btn btn-sun" href="tel:{PHONE_TEL}">{icon('phone')} Call {PHONE_DISP}</a>
       <a class="btn btn-ghost" href="{BOOK_URL}" rel="nofollow">{icon('calendar')} Book an appointment</a>
     </div>
-    <div class="sub" style="margin-top:1.4em">{gbadge()}</div>
+    <div class="sub" style="margin-top:1.4em">{gbadge()}{mr_chip()}</div>
     <div class="sub">
       <span>{icon('check')} Certified mechanics</span>
       <span>{icon('check')} Price approved before work starts</span>
@@ -2532,6 +2560,7 @@ def page_about():
     <div class="card" style="margin-top:1em"><span class="cico">{icon('phone')}</span><h3>Talk to us</h3>
       <p><a href="tel:{PHONE_TEL}">{PHONE_DISP}</a><br>
       <a href="mailto:{EMAIL}">{EMAIL}</a></p></div>
+    {mr_card().replace('class="card mrcard"', 'class="card mrcard" style="margin-top:1em"')}
   </div>
 </div></div></section>"""
     body += check_section()
