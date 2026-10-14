@@ -2101,13 +2101,13 @@ def mr_badge(w, size):
             f'width="{w}" height="{round(w*419/520)}" loading="lazy" decoding="async"></picture>')
 
 def mr_chip():
-    return (f'<a class="mrchip" href="{MR_LINK}" rel="noopener">{mr_badge(52, 260)}'
+    return (f'<a class="mrchip" href="{MR_LINK}" rel="nofollow noopener">{mr_badge(52, 260)}'
             f'<span><b>MechanicRank Verified</b><span class="t">Mobile mechanic, Orlando</span></span></a>')
 
 def mr_card():
     return (f'<div class="card mrcard">{mr_badge(150, 520)}<div><h3>MechanicRank Verified</h3>'
             f'<p>Listed and verified on MechanicRank as a mobile mechanic in Orlando, FL.</p>'
-            f'<a href="{MR_LINK}" rel="noopener">See the MechanicRank listing &rarr;</a></div></div>')
+            f'<a href="{MR_LINK}" rel="nofollow noopener">See the MechanicRank listing &rarr;</a></div></div>')
 
 def gbadge():
     stars = "".join(icon("star") for _ in range(5))
