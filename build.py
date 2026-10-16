@@ -850,6 +850,13 @@ SERVICE_BITE = {
 }
 
 BLOG_BITE = {
+    "mobile-mechanic-hourly-rate-orlando": (
+    "There is no official hourly rate. <b>Ask for the total price of the job in writing</b>, "
+    "because in Florida that estimate is what protects you.",
+    ["Orlando auto techs earned a median $23.00 an hour in May 2025 (BLS)",
+     "A billed rate also pays for the truck, tools, drive time and taxes",
+     "Over $150, Florida law says you get a written estimate first",
+     "The bill can only go $50 over the estimate without your okay"]),
     "30-60-90-rule-for-cars": (
         "The 30-60-90 rule says your car needs a bigger service at <b>30,000, 60,000 and "
         "90,000 miles</b>. In Orlando, treat those marks as the latest you should go, because "
@@ -906,6 +913,206 @@ BLOG_BITE = {
 
 # ------------------------------------------------------------------ BLOG
 BLOG = [
+    {
+        "slug": "mobile-mechanic-hourly-rate-orlando",
+        "title": "How Much Should a Mobile Mechanic Charge an Hour in Orlando?",
+        "desc": "What Orlando mechanics really earn, why the guides disagree on hourly rates, "
+                "and the Florida estimate rules that protect you before any work starts.",
+        "date": "2026-10-15", "tag": "Pricing",
+        "faqs": [
+            ("How much should a mobile mechanic charge an hour?",
+             "There is no official number. Guides that rank for this question quote anywhere "
+             "from $50 to $150 an hour, and the ones we read on October 12, 2026 did not name "
+             "where their numbers came from. The hourly rate also matters less than the total. "
+             "Ask for the price of the whole job, in writing, before work starts."),
+            ("How much is mechanic labor per hour in Florida?",
+             "What a mechanic earns and what a shop bills are two different numbers. The U.S. "
+             "Bureau of Labor Statistics says the median auto technician in Florida earned "
+             "$23.20 an hour in May 2025. A billed labor rate is higher because it also pays "
+             "for tools, insurance, the truck or the building, and the hours nobody can bill."),
+            ("Is $150 an hour expensive for a mechanic?",
+             "Not by itself. A $150 rate on a job booked at one hour costs less than a $90 rate "
+             "on a job that somehow takes three. Compare the full price for the same job, the "
+             "same parts and the same guarantee. Then the hourly rate stops mattering."),
+            ("Can a mechanic charge more than the estimate in Florida?",
+             "Only by a little, unless you say yes first. Florida law lets the final bill go "
+             "over a written estimate by $10 or 10 percent, whichever is more, but never by "
+             "more than $50. Past that, the shop has to call you and get your okay."),
+            ("Do mobile mechanics have to register in Florida?",
+             "Yes. The Florida Motor Vehicle Repair Act counts mobile repair shops and "
+             "self-employed mechanics as repair shops, and repair shops have to register with "
+             "the Florida Department of Agriculture and Consumer Services. You can look a "
+             "business up on the department's Business License Lookup."),
+            ("Do I have to pay for a diagnosis?",
+             "Often, yes. Finding the problem is real work. In Florida, a written estimate has "
+             "to list the charge for making the estimate, or how that charge is worked out. Ask "
+             "about it on the phone so it is not a surprise."),
+        ],
+        "body": """
+<p>Everybody wants one number. Type this question into Google and you get Reddit threads,
+Facebook groups and a few guides that quote $50, $85 or $150 an hour. We read the top ones
+on October 12, 2026. None of them said where their numbers came from, and none of them said
+a word about Florida.</p>
+<p>So here is what we can show you with real sources. What Orlando mechanics actually earn,
+why a mobile rate is built differently from a shop rate, and the Florida law that matters
+more than any hourly number.</p>
+
+<h2>Why Nobody Agrees on the Hourly Rate</h2>
+<p>The guides disagree because they are guessing in public. One 2026 guide from a mechanic
+software company puts the national mobile rate at $85 an hour and says rates run from $50 to
+$150. It credits industry data from thousands of mechanics but never names it. Another 2026
+guide from a shop software maker says mobile mechanics charge $80 to $140 and calls its
+numbers estimates. Both may be fair guesses. Neither is something you can check.</p>
+<p>The rest of page one is Reddit threads, Facebook groups, a forum and a TikTok, where
+mechanics trade their own rates and argue about them. Those are real opinions from real
+mechanics. They are not a market rate.</p>
+<p>There is a better place to start. The government tracks what mechanics get paid.</p>
+
+<h2>What Orlando Mechanics Actually Earn</h2>
+<p>The U.S. Bureau of Labor Statistics runs a wage survey every May. Its May 2025 numbers
+count 6,480 automotive service technicians and mechanics working in the Orlando, Kissimmee
+and Sanford metro area. Here is what they earned, next to Florida and the whole country.</p>
+<div class="symwrap" role="img" aria-label="Bar chart. Hourly pay for auto technicians, May 2025. Orlando median $23.00, Florida median $23.20, United States median $24.34, Orlando mean $25.77.">
+<p style="margin:.6em 0 .2em"><b>Hourly Pay for Auto Technicians, May 2025</b></p>
+<div style="display:grid;gap:.55em;margin:.8em 0 1em">
+<div><div style="font-size:.9rem">Orlando metro, median</div><div style="display:flex;align-items:center;gap:.6em"><span style="display:block;height:18px;width:76.7%;background:var(--grad);border-radius:4px"></span><b>$23.00</b></div></div>
+<div><div style="font-size:.9rem">Florida, median</div><div style="display:flex;align-items:center;gap:.6em"><span style="display:block;height:18px;width:77.3%;background:var(--grad);border-radius:4px"></span><b>$23.20</b></div></div>
+<div><div style="font-size:.9rem">United States, median</div><div style="display:flex;align-items:center;gap:.6em"><span style="display:block;height:18px;width:81.1%;background:var(--grad);border-radius:4px"></span><b>$24.34</b></div></div>
+<div><div style="font-size:.9rem">Orlando metro, mean</div><div style="display:flex;align-items:center;gap:.6em"><span style="display:block;height:18px;width:85.9%;background:var(--grad);border-radius:4px"></span><b>$25.77</b></div></div>
+</div>
+<p style="font-size:.85rem;color:var(--dim);margin:0 0 .6em">Source, U.S. Bureau of Labor Statistics, Occupational Employment and Wage Statistics, May 2025, read October 12, 2026.</p>
+</div>
+<p>Two things jump out. Orlando mechanics earn a little less than the national median. And
+the mean is higher than the median, which means a smaller group of top techs pulls the
+average up. That matches what you see on the street. A master tech with a diagnostic scope
+and years on Toyotas and Fords is not paid like a lube tech.</p>
+<p>Now the key point. <b>That wage is not the price you pay.</b> It is what lands in the
+mechanic's pocket before anything else gets paid.</p>
+
+<h2>How a Mobile Rate Gets Built</h2>
+<p>A labor rate has to cover the mechanic's pay and everything that makes the work
+possible. For a shop that means rent, lifts and a front desk. For a mobile mechanic it is a
+different list.</p>
+<ul>
+<li><b>The truck.</b> Fuel, tires, insurance and repairs on the van that carries the
+shop.</li>
+<li><b>Tools and scan gear.</b> A real diagnostic scanner, software updates and the hand
+tools that ride along every day.</li>
+<li><b>Drive time.</b> Nobody bills for sitting on I-4. An hour in traffic between jobs is an
+hour of pay with no work in it.</li>
+<li><b>Parts runs.</b> Picking up the right part, and taking back the wrong one, is time on
+the clock too.</li>
+<li><b>Taxes and business costs.</b> The things every business pays before the owner sees a
+dollar.</li>
+</ul>
+<p>Here is a worked example, not anyone's real price. Say a mobile mechanic wants to earn
+the Orlando median of $23 an hour. Say a third of the workday goes to driving, parts runs
+and paperwork that nobody pays for. To clear $23 for every hour worked, he has to bill $34.50
+for every hour he is on a car. That is before one gallon of gas, one tool, one insurance bill
+or one tax payment. Add those and you can see how the rates in the guides get where they
+are.</p>
+<figure class="photo-card" style="margin:1.4em 0"><img src="/img/under-hood.jpg" width="1400" height="1050" loading="lazy"
+ alt="Mobile mechanic working under the hood of a customer's car in Orlando"></figure>
+<p>There is one place mobile repair can come out ahead. There is no building to pay for and
+no waiting room to heat or cool. Whether that saving reaches you depends on the job and the
+mechanic. So do not judge by the rate. Judge by the total.</p>
+
+<h2>The Hourly Rate Is the Wrong Thing to Compare</h2>
+<p>Most repair work is not timed with a stopwatch. A lot of mechanics, at shops and on the
+road, price a job from a set labor time for that repair on that car, or quote a flat price
+for the whole job. Florida law even makes the shop tell you which one you are getting. A
+written estimate has to say whether you are charged a flat rate, an hourly rate, or both.</p>
+<p>That is why two quotes with the same hourly rate can land far apart, and two quotes with
+very different rates can come out the same. Here is what to put side by side instead.</p>
+<div class="symwrap"><table class="sym">
+<tr><th>Ask about</th><td><b>Why it matters</b></td></tr>
+<tr><th>The total price for the job</th><td>Rate times hours, plus parts, plus any fees. This is the only number you actually pay.</td></tr>
+<tr><th>Flat or hourly</th><td>A flat price puts the risk of a slow job on the mechanic. An hourly price puts it on you.</td></tr>
+<tr><th>The parts</th><td>Brand, new or rebuilt, and whether the old parts come back to you.</td></tr>
+<tr><th>The diagnosis charge</th><td>Whether there is one, how much, and whether it counts toward the repair.</td></tr>
+<tr><th>Any trip or supply fee</th><td>Some mobile mechanics charge to come out. Florida estimates have to list shop supply and waste charges.</td></tr>
+<tr><th>The guarantee</th><td>What is covered, and for how many months or miles. A Florida estimate has to say.</td></tr>
+</table></div>
+
+<h2>The Florida Rules That Protect You</h2>
+<p>This is the part none of the top pages cover, and it is worth more than any hourly
+number. Florida has a law just for car repair. It is the Florida Motor Vehicle Repair Act,
+Chapter 559, Part IX of the Florida Statutes.</p>
+
+<h3>Mobile Mechanics Count as Repair Shops</h3>
+<p>Section 559.903 defines a repair shop as anyone paid to fix cars owned by other people.
+It names mobile motor vehicle repair shops and self-employed people right in the list. Section
+559.904 says each repair shop has to register with the Florida Department of Agriculture and
+Consumer Services before doing business. The department has a Business License Lookup on its
+website, so you can check a name before you hand over a key.</p>
+
+<h3>You Get a Written Estimate Over $150</h3>
+<p>Under section 559.905, when a repair will cost you more than $150, the shop has to give
+you a written estimate before any diagnosis or repair begins. The estimate has to show the
+shop's name and phone, your car's details, a description of the problem, flat or hourly, the
+estimated cost, the charge for making the estimate, any guarantee, and whether you want your
+old parts saved. You are allowed to waive the estimate, but you do not have to.</p>
+
+<h3>The Bill Can Only Go a Little Over</h3>
+<p>Section 559.909 caps the surprise. Without your okay, the final bill can only go over the
+written estimate by $10 or 10 percent, whichever is more, and never by more than $50. If more
+work turns up, the shop has to call you, and you can say yes, change the job, or cancel it.
+The shop also cannot keep your car because you refused to pay for work you never agreed
+to.</p>
+<p>Here is what that cap looks like on real dollar amounts. These are worked examples from
+the statute, not prices for any job.</p>
+<div class="symwrap"><table class="sym">
+<tr><th>Written estimate</th><td><b>Most the bill can be without your okay</b></td></tr>
+<tr><th>$200</th><td>$220 (10 percent is $20)</td></tr>
+<tr><th>$400</th><td>$440 (10 percent is $40)</td></tr>
+<tr><th>$800</th><td>$850 (10 percent would be $80, so the $50 cap wins)</td></tr>
+<tr><th>$1,500</th><td>$1,550 (the $50 cap again)</td></tr>
+</table></div>
+<p>Read that table again with the hourly rate question in mind. A written estimate with a
+total on it protects you no matter what the rate is. An hourly rate with no estimate protects
+you from nothing.</p>
+
+<h3>You Can See Your Old Parts</h3>
+<p>The same section says you can ask to inspect the parts that came off your car, as long as
+you ask when you approve the work. In many cases you can take them home. It is the easiest
+way to know the part was really replaced.</p>
+<figure class="photo-card" style="margin:1.4em 0"><img src="/img/driveway-service.jpg" width="1475" height="1536" loading="lazy"
+ alt="Mobile mechanic doing a repair in a customer's driveway in the Orlando area"></figure>
+
+<h2>How to Get a Fair Price This Week</h2>
+<ol class="proc">
+<li><b>Describe the problem clearly</b><p>The year, make, model and mileage, what you hear or
+feel, and when it happens. A clear story gets a closer quote.</p></li>
+<li><b>Ask for the total, not the rate</b><p>Ask what the whole job costs, parts and labor,
+and whether that is flat or hourly.</p></li>
+<li><b>Ask about diagnosis and trip charges</b><p>Find out up front if finding the problem
+costs extra, and if it counts toward the repair.</p></li>
+<li><b>Get it in writing over $150</b><p>It is Florida law. A text or email with the total
+is better than a number said in passing.</p></li>
+<li><b>Check the registration</b><p>Look the business up on the Florida Department of
+Agriculture and Consumer Services Business License Lookup.</p></li>
+<li><b>Ask for your old parts</b><p>Say so when you approve the work, not after.</p></li>
+</ol>
+<p>We do not post an hourly rate on this site, and we do not think you should shop by one.
+Call {PHONE}, tell us what the car is doing, and you get the price in plain numbers before any
+work starts. That goes for <a href="/services/brake-repair/">brake jobs</a>, <a
+href="/services/check-engine-light-diagnostics/">check engine diagnostics</a> and <a
+href="/services/no-start-repair/">cars that will not start</a>. If you are weighing a tow
+against a house call, here is <a href="/blog/mobile-mechanic-vs-tow-to-shop/">the real math
+on a mobile mechanic versus towing to a shop</a>.</p>
+
+<h2>Sources</h2>
+<ul class="sources">
+<li>U.S. Bureau of Labor Statistics, Occupational Employment and Wage Statistics, May 2025, <a href="https://data.bls.gov/timeseries/OEUM003674000000049302308" rel="nofollow noopener">Orlando metro median wage</a>, <a href="https://data.bls.gov/timeseries/OEUM003674000000049302303" rel="nofollow noopener">Orlando metro mean wage</a>, <a href="https://data.bls.gov/timeseries/OEUM003674000000049302301" rel="nofollow noopener">Orlando metro employment</a>, <a href="https://data.bls.gov/timeseries/OEUS120000000000049302308" rel="nofollow noopener">Florida median wage</a> and <a href="https://data.bls.gov/timeseries/OEUN000000000000049302308" rel="nofollow noopener">U.S. median wage</a> for automotive service technicians and mechanics, read October 12, 2026</li>
+<li>Florida Statutes 2026, <a href="http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0500-0599/0559/Sections/0559.903.html" rel="nofollow noopener">section 559.903, Definitions</a></li>
+<li>Florida Statutes 2026, <a href="http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0500-0599/0559/Sections/0559.904.html" rel="nofollow noopener">section 559.904, Motor Vehicle Repair Shop Registration</a></li>
+<li>Florida Statutes 2026, <a href="http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0500-0599/0559/Sections/0559.905.html" rel="nofollow noopener">section 559.905, Written Repair Estimate and Disclosure Statement</a></li>
+<li>Florida Statutes 2026, <a href="http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0500-0599/0559/Sections/0559.909.html" rel="nofollow noopener">section 559.909, Charges in Excess of the Estimate</a></li>
+<li>Florida Department of Agriculture and Consumer Services, <a href="https://www.fdacs.gov/Business-Services/Motor-Vehicle-Repair" rel="nofollow noopener">Motor Vehicle Repair</a>, read October 12, 2026</li>
+<li>Trackara Pro, <a href="https://pro.trackara.app/blog/mobile-mechanic-hourly-rate" rel="nofollow noopener">Mobile Mechanic Hourly Rate in 2026</a>, May 25, 2026</li>
+<li>autoGMS, <a href="https://myautogms.com/blog/mechanic-hourly-labor-rate-in-2025" rel="nofollow noopener">Mechanic Labor Rate in 2026</a>, April 28, 2026</li>
+</ul>""",
+    },
     {
         "slug": "30-60-90-rule-for-cars",
         "title": "What Is the 30-60-90 Rule for Cars? The Orlando Version",
