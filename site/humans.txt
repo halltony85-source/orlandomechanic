@@ -10,6 +10,7 @@
 /* TEAM */
 Site: Orlando's Finest Mobile Mechanic — the repair shop that comes to you
 Built by: Clickflame · Anthony Limpert
+Personal site: https://anthonylimpert.com/
 Contact: support@clickflame.com
 From: the workbench of a mom-and-pop shop, for a mom-and-pop shop
 

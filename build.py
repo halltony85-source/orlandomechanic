@@ -2909,6 +2909,7 @@ HUMANS = f"""/* humans.txt — {DOMAIN}/humans.txt */
 /* TEAM */
 Site: {BIZ} — {TAGLINE.lower()}
 Built by: Clickflame · Anthony Limpert
+Personal site: https://anthonylimpert.com/
 Contact: support@clickflame.com
 From: the workbench of a mom-and-pop shop, for a mom-and-pop shop
 
