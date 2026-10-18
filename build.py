@@ -1847,6 +1847,9 @@ a.card:hover{transform:translateY(-4px);border-color:rgba(242,106,27,.5);box-sha
 .bite{display:flex;gap:1em;align-items:flex-start;background:linear-gradient(100deg,rgba(242,106,27,.09),rgba(247,185,85,.12));
   border:1px solid rgba(242,106,27,.25);border-left:5px solid var(--sun);border-radius:var(--rs);
   padding:1.2em 1.4em;margin:0 0 1.6em}
+.orl290p{margin:0 0 1.4em}
+.orl290p a{display:inline-flex;align-items:center;min-height:44px;padding:.6em 1.1em;border-radius:6px;background:var(--sundeep);color:#fff;font-weight:600;font-size:.95rem;line-height:1.3;text-decoration:none;overflow-wrap:anywhere}
+.orl290p a:hover,.orl290p a:focus-visible{background:var(--ink2);color:#fff}
 .bite .ic{color:var(--sundeep);width:1.5em;height:1.5em;margin-top:.15em}
 .bite p{font-family:var(--disp);font-weight:600;font-size:1.12rem;line-height:1.45;color:var(--ink)}
 .bite p b{color:var(--sundeep)}
@@ -2634,12 +2637,20 @@ def page_blog_index():
     return head(title, desc, "blog",
                 schema_breadcrumb([("Home", ""), ("Blog", "blog")])) + body + footer()
 
+def orl290p_box():
+    """Google Preferred Sources button, right after the short answer (2026-10-18)."""
+    return ('<p class="orl290p"><a href="https://www.google.com/preferences/source?q=orlando.mechanicrank.com" '
+            "target=\"_blank\" rel=\"noopener\">Keep Orlando's Finest in your Google results</a></p>")
+
+
 def page_blog_post(p):
     title = f"{p['title']} | Orlando's Finest"
     body_html = p["body"].replace("{PHONE}", f'<a href="tel:{PHONE_TEL}">{PHONE_DISP}</a>')
     if p["slug"] in BLOG_BITE:
         b_text, takeaways = BLOG_BITE[p["slug"]]
-        body_html = (bite_box(b_text) + snack_box(takeaways, "Key takeaways") + body_html)
+        body_html = (bite_box(b_text) + orl290p_box() + snack_box(takeaways, "Key takeaways") + body_html)
+    else:
+        body_html = orl290p_box() + body_html
     others = "".join(blog_card(o) for o in [x for x in BLOG if x["slug"] != p["slug"]][:3])
     body = phero("From the blog", esc(p["title"]), esc(p["desc"]),
                  crumbs=[("Home", ""), ("Blog", "blog"), (p["tag"], f"blog/{p['slug']}")])
