@@ -1352,7 +1352,7 @@ problem.</p>
         "slug": "mobile-mechanic-vs-tow-to-shop",
         "title": "Mobile Mechanic vs. Towing to a Shop: The Real Math",
         "desc": "When your car won't start in Orlando, the tow-plus-shop route costs more "
-                "than most people expect. Here's the honest comparison.",
+                "than most people expect. See the real comparison, itemized.",
         "date": "2026-07-28", "tag": "Guides",
         "body": """
 <p>Your car won't start in the driveway. The reflex is: call a tow, send it to a shop. Before
@@ -1386,7 +1386,7 @@ Orlando metro</a>, seven days a week.</p>""",
         "date": "2026-07-14", "tag": "Diagnostics",
         "body": """
 <p>The check engine light has one job: telling you the computer stored a fault. What it
-refuses to tell you is how bad. Here's how to read the situation like a mechanic.</p>
+refuses to tell you is how bad. Read the situation the way a mechanic does.</p>
 <h2>First: steady or flashing?</h2>
 <p>A <strong>steady light</strong> means a fault is logged but the engine isn't in immediate
 danger. Drive gently, get it diagnosed soon. A <strong>flashing light</strong> means an
@@ -1395,7 +1395,7 @@ you drive. Pull over, shut it down, and call. A converter costs many times what 
 costs.</p>
 <h2>The free code read trap</h2>
 <p>The parts store will read your code for free and sell you the part the code mentions.
-Here's the problem: a code names a <em>circuit</em>, not a <em>part</em>. A lean code can be
+The problem is that a code names a <em>circuit</em>, not a <em>part</em>. A lean code can be
 a vacuum leak, a tired fuel pump, a dirty airflow sensor, or a failing O2 sensor. Guess
 wrong and you've spent real money to keep the light on. The store isn't being dishonest. Reading a code just isn't diagnosis.</p>
 <h2>What actual diagnosis looks like</h2>
