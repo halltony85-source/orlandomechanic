@@ -231,6 +231,22 @@ a.card:hover{transform:translateY(-4px);border-color:rgba(242,106,27,.5);box-sha
 .snackbox li{display:flex;gap:.6em;align-items:flex-start;font-size:.95rem}
 .snackbox .ic{color:var(--sun);margin-top:.25em;width:1em;height:1em}
 
+.teri9-first{display:flex;gap:1em;align-items:flex-start;background:linear-gradient(100deg,rgba(242,106,27,.09),rgba(247,185,85,.12));
+  border:1px solid rgba(242,106,27,.25);border-left:5px solid var(--sun);border-radius:var(--rs);
+  padding:1.2em 1.4em;margin:0 0 1.6em}
+.teri9-first .ic{color:var(--sundeep);width:1.5em;height:1.5em;margin-top:.15em}
+.teri9-first p{font-family:var(--disp);font-weight:600;font-size:1.12rem;line-height:1.45;color:var(--ink)}
+.teri9-first p b{color:var(--sundeep)}
+.teri9-brief{background:var(--white);border:1px solid var(--line);border-radius:var(--r);
+  padding:1.4em 1.6em;margin:0 0 1.8em;box-shadow:var(--shadow)}
+.teri9-brief h3{font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sundeep);
+  display:flex;gap:.5em;align-items:center;margin-bottom:.8em}
+.teri9-brief ul{list-style:none;display:grid;gap:.5em}
+.teri9-brief li{display:flex;gap:.6em;align-items:flex-start;font-size:.95rem}
+.teri9-brief .ic{color:var(--sun);margin-top:.25em;width:1em;height:1em}
+.teri9-qa h3{font-size:1.08rem;margin:1.3em 0 .35em}
+.teri9-qa p{margin:0}
+
 /* symptom table */
 .sym{width:100%;border-collapse:collapse;margin:1.6em 0;font-size:.95rem}
 .sym th,.sym td{text-align:left;padding:.9em 1em;border-bottom:1px solid var(--line);vertical-align:top}

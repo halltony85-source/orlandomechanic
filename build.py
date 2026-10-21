@@ -921,8 +921,8 @@ BLOG = [
         "date": "2026-10-15", "tag": "Pricing",
         "faqs": [
             ("How much should a mobile mechanic charge an hour?",
-             "There is no official number. Guides that rank for this question quote anywhere "
-             "from $50 to $150 an hour, and the ones we read on October 12, 2026 did not name "
+             "There is no official number. Online guides quote anywhere "
+             "from $50 to $150 an hour, and the ones we found did not name "
              "where their numbers came from. The hourly rate also matters less than the total. "
              "Ask for the price of the whole job, in writing, before work starts."),
             ("How much is mechanic labor per hour in Florida?",
@@ -950,10 +950,9 @@ BLOG = [
         ],
         "body": """
 <p>Everybody wants one number. Type this question into Google and you get Reddit threads,
-Facebook groups and a few guides that quote $50, $85 or $150 an hour. We read the top ones
-on October 12, 2026. None of them said where their numbers came from, and none of them said
-a word about Florida.</p>
-<p>So here is what we can show you with real sources. What Orlando mechanics actually earn,
+Facebook groups and a few guides that quote $50, $85 or $150 an hour. None of them said
+where their numbers came from, and none of them said a word about Florida.</p>
+<p>This page sticks to what has a real source. What Orlando mechanics actually earn,
 why a mobile rate is built differently from a shop rate, and the Florida law that matters
 more than any hourly number.</p>
 
@@ -971,7 +970,7 @@ mechanics. They are not a market rate.</p>
 <h2>What Orlando Mechanics Actually Earn</h2>
 <p>The U.S. Bureau of Labor Statistics runs a wage survey every May. Its May 2025 numbers
 count 6,480 automotive service technicians and mechanics working in the Orlando, Kissimmee
-and Sanford metro area. Here is what they earned, next to Florida and the whole country.</p>
+and Sanford metro area. The chart shows what they earned, next to Florida and the whole country.</p>
 <div class="symwrap" role="img" aria-label="Bar chart. Hourly pay for auto technicians, May 2025. Orlando median $23.00, Florida median $23.20, United States median $24.34, Orlando mean $25.77.">
 <p style="margin:.6em 0 .2em"><b>Hourly Pay for Auto Technicians, May 2025</b></p>
 <div style="display:grid;gap:.55em;margin:.8em 0 1em">
@@ -980,7 +979,7 @@ and Sanford metro area. Here is what they earned, next to Florida and the whole 
 <div><div style="font-size:.9rem">United States, median</div><div style="display:flex;align-items:center;gap:.6em"><span style="display:block;height:18px;width:81.1%;background:var(--grad);border-radius:4px"></span><b>$24.34</b></div></div>
 <div><div style="font-size:.9rem">Orlando metro, mean</div><div style="display:flex;align-items:center;gap:.6em"><span style="display:block;height:18px;width:85.9%;background:var(--grad);border-radius:4px"></span><b>$25.77</b></div></div>
 </div>
-<p style="font-size:.85rem;color:var(--dim);margin:0 0 .6em">Source, U.S. Bureau of Labor Statistics, Occupational Employment and Wage Statistics, May 2025, read October 12, 2026.</p>
+<p style="font-size:.85rem;color:var(--dim);margin:0 0 .6em">Source, U.S. Bureau of Labor Statistics, Occupational Employment and Wage Statistics, May 2025, as of October 2026.</p>
 </div>
 <p>Two things jump out. Orlando mechanics earn a little less than the national median. And
 the mean is higher than the median, which means a smaller group of top techs pulls the
@@ -1005,7 +1004,7 @@ the clock too.</li>
 <li><b>Taxes and business costs.</b> The things every business pays before the owner sees a
 dollar.</li>
 </ul>
-<p>Here is a worked example, not anyone's real price. Say a mobile mechanic wants to earn
+<p>Take a made up case, not anyone's real price. Say a mobile mechanic wants to earn
 the Orlando median of $23 an hour. Say a third of the workday goes to driving, parts runs
 and paperwork that nobody pays for. To clear $23 for every hour worked, he has to bill $34.50
 for every hour he is on a car. That is before one gallon of gas, one tool, one insurance bill
@@ -1023,7 +1022,7 @@ road, price a job from a set labor time for that repair on that car, or quote a 
 for the whole job. Florida law even makes the shop tell you which one you are getting. A
 written estimate has to say whether you are charged a flat rate, an hourly rate, or both.</p>
 <p>That is why two quotes with the same hourly rate can land far apart, and two quotes with
-very different rates can come out the same. Here is what to put side by side instead.</p>
+very different rates can come out the same. Put these side by side instead.</p>
 <div class="symwrap"><table class="sym">
 <tr><th>Ask about</th><td><b>Why it matters</b></td></tr>
 <tr><th>The total price for the job</th><td>Rate times hours, plus parts, plus any fees. This is the only number you actually pay.</td></tr>
@@ -1035,7 +1034,7 @@ very different rates can come out the same. Here is what to put side by side ins
 </table></div>
 
 <h2>The Florida Rules That Protect You</h2>
-<p>This is the part none of the top pages cover, and it is worth more than any hourly
+<p>Most pages skip this, and it is worth more than any hourly
 number. Florida has a law just for car repair. It is the Florida Motor Vehicle Repair Act,
 Chapter 559, Part IX of the Florida Statutes.</p>
 
@@ -1059,7 +1058,7 @@ written estimate by $10 or 10 percent, whichever is more, and never by more than
 work turns up, the shop has to call you, and you can say yes, change the job, or cancel it.
 The shop also cannot keep your car because you refused to pay for work you never agreed
 to.</p>
-<p>Here is what that cap looks like on real dollar amounts. These are worked examples from
+<p>The cap looks like this on real dollar amounts. These are worked examples from
 the statute, not prices for any job.</p>
 <div class="symwrap"><table class="sym">
 <tr><th>Written estimate</th><td><b>Most the bill can be without your okay</b></td></tr>
@@ -1098,17 +1097,17 @@ Call {PHONE}, tell us what the car is doing, and you get the price in plain numb
 work starts. That goes for <a href="/services/brake-repair/">brake jobs</a>, <a
 href="/services/check-engine-light-diagnostics/">check engine diagnostics</a> and <a
 href="/services/no-start-repair/">cars that will not start</a>. If you are weighing a tow
-against a house call, here is <a href="/blog/mobile-mechanic-vs-tow-to-shop/">the real math
+against a house call, read <a href="/blog/mobile-mechanic-vs-tow-to-shop/">the real math
 on a mobile mechanic versus towing to a shop</a>.</p>
 
-<h2>Sources</h2>
+<h3>Who Said So</h3>
 <ul class="sources">
-<li>U.S. Bureau of Labor Statistics, Occupational Employment and Wage Statistics, May 2025, <a href="https://data.bls.gov/timeseries/OEUM003674000000049302308" rel="nofollow noopener">Orlando metro median wage</a>, <a href="https://data.bls.gov/timeseries/OEUM003674000000049302303" rel="nofollow noopener">Orlando metro mean wage</a>, <a href="https://data.bls.gov/timeseries/OEUM003674000000049302301" rel="nofollow noopener">Orlando metro employment</a>, <a href="https://data.bls.gov/timeseries/OEUS120000000000049302308" rel="nofollow noopener">Florida median wage</a> and <a href="https://data.bls.gov/timeseries/OEUN000000000000049302308" rel="nofollow noopener">U.S. median wage</a> for automotive service technicians and mechanics, read October 12, 2026</li>
+<li>U.S. Bureau of Labor Statistics, Occupational Employment and Wage Statistics, May 2025, <a href="https://data.bls.gov/timeseries/OEUM003674000000049302308" rel="nofollow noopener">Orlando metro median wage</a>, <a href="https://data.bls.gov/timeseries/OEUM003674000000049302303" rel="nofollow noopener">Orlando metro mean wage</a>, <a href="https://data.bls.gov/timeseries/OEUM003674000000049302301" rel="nofollow noopener">Orlando metro employment</a>, <a href="https://data.bls.gov/timeseries/OEUS120000000000049302308" rel="nofollow noopener">Florida median wage</a> and <a href="https://data.bls.gov/timeseries/OEUN000000000000049302308" rel="nofollow noopener">U.S. median wage</a> for automotive service technicians and mechanics, as of October 2026</li>
 <li>Florida Statutes 2026, <a href="http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0500-0599/0559/Sections/0559.903.html" rel="nofollow noopener">section 559.903, Definitions</a></li>
 <li>Florida Statutes 2026, <a href="http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0500-0599/0559/Sections/0559.904.html" rel="nofollow noopener">section 559.904, Motor Vehicle Repair Shop Registration</a></li>
 <li>Florida Statutes 2026, <a href="http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0500-0599/0559/Sections/0559.905.html" rel="nofollow noopener">section 559.905, Written Repair Estimate and Disclosure Statement</a></li>
 <li>Florida Statutes 2026, <a href="http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0500-0599/0559/Sections/0559.909.html" rel="nofollow noopener">section 559.909, Charges in Excess of the Estimate</a></li>
-<li>Florida Department of Agriculture and Consumer Services, <a href="https://www.fdacs.gov/Business-Services/Motor-Vehicle-Repair" rel="nofollow noopener">Motor Vehicle Repair</a>, read October 12, 2026</li>
+<li>Florida Department of Agriculture and Consumer Services, <a href="https://www.fdacs.gov/Business-Services/Motor-Vehicle-Repair" rel="nofollow noopener">Motor Vehicle Repair</a>, as of October 2026</li>
 <li>Trackara Pro, <a href="https://pro.trackara.app/blog/mobile-mechanic-hourly-rate" rel="nofollow noopener">Mobile Mechanic Hourly Rate in 2026</a>, May 25, 2026</li>
 <li>autoGMS, <a href="https://myautogms.com/blog/mechanic-hourly-labor-rate-in-2025" rel="nofollow noopener">Mechanic Labor Rate in 2026</a>, April 28, 2026</li>
 </ul>""",
@@ -1155,7 +1154,7 @@ on a mobile mechanic versus towing to a shop</a>.</p>
 <p>The 30-60-90 rule is the oldest shortcut in car care. It says your car needs a bigger
 service at 30,000 miles, again at 60,000, and again at 90,000. It is a good rule. It is
 also a national rule, and Orlando is not a national kind of place to drive.</p>
-<p>Here is the whole thing in plain English, what goes into each visit, what the big items
+<p>The whole thing in plain English follows: what goes into each visit, what the big items
 cost, and the three Central Florida conditions that move every date on the chart.</p>
 
 <h2>What the 30-60-90 Rule Really Means</h2>
@@ -1167,7 +1166,7 @@ line for a lot of cars.</p>
 <p>So use the rule for one job. It tells you when a big visit is coming. The manual tells
 you what goes in it.</p>
 <p>Miles also turn into years. The Federal Highway Administration puts the average driver
-at 13,476 miles a year. At that pace, here is when each milestone shows up. This is a worked
+at 13,476 miles a year. At that pace, each milestone shows up on a schedule like this. It is a worked
 example, not a promise.</p>
 <div class="symwrap"><table class="sym">
 <tr><th>Milestone</th><td><b>About how old the car is at 13,476 miles a year</b></td></tr>
@@ -1219,7 +1218,7 @@ years, compared with five or more up north, and it suggests a test every year on
 reaches year three. Put that next to the table above. By the 60,000 mile visit, a typical
 Orlando car is about four and a half years old. If its batteries last three years, it is
 already on its second one, and the third is due around the 90k mark. That is why a battery
-test belongs in every big service, even when the car still cranks fine. Here is <a
+test belongs in every big service, even when the car still cranks fine. Read <a
 href="/blog/florida-heat-car-battery/">why Florida heat kills batteries without warning</a>.</p>
 
 <h3>Humidity Gets Into Your Brake Fluid</h3>
@@ -1248,8 +1247,8 @@ I-4 traffic wears brakes</a> and what each brake noise means.</p>
 <p>You will see guides quote one price for the whole 60k or 90k service. Ignore it. A
 milestone service is a list, not a product, and two cars at 60,000 miles can need very
 different lists. Price it line by line.</p>
-<p>Here are national averages from RepairPal for the three biggest line items, checked on
-October 10, 2026. They do not include tax and do not adjust for location, so use them as a
+<p>National averages from RepairPal for the three biggest line items, as of
+October 2026, are below. They do not include tax and do not adjust for location, so use them as a
 gut check, not a quote.</p>
 <div class="symwrap"><table class="sym">
 <tr><th>Line item</th><td><b>National average (RepairPal)</b></td><td><b>When it usually comes up</b></td></tr>
@@ -1262,8 +1261,8 @@ valves hit the pistons, and a cheap belt job becomes an engine job. If your car 
 and you are near or past the mileage in your manual, do not wait on it. If it has a chain,
 there is no 90k belt job at all, and nobody should be selling you one.</p>
 
-<h2>Where the 30-60-90 Rule Gets It Wrong</h2>
-<p>The rule is useful. It is also old. Here is where it can steer you wrong.</p>
+<h2>Where the 30-60-90 Rule Falls Short</h2>
+<p>The rule is useful. It is also old. These are the spots where it can steer you wrong.</p>
 <ul>
 <li><b>It ignores time.</b> A car driven 5,000 miles a year still ages. Batteries, brake
 fluid, coolant and rubber all wear by the calendar, and Florida heat speeds that up.</li>
@@ -1281,7 +1280,7 @@ car gets serviced. A dealer, an independent shop, or your own garage. Under the
 Magnuson-Moss Warranty Act, a company cannot void your warranty just because someone else did
 the work. It can still deny a claim if the outside work caused the damage, so the job has to
 be done right.</p>
-<p>The fix is simple. Keep every receipt with the date, the mileage and what was done. A
+<p>The cure is simple. Keep every receipt with the date, the mileage and what was done. A
 folder in the glove box or photos on your phone both work. Those records also help when you
 sell the car.</p>
 
@@ -1305,15 +1304,15 @@ service</a>, <a href="/services/battery-replacement/">battery testing</a>, and <
 href="/services/brake-repair/">brake work</a> in your driveway, and we will tell you straight
 which items on the list need a shop lift instead. Call {PHONE}.</p>
 
-<h2>Sources</h2>
+<h3>Who Said So</h3>
 <ul class="sources">
 <li>Jalopnik, <a href="https://www.jalopnik.com/2031332/does-30-60-90-rule-for-car-maintenance-make-sense/" rel="nofollow noopener">Does the 30-60-90 Rule for Car Maintenance Actually Make Sense?</a>, November 25, 2025</li>
 <li>Federal Highway Administration, <a href="https://www.fhwa.dot.gov/ohim/onh00/bar8.htm" rel="nofollow noopener">Average Annual Miles per Driver by Age Group</a></li>
 <li>Car Care Council via AutoInc, <a href="https://www.autoinc.org/?p=14025" rel="nofollow noopener">Take Action to Reduce Effects of Severe Driving</a>, October 1, 2019</li>
-<li>National Weather Service Melbourne, <a href="https://www.weather.gov/media/mlb/climate/mcoJUL.pdf" rel="nofollow noopener">Orlando July Normals and Records</a>, read October 10, 2026</li>
+<li>National Weather Service Melbourne, <a href="https://www.weather.gov/media/mlb/climate/mcoJUL.pdf" rel="nofollow noopener">Orlando July Normals and Records</a>, as of October 2026</li>
 <li>AAA, <a href="https://www.aaa.com/autorepair/articles/how-long-do-car-batteries-last" rel="nofollow noopener">How Long Do Car Batteries Last</a></li>
 <li>49 CFR 571.116, <a href="https://www.law.cornell.edu/cfr/text/49/571.116" rel="nofollow noopener">Federal Motor Vehicle Safety Standard 116, Brake Fluids</a></li>
-<li>RepairPal, <a href="https://repairpal.com/estimator/timing-belt-replacement-cost" rel="nofollow noopener">Timing Belt Replacement Cost</a>, <a href="https://repairpal.com/estimator/spark-plug-replacement-cost" rel="nofollow noopener">Spark Plug Replacement Cost</a> and <a href="https://repairpal.com/estimator/transmission-fluid-change-cost" rel="nofollow noopener">Transmission Fluid Change Cost</a>, read October 10, 2026</li>
+<li>RepairPal, <a href="https://repairpal.com/estimator/timing-belt-replacement-cost" rel="nofollow noopener">Timing Belt Replacement Cost</a>, <a href="https://repairpal.com/estimator/spark-plug-replacement-cost" rel="nofollow noopener">Spark Plug Replacement Cost</a> and <a href="https://repairpal.com/estimator/transmission-fluid-change-cost" rel="nofollow noopener">Transmission Fluid Change Cost</a>, as of October 2026</li>
 <li>Federal Trade Commission, <a href="https://consumer.ftc.gov/consumer-alerts/2022/07/ftc-says-companies-warranty-restrictions-were-illegal" rel="nofollow noopener">FTC Says Companies' Warranty Restrictions Were Illegal</a>, July 7, 2022</li>
 </ul>""",
     },
@@ -1861,6 +1860,22 @@ a.card:hover{transform:translateY(-4px);border-color:rgba(242,106,27,.5);box-sha
 .snackbox li{display:flex;gap:.6em;align-items:flex-start;font-size:.95rem}
 .snackbox .ic{color:var(--sun);margin-top:.25em;width:1em;height:1em}
 
+.teri9-first{display:flex;gap:1em;align-items:flex-start;background:linear-gradient(100deg,rgba(242,106,27,.09),rgba(247,185,85,.12));
+  border:1px solid rgba(242,106,27,.25);border-left:5px solid var(--sun);border-radius:var(--rs);
+  padding:1.2em 1.4em;margin:0 0 1.6em}
+.teri9-first .ic{color:var(--sundeep);width:1.5em;height:1.5em;margin-top:.15em}
+.teri9-first p{font-family:var(--disp);font-weight:600;font-size:1.12rem;line-height:1.45;color:var(--ink)}
+.teri9-first p b{color:var(--sundeep)}
+.teri9-brief{background:var(--white);border:1px solid var(--line);border-radius:var(--r);
+  padding:1.4em 1.6em;margin:0 0 1.8em;box-shadow:var(--shadow)}
+.teri9-brief h3{font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sundeep);
+  display:flex;gap:.5em;align-items:center;margin-bottom:.8em}
+.teri9-brief ul{list-style:none;display:grid;gap:.5em}
+.teri9-brief li{display:flex;gap:.6em;align-items:flex-start;font-size:.95rem}
+.teri9-brief .ic{color:var(--sun);margin-top:.25em;width:1em;height:1em}
+.teri9-qa h3{font-size:1.08rem;margin:1.3em 0 .35em}
+.teri9-qa p{margin:0}
+
 /* symptom table */
 .sym{width:100%;border-collapse:collapse;margin:1.6em 0;font-size:.95rem}
 .sym th,.sym td{text-align:left;padding:.9em 1em;border-bottom:1px solid var(--line);vertical-align:top}
@@ -2299,6 +2314,20 @@ def block_why():
 def bite_box(text_html):
     return (f'<div class="bite">{icon("bolt")}<p>{text_html}</p></div>')
 
+def post_bite_box(text_html):
+    return (f'<div class="teri9-first">{icon("bolt")}<p>{text_html}</p></div>')
+
+def post_snack_box(items, title="Need It Fast?"):
+    li = "".join(f'<li>{icon("check")}<span>{esc(x)}</span></li>' for x in items)
+    return (f'<div class="teri9-brief"><h3>{icon("clipboard")} {esc(title)}</h3>'
+      f'<ul>{li}</ul></div>')
+
+def post_qa(faqs, title="Questions Worth Asking"):
+    items = "".join(f'<h3>{esc(q)}</h3><p>{esc(a)}</p>' for q, a in faqs)
+    return (f'<section class="sec"><div class="wrap">'
+            f'<div class="sec-head"><h2>{esc(title)}</h2></div>'
+            f'<div class="teri9-qa">{items}</div></div></section>')
+
 def snack_box(items, title="At a glance"):
     li = "".join(f'<li>{icon("check")}<span>{esc(x)}</span></li>' for x in items)
     return (f'<div class="snackbox"><h3>{icon("clipboard")} {esc(title)}</h3>'
@@ -2648,7 +2677,7 @@ def page_blog_post(p):
     body_html = p["body"].replace("{PHONE}", f'<a href="tel:{PHONE_TEL}">{PHONE_DISP}</a>')
     if p["slug"] in BLOG_BITE:
         b_text, takeaways = BLOG_BITE[p["slug"]]
-        body_html = (bite_box(b_text) + orl290p_box() + snack_box(takeaways, "Key takeaways") + body_html)
+        body_html = (post_bite_box(b_text) + orl290p_box() + post_snack_box(takeaways) + body_html)
     else:
         body_html = orl290p_box() + body_html
     others = "".join(blog_card(o) for o in [x for x in BLOG if x["slug"] != p["slug"]][:3])
@@ -2673,14 +2702,13 @@ def page_blog_post(p):
   </div>
 </div></div></section>"""
     if p.get("faqs"):
-        body += block_faq(p["faqs"], "Questions people ask")
+        body += post_qa(p["faqs"])
     body += ('<section class="sec light"><div class="wrap"><div class="sec-head">'
-             '<h2>More from the blog</h2></div>'
+             '<h2>Before You Go</h2></div>'
              f'<div class="grid g3">{others}</div></div></section>')
     body += block_cta()
-    extra = [schema_faq(p["faqs"])] if p.get("faqs") else []
     return head(title, p["desc"], f"blog/{p['slug']}",
-                schema_blogpost(p), *extra,
+                schema_blogpost(p),
                 schema_breadcrumb([("Home", ""), ("Blog", "blog"),
                                    (p["title"], f"blog/{p['slug']}")])) + body + footer()
 
