@@ -399,6 +399,7 @@ SERVICES = [
             "Then you get a plain-English verdict: what's solid, what needs money soon, and what "
             "that means for the price. Sometimes the report saves you from a bad car. Just as "
             "often it hands you a negotiating list worth far more than the inspection cost.",
+            "You can also book our pre-purchase inspection through PPI Auto.</p><p><a href=\"https://prepurchaseauto.com/inspector-orlandos-finest-mobile-mechanic-fl/\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://prepurchaseauto.com/badges/ppi-auto-listed.svg\" alt=\"Listed on PPI Auto\" width=\"300\" height=\"94\" loading=\"lazy\" style=\"max-width:100%;height:auto\"></a>",
         ],
         "bullets": [
             "Full computer scan, including cleared-code history",
